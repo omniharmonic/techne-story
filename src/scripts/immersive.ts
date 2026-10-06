@@ -39,11 +39,12 @@ function load(name: string) {
   });
 }
 function project(p: {x:number;y:number}): Point {
-  return isMobile()?camera.point(.49+p.x*.20,.34+p.y*.26):camera.point(.30+p.x*.66,.53+p.y*.40);
+  const i=PEOPLE.indexOf(p as typeof PEOPLE[number]), hub=HUBS[Math.max(0,i)%HUBS.length];
+  return camera.point(hub.x+(p.x-.5)*.09,hub.y+(p.y-.5)*.052);
 }
 function towers(state: ReturnType<typeof filmState>) {
-  const defs=isMobile()?[[.51,.50,.28],[.67,.51,.32],[.595,.60,.48]]:[[.59,.74,.43],[.86,.79,.48],[.745,.89,.73]];
-  const size=Math.min(1,height*(isMobile()?.50:.78)/(camera.h*(isMobile()?.48:.73)*1.08));
+  const defs=[[.485,.525,.31],[.902,.585,.39],[.582,.818,.58]];
+  const size=Math.min(1,...defs.map(([x,y,h])=>Math.max(.05,camera.point(x,y).y-height*.12)/(camera.h*h*1.08)));
   return defs.map(([x,y,h],i)=>({...camera.point(x,y),h:camera.h*h*size*mix(.69,1.08,state.growth)*state.rise,i}));
 }
 function backdrop(img: HTMLImageElement) {ctx.drawImage(img,camera.x,camera.y,camera.w,camera.h);}
@@ -190,8 +191,8 @@ function drawFederation(n:number,now:number) {
   const start=chapterIndex('sdk')-.9,strength=smooth(start-.4,start+1.1,n);
   if(strength<=0)return;
   const mature=smooth(chapterIndex('sdk'),chapterIndex('federation')+.5,n);
-  const map=(p:Point):Point=>isMobile()?camera.point(.50+p.x*.19,.25+p.y*.30):camera.point(.40+p.x*.58,.48+p.y*.45);
-  const hubs=HUBS.map(map),r=(isMobile()?19:34),demoId=demo?BEATS[demo.chapter].id:'';
+  const map=(p:Point):Point=>camera.point(p.x,p.y);
+  const hubs=HUBS.map(map),r=camera.w*.014,demoId=demo?BEATS[demo.chapter].id:'';
   const demoProgress=demo&&(demoId==='remix'||demoId==='federation')?(quiet?1:clamp((now-demo.start)/3400)):0;
   const line=(a:Point,b:Point,alpha:number,weight=1)=>{
     ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.bezierCurveTo(mix(a.x,b.x,.38),a.y-Math.abs(a.x-b.x)*.13,mix(a.x,b.x,.7),b.y-Math.abs(a.x-b.x)*.1,b.x,b.y);ctx.strokeStyle=color(mint,alpha*strength);ctx.lineWidth=weight;ctx.stroke();
@@ -199,11 +200,11 @@ function drawFederation(n:number,now:number) {
   ctx.save();ctx.globalCompositeOperation='screen';
   // Every hub connects to several peers; no central distribution tower.
   FEDERATION_LINKS.forEach(([a,b],i)=>{
-    const alpha=(.20+mature*.28);line(hubs[a],hubs[b],alpha,isMobile()?.85:1.3);
+    const alpha=(.20+mature*.28);line(hubs[a],hubs[b],alpha,1.4);
     if(!quiet||demoProgress){for(let side=0;side<2;side++){
       let u=quiet?demoProgress:(phase*.075+i*.137+side*.48)%1;if(side)u=1-u;
       const p={x:mix(hubs[a].x,hubs[b].x,u),y:mix(hubs[a].y,hubs[b].y,u)-Math.sin(u*Math.PI)*Math.abs(hubs[a].x-hubs[b].x)*.10};
-      glow(p.x,p.y,isMobile()?5:8,side?gold:mint,strength*.65);
+      glow(p.x,p.y,isMobile()?9:13,side?gold:mint,strength*.95);
     }}
   });
   // Branches divide by the golden ratio. They grow into local exchange loops.
@@ -221,15 +222,22 @@ function drawFederation(n:number,now:number) {
     }
   });
   hubs.forEach((p,i)=>{
-    const size=r*(.83+(i%3)*.10),bloom=smooth(start-.3+i*.12,start+1.3+i*.1,n);
+    const size=r*(.6+HUBS[i].y*.8),bloom=smooth(start-.3+i*.12,start+1.3+i*.1,n);
     // Translucent nested petals echo greenhouses and living seed heads.
     for(let j=0;j<5;j++){
-      const angle=j*2.3999632297+i*.4,rr=size/PHI**(j*.38)*(quiet?1:1+Math.sin(phase*.5+i+j*.8)*.015);
+      const angle=j*2.3999632297+i*.4,rr=size/PHI**(j*.38)*(quiet?1:1+Math.sin(phase*.5+i+j*.8)*.07);
       ctx.save();ctx.translate(p.x,p.y);ctx.rotate(angle);ctx.scale(1,.55);
       ctx.beginPath();ctx.ellipse(rr*.26,0,rr,rr/PHI,0,0,Math.PI*2);
       ctx.fillStyle=color(mint,.028*bloom*strength);ctx.fill();ctx.strokeStyle=color(j%2?gold:mint,(.37-j*.035)*bloom*strength);ctx.lineWidth=.85;ctx.stroke();ctx.restore();
     }
     glow(p.x,p.y,size*.8,mint,.30*strength);ctx.beginPath();ctx.arc(p.x,p.y,3,0,Math.PI*2);ctx.fillStyle=color([244,240,223],strength);ctx.fill();
+    // A visible ground-plane pulse originates at each actual settlement.
+    if(!quiet){
+      const u=(phase*.27+i*.19)%1;
+      ctx.beginPath();ctx.ellipse(p.x,p.y,size*(.8+u*2.6),size*(.25+u*.8),0,0,Math.PI*2);
+      ctx.strokeStyle=color(mint,(1-u)*.8*bloom*strength);ctx.lineWidth=1.6;ctx.stroke();
+      glow(p.x,p.y,size*(.65+Math.sin(phase*1.8+i)*.15),mint,.48*strength);
+    }
     // App leaves retain a shared base but acquire distinct local forms.
     const apps=smooth(chapterIndex('sdk')-.5,chapterIndex('remix'),n);
     if(apps>0){for(let k=0;k<3;k++){
@@ -251,17 +259,17 @@ function drawFederation(n:number,now:number) {
 const mistTexture=document.createElement('canvas');mistTexture.width=512;mistTexture.height=128;
 const mistContext=mistTexture.getContext('2d')!;
 for(let i=0;i<22;i++){
-  const x=30+i*21,y=64+Math.sin(i*1.8)*17,r=25+Math.sin(i*.7)*9;
-  const g=mistContext.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,'rgba(201,225,215,.22)');g.addColorStop(1,'rgba(201,225,215,0)');mistContext.fillStyle=g;mistContext.fillRect(x-r,y-r,r*2,r*2);
+  const x=30+i*21,y=64+Math.sin(i*1.8)*17,r=43+Math.sin(i*.7)*7;
+  const g=mistContext.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,'rgba(220,238,227,.38)');g.addColorStop(1,'rgba(201,225,215,0)');mistContext.fillStyle=g;mistContext.fillRect(x-r,y-r,r*2,r*2);
 }
 function drawMist(t:number,foreground=false){
-  const layer=foreground?1:0;
   ctx.save();
-  for(let i=0;i<5;i++){
-    const drift=quiet?0:Math.sin(phase*.022+i*1.7)*.045;
-    const p=camera.point(.12+i*.20+drift,.30+layer*.35+(i%3)*.075);
-    const w=camera.w*(.25+i*.025),h=w*(foreground?.09:.13);
-    ctx.globalAlpha=(foreground?.11:.20)*(1-filmState(t).darkness*.35);
+  const banks=foreground?[[.34,.70],[.76,.51],[.50,.86]]:[[.32,.40],[.75,.36],[.58,.59]];
+  for(let i=0;i<banks.length;i++){
+    const drift=quiet?0:Math.sin(phase*.12+i*1.7)*.055;
+    const p=camera.point(banks[i][0]+drift,banks[i][1]+Math.sin(phase*.18+i)*.006);
+    const w=camera.w*(.29+i*.025),h=w*(foreground?.17:.15);
+    ctx.globalAlpha=(foreground?.62:.52)*(1-filmState(t).darkness*.15);
     ctx.drawImage(mistTexture,p.x-w/2,p.y-h/2,w,h);
   }
   ctx.restore();
@@ -270,9 +278,9 @@ function drawRiverLight(t:number){
   const calm=1-filmState(t).darkness*.75;
   ctx.save();ctx.globalCompositeOperation='screen';
   for(let i=0;i<16;i++){
-    const y=.50+i*.014,x=.68-Math.sin(i*.25)*.035;
+    const y=.51+i*.011,x=.64+Math.sin(i*.25)*.045;
     const p=camera.point(x,y),wave=quiet?.5:(Math.sin(phase*.55+i*1.7)+1)/2;
-    ctx.strokeStyle=color(gold,calm*(.035+wave*.055));ctx.lineWidth=.6;
+    ctx.strokeStyle=color(gold,calm*(.09+wave*.13));ctx.lineWidth=.6;
     ctx.beginPath();ctx.moveTo(p.x-camera.w*.006*(1+wave),p.y);ctx.lineTo(p.x+camera.w*.006*(1+wave),p.y);ctx.stroke();
   }ctx.restore();
 }
