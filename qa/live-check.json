@@ -1,0 +1,32 @@
+{
+  "url": "https://omniharmonic.github.io/techne-story/",
+  "date": "2026-10-06T19:42:01.256Z",
+  "layouts": [
+    {
+      "width": 1440,
+      "overflow": 0,
+      "scene": "place",
+      "T": 10,
+      "people": 24,
+      "segments": 24
+    },
+    {
+      "width": 820,
+      "overflow": 0,
+      "scene": "place",
+      "T": 10,
+      "people": 24,
+      "segments": 24
+    },
+    {
+      "width": 390,
+      "overflow": 0,
+      "scene": "place",
+      "T": 10,
+      "people": 24,
+      "segments": 24
+    }
+  ],
+  "errors": [],
+  "failed": []
+}

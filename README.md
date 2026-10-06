@@ -33,7 +33,7 @@ Dependencies and build output are excluded from Git. Use `npm ci` to install the
 | `src/pages/stills/[name].svg.ts` | Still figures rendered from the same model (story mode, reduced motion, no JavaScript, print). |
 | `src/components/Demo.astro` | Interactive controls and their text outcomes, per scene. |
 | `design/` (local only) | Internal design handoff, reference boards and generated source artwork. Excluded from the public repository. |
-| `qa/` | Evidence: `REPORT.md`, screenshots, intermediate frames, recordings, check results, manifest, transfer report. |
+| `qa/` | Release report, public screenshots, check results, manifest and transfer report. Earlier implementation evidence is retained locally. |
 | `HANDOFF-TO-DESIGN.md` (local only) | Historical internal implementation handoff, excluded from the public repository. |
 | `licenses/` | SIL Open Font License texts for Newsreader and Source Sans 3 (self-hosted via Fontsource). |
 
