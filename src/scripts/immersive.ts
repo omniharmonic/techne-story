@@ -1,3 +1,4 @@
+import { landscapeCamera } from '../lib/camera';
 import { PHI, HUBS, BRANCHES, FEDERATION_LINKS } from '../lib/federation';
 import { SOURCES } from '../lib/chapters';
 import { BEATS, LAST, sceneAt, chapterIndex, PEOPLE, RELATIONS, filmState, clamp, mix, smooth, route, type Point } from '../lib/immersive';
@@ -27,6 +28,7 @@ const assets: Record<string, HTMLImageElement> = {};
 const exchangeOutcome=(id:string)=>({packets:'A message crosses independent networks.',extraction:'The platform keeps the value.',living:'Shared onward. Returned in another form.',remix:'A local variation. The same shared language.',federation:'More communities. Shared reach. Local control.'}[id]||'A direct connection. Something comes back.');
 const mint = [181, 245, 210], gold = [246, 181, 98];
 const color = (c: number[], a: number) => 'rgba(' + c.map(Math.round).join(',') + ',' + clamp(a) + ')';
+let camera=landscapeCamera(innerWidth,innerHeight,0);
 const isMobile = () => width <= 700;
 
 function load(name: string) {
@@ -37,23 +39,14 @@ function load(name: string) {
   });
 }
 function project(p: {x:number;y:number}): Point {
-  return isMobile()
-    ? { x: width * (.04 + p.x * .92), y: height * (.33 + p.y * .27) }
-    : { x: width * (.30 + p.x * .66), y: height * (.53 + p.y * .40) };
+  return isMobile()?camera.point(.49+p.x*.20,.34+p.y*.26):camera.point(.30+p.x*.66,.53+p.y*.40);
 }
 function towers(state: ReturnType<typeof filmState>) {
-  const defs = isMobile()
-    ? [[.20,.49,.28], [.83,.50,.32], [.54,.59,.48]]
-    : [[.59,.74,.43], [.86,.79,.48], [.745,.89,.73]];
-  return defs.map(([x,y,h], i) => ({ x: x * width, y: y * height, h: h * height * mix(.69,1.08,state.growth) * state.rise, i }));
+  const defs=isMobile()?[[.51,.50,.28],[.67,.51,.32],[.595,.60,.48]]:[[.59,.74,.43],[.86,.79,.48],[.745,.89,.73]];
+  const size=Math.min(1,height*(isMobile()?.50:.78)/(camera.h*(isMobile()?.48:.73)*1.08));
+  return defs.map(([x,y,h],i)=>({...camera.point(x,y),h:camera.h*h*size*mix(.69,1.08,state.growth)*state.rise,i}));
 }
-function backdrop(img: HTMLImageElement, zoom: number, px: number, py: number) {
-  const scale = Math.max(width / img.width, height / img.height) * zoom;
-  const iw = img.width * scale, ih = img.height * scale;
-  // Center the river and garden rather than cropping to the left edge on phones.
-  const focal = isMobile() ? .60 : .50;
-  ctx.drawImage(img, (width - iw) * focal + px, (height - ih) * .5 + py, iw, ih);
-}
+function backdrop(img: HTMLImageElement) {ctx.drawImage(img,camera.x,camera.y,camera.w,camera.h);}
 function glow(x: number,y: number,r: number,c: number[],a: number) {
   const g = ctx.createRadialGradient(x,y,0,x,y,r);
   g.addColorStop(0,color(c,a)); g.addColorStop(.18,color(c,a*.65)); g.addColorStop(1,color(c,0));
@@ -92,8 +85,8 @@ function eye(x:number,y:number,r:number,intensity:number,time:number) {
 }
 /** Detailed, reversible illustrations inhabit the same ground plane. */
 function drawMechanisms(n:number,points:Point[],ts:ReturnType<typeof towers>,state:ReturnType<typeof filmState>) {
-  const at=(id:string,spread=.95)=>{const d=Math.abs(n-chapterIndex(id));return 1-smooth(.25,spread,d);};
-  const origins=smooth(.18,.85,n)*(1-smooth(2.4,4,n));
+  const at=(id:string,spread=.95)=>{const index=chapterIndex(id);if(index<0)return 0;const d=Math.abs(n-index);return 1-smooth(.25,spread,d);};
+  const origins=smooth(.05,.2,state.t)*(1-smooth(.5,1.4,state.t));
 
   const scale=isMobile()?.72:1;
   const stroke=(a:Point,b:Point,c:number[],opacity:number,bend=40)=>{
@@ -121,7 +114,7 @@ function drawMechanisms(n:number,points:Point[],ts:ReturnType<typeof towers>,sta
   }
   ctx.globalCompositeOperation='screen';
   // Hyperlinked pages rise from the pavilions, never enclosing their neighbors.
-  const web=at('open-web',1.2);
+  const web=at('packets',1.2);
   if(web>0){for(let i=0;i<9;i++){
     const p=points[i*3],r=13*scale,y=p.y-48*scale;
     ctx.save();ctx.translate(p.x,y);ctx.transform(1,-.15,.12,1,0,0);
@@ -131,7 +124,7 @@ function drawMechanisms(n:number,points:Point[],ts:ReturnType<typeof towers>,sta
     stroke({x:p.x,y},points[(i*3+6)%27],mint,web*.28,25);
   }}
   // Walled platforms grow around relationships that still use open roads.
-  const walls=smooth(3.4,4,n)*(1-smooth(5,6.2,n));
+  const walls=smooth(.8,1.4,state.t)*(1-smooth(1.7,2.1,state.t));
   if(walls>0){ts.forEach((tower,j)=>{
     const rx=(isMobile()?width*.15:width*.095),ry=rx*.28;
     for(let layer=0;layer<3;layer++){
@@ -180,7 +173,7 @@ function drawMechanisms(n:number,points:Point[],ts:ReturnType<typeof towers>,sta
     stroke({x:cx,y:cy+rx*.6},{x:ts[i].x,y:ts[i].y},c,publicSquare*.25,0);
   }}
   // AI multiplies reaching paths and draws small satellites into the center.
-  const reach=smooth(10.4,11.8,n)*(1-smooth(13,14.1,n));
+  const reach=smooth(2.5,3.2,state.t)*(1-smooth(3.7,4.5,state.t));
   if(reach>0){
     const crown={x:ts[2].x,y:ts[2].y-ts[2].h*.82};
     for(let i=0;i<points.length;i++){
@@ -194,10 +187,10 @@ function drawMechanisms(n:number,points:Point[],ts:ReturnType<typeof towers>,sta
 }
 
 function drawFederation(n:number,now:number) {
-  const start=chapterIndex('belong'),strength=smooth(start-.4,start+1.1,n);
+  const start=chapterIndex('sdk')-.9,strength=smooth(start-.4,start+1.1,n);
   if(strength<=0)return;
   const mature=smooth(chapterIndex('sdk'),chapterIndex('federation')+.5,n);
-  const map=(p:Point):Point=>isMobile()?{x:width*(.05+p.x*.9),y:height*(.20+p.y*.33)}:{x:width*(.40+p.x*.58),y:height*(.48+p.y*.45)};
+  const map=(p:Point):Point=>isMobile()?camera.point(.50+p.x*.19,.25+p.y*.30):camera.point(.40+p.x*.58,.48+p.y*.45);
   const hubs=HUBS.map(map),r=(isMobile()?19:34),demoId=demo?BEATS[demo.chapter].id:'';
   const demoProgress=demo&&(demoId==='remix'||demoId==='federation')?(quiet?1:clamp((now-demo.start)/3400)):0;
   const line=(a:Point,b:Point,alpha:number,weight=1)=>{
@@ -231,7 +224,7 @@ function drawFederation(n:number,now:number) {
     const size=r*(.83+(i%3)*.10),bloom=smooth(start-.3+i*.12,start+1.3+i*.1,n);
     // Translucent nested petals echo greenhouses and living seed heads.
     for(let j=0;j<5;j++){
-      const angle=j*2.3999632297+i*.4,rr=size/PHI**(j*.38);
+      const angle=j*2.3999632297+i*.4,rr=size/PHI**(j*.38)*(quiet?1:1+Math.sin(phase*.5+i+j*.8)*.015);
       ctx.save();ctx.translate(p.x,p.y);ctx.rotate(angle);ctx.scale(1,.55);
       ctx.beginPath();ctx.ellipse(rr*.26,0,rr,rr/PHI,0,0,Math.PI*2);
       ctx.fillStyle=color(mint,.028*bloom*strength);ctx.fill();ctx.strokeStyle=color(j%2?gold:mint,(.37-j*.035)*bloom*strength);ctx.lineWidth=.85;ctx.stroke();ctx.restore();
@@ -254,18 +247,49 @@ function drawFederation(n:number,now:number) {
   ctx.restore();
 }
 
+// A reusable soft texture keeps drifting mist inexpensive, even on wide screens.
+const mistTexture=document.createElement('canvas');mistTexture.width=512;mistTexture.height=128;
+const mistContext=mistTexture.getContext('2d')!;
+for(let i=0;i<22;i++){
+  const x=30+i*21,y=64+Math.sin(i*1.8)*17,r=25+Math.sin(i*.7)*9;
+  const g=mistContext.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,'rgba(201,225,215,.22)');g.addColorStop(1,'rgba(201,225,215,0)');mistContext.fillStyle=g;mistContext.fillRect(x-r,y-r,r*2,r*2);
+}
+function drawMist(t:number,foreground=false){
+  const layer=foreground?1:0;
+  ctx.save();
+  for(let i=0;i<5;i++){
+    const drift=quiet?0:Math.sin(phase*.022+i*1.7)*.045;
+    const p=camera.point(.12+i*.20+drift,.30+layer*.35+(i%3)*.075);
+    const w=camera.w*(.25+i*.025),h=w*(foreground?.09:.13);
+    ctx.globalAlpha=(foreground?.11:.20)*(1-filmState(t).darkness*.35);
+    ctx.drawImage(mistTexture,p.x-w/2,p.y-h/2,w,h);
+  }
+  ctx.restore();
+}
+function drawRiverLight(t:number){
+  const calm=1-filmState(t).darkness*.75;
+  ctx.save();ctx.globalCompositeOperation='screen';
+  for(let i=0;i<16;i++){
+    const y=.50+i*.014,x=.68-Math.sin(i*.25)*.035;
+    const p=camera.point(x,y),wave=quiet?.5:(Math.sin(phase*.55+i*1.7)+1)/2;
+    ctx.strokeStyle=color(gold,calm*(.035+wave*.055));ctx.lineWidth=.6;
+    ctx.beginPath();ctx.moveTo(p.x-camera.w*.006*(1+wave),p.y);ctx.lineTo(p.x+camera.w*.006*(1+wave),p.y);ctx.stroke();
+  }ctx.restore();
+}
+
 function draw(narrative:number,now:number) {
   const t=sceneAt(narrative);
+  camera=landscapeCamera(width,height,t);
   if(!ready)return;
   const state=filmState(t), mobile=isMobile(), points=PEOPLE.map(project), ts=towers(state);
   ctx.setTransform(ratio,0,0,ratio,0,0);ctx.fillStyle='#061e24';ctx.fillRect(0,0,width,height);
   ctx.save();
-  const zoom=1.035+.065*(1-smooth(0,1.2,t))+.035*smooth(2,3.2,t)*(1-smooth(4,5.4,t));
-  backdrop(assets.valley,zoom,Math.sin(t*.6)*width*.006,-state.growth*height*.008);
-  if(state.life>0){ctx.globalAlpha=state.life;backdrop(assets.commons,zoom,Math.sin(t*.6)*width*.006,-state.growth*height*.008);ctx.globalAlpha=1;}
+  backdrop(assets.valley);
+  if(state.life>0){ctx.globalAlpha=state.life;backdrop(assets.commons);ctx.globalAlpha=1;}
   // Continuous color-grade, shared by the scenery and composite architecture.
   ctx.fillStyle='rgba(2,20,28,'+( .26 + state.darkness*.46 - state.life*.12)+')';ctx.fillRect(0,0,width,height);
   const atmosphere=ctx.createLinearGradient(0,0,0,height);atmosphere.addColorStop(0,'rgba(2,21,29,'+(.22+state.darkness*.3)+')');atmosphere.addColorStop(.6,'rgba(3,36,37,0)');atmosphere.addColorStop(1,'rgba(1,20,22,.12)');ctx.fillStyle=atmosphere;ctx.fillRect(0,0,width,height);
+  drawMist(t);drawRiverLight(t);
   const netOpacity=state.network*(1-state.life*.9);
   const ink=mint.map((v,i)=>mix(v,gold[i],state.capture));
   ctx.save();ctx.globalCompositeOperation='screen';ctx.lineCap='round';
@@ -320,6 +344,7 @@ function draw(narrative:number,now:number) {
   if(bloom>0){ctx.save();ctx.globalCompositeOperation='screen';for(let i=0;i<9;i++){const end=points[(i*3+2)%points.length];const origin={x:ts[i%3].x,y:ts[i%3].y};const p=smooth(3.7+i*.065,4.65+i*.06,t);ctx.beginPath();ctx.moveTo(origin.x,origin.y);ctx.bezierCurveTo(origin.x+Math.sin(i*2)*width*.12,origin.y-height*.2*p,end.x,end.y-height*.20*p,end.x,end.y);ctx.strokeStyle=color(mint,bloom*.28);ctx.lineWidth=1.1;ctx.stroke();glow(end.x,end.y,18,mint,bloom*.28);}ctx.restore();}
   // Floating motes integrate the digital light into the atmosphere.
   if(!quiet){ctx.save();ctx.globalCompositeOperation='screen';for(let i=0;i<24;i++){const x=((i*.381966+Math.sin(phase*.035+i)*.025)%1)*width;const y=height*(.39+((i*.273+phase*.006)% .60));glow(x,y,1.3+(i%3),state.darkness>.7?gold:mint,.18);}ctx.restore();}
+  drawMist(t,true);
   drawFederation(narrative,now);
   if(demo)drawExchange(points,ts,state,now);
   ctx.restore();
@@ -384,7 +409,8 @@ function tick(now:number) {
 }
 function request(){if(!raf&&!document.hidden)raf=requestAnimationFrame(tick);}
 function measure(){
-  width=innerWidth;height=innerHeight;ratio=Math.min(devicePixelRatio||1,1.7);
+  // Bound the painted world on ultrawide displays; HTML type stays full resolution.
+  width=innerWidth;height=innerHeight;ratio=Math.min(devicePixelRatio||1,1.7,Math.sqrt(2_000_000/(width*height)));
   canvas.width=Math.round(width*ratio);canvas.height=Math.round(height*ratio);
   if(height < 430 && width < 600 && !reading) { autoReading=true; setReading(true); return; }
   if((height >= 430 || width >= 600) && autoReading) { autoReading=false; setReading(false); return; }
@@ -444,6 +470,6 @@ addEventListener('scroll',()=>{if(!reading)target=clamp(scrollY/Math.max(1,span)
 addEventListener('resize',measure);document.addEventListener('visibilitychange',request);
 addEventListener('hashchange',()=>{const i=BEATS.findIndex(b=>'#'+b.id===location.hash);if(i>=0)go(i);});
 setQuiet(quiet);measure();
-Promise.all(['valley','commons','citadel'].map(load)).then(()=>{ready=true;canvas.parentElement!.classList.add('ready');const legacy: Record<string,string>={credit:'sharing',open:'connection',peers:'connection',captured:'capture',flow:'extraction',freed:'reconnect',homes:'belong',groups:'belong',alive:'living',place:'living',unfinished:'future',techne:'future'};const hash=location.hash.slice(1);const index=BEATS.findIndex(b=>b.id===(legacy[hash]||hash));if(index>=0&&!reading)go(index);request();}).catch(()=>{setReading(true);});
+Promise.all(['valley','commons','citadel'].map(load)).then(()=>{ready=true;canvas.parentElement!.classList.add('ready');const legacy: Record<string,string>={'open-web':'packets',capture:'sharing',enclosure:'sharing',psyche:'extraction',livelihoods:'extraction',democracy:'extraction',moloch:'acceleration',choice:'reconnect',belong:'sdk',stewardship:'federation',fund:'future',credit:'sharing',open:'connection',peers:'connection',captured:'sharing',flow:'extraction',freed:'reconnect',homes:'sdk',groups:'sdk',alive:'living',place:'living',unfinished:'future',techne:'future'};const hash=location.hash.slice(1);const index=BEATS.findIndex(b=>b.id===(legacy[hash]||hash));if(index>=0&&!reading)go(index);request();}).catch(()=>{setReading(true);});
 document.fonts.ready.then(measure);
-(window as any).__film={state:()=>({progress,target,active,quiet,reading,ready,scene:sceneAt(progress),chapters:BEATS.length,people:PEOPLE.length,edges:RELATIONS.length,width,height}),go,freeze:()=>setQuiet(true)};
+(window as any).__film={state:()=>({progress,target,active,quiet,reading,ready,camera:{x:camera.x,y:camera.y,w:camera.w,h:camera.h},scene:sceneAt(progress),chapters:BEATS.length,people:PEOPLE.length,edges:RELATIONS.length,width,height}),go,freeze:()=>setQuiet(true)};

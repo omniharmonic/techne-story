@@ -24,7 +24,7 @@ html.reading .hero-shade, html:not(.js) .hero-shade { display: none; }
 .quiet-control:hover { color: var(--mint); }
 .beat { position: relative; min-height: 95svh; padding: 130px 7vw; }
 .copy { max-width: 680px; text-shadow: 0 2px 28px rgba(0,14,17,.32); }
-h1,h2 { margin: 0; font-weight: 300; font-size: clamp(52px, 6.65vw, 112px); line-height: .99; letter-spacing: -.052em; }
+h1,h2 { margin: 0; font-weight: 300; font-size: clamp(52px, 6.65vw, 96px); line-height: .99; letter-spacing: -.052em; }
 h1 span,h2 span { display: block; }
 .narration { max-width: 36ch; font-size: clamp(18px,1.43vw,22px); line-height: 1.5; color: #edf1e8; margin: 26px 0 0; text-wrap: pretty; }
 .js .beat { padding: 0; height: var(--scene-span); min-height: 0; }

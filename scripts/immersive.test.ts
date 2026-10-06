@@ -1,8 +1,9 @@
+import {landscapeCamera} from '../src/lib/camera.ts';
 import {PHI,HUBS,BRANCHES,FEDERATION_LINKS} from '../src/lib/federation.ts';
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {BEATS,LAST,sceneAt,PEOPLE,RELATIONS,filmState,route} from '../src/lib/immersive.ts';
-test('twenty-three distinct chapters with concise narration and deeper notes',()=>{assert.equal(BEATS.length,23);assert.equal(new Set(BEATS.map(b=>b.id)).size,23);for(const b of BEATS){assert.ok(b.body.split(/\s+/).length<48);assert.ok(b.note.length>50);}assert.equal(new Set(BEATS.map(b=>b.act)).size,5);});
+test('twelve distinct chapters with concise narration and deeper notes',()=>{assert.equal(BEATS.length,12);assert.equal(new Set(BEATS.map(b=>b.id)).size,12);for(const b of BEATS){assert.ok(b.body.split(/\s+/).length<48);assert.ok(b.note.length>50);}assert.equal(new Set(BEATS.map(b=>b.act)).size,5);});
 test('the approved opening remains intact',()=>{assert.equal(BEATS[0].title,'Another web\nis possible.');assert.equal(BEATS[0].body,'The internet began with a beautiful idea. People could connect directly. The network belonged to everyone.');assert.equal(sceneAt(0),0);});
 test('narrative-to-landscape mapping is continuous, monotonic and bounded',()=>{assert.equal(sceneAt(-1),0);assert.equal(sceneAt(100),7);let previous=0;for(let i=0;i<=LAST*100;i++){const scene=sceneAt(i/100);assert.ok(scene>=previous&&scene-previous<.02);previous=scene;}for(let i=0;i<BEATS.length;i++)assert.equal(sceneAt(i),BEATS[i].scene);});
 test('the film clock is bounded at both scroll extremes',()=>{assert.deepEqual(filmState(-10),filmState(0));assert.deepEqual(filmState(20),filmState(7));});
@@ -14,6 +15,8 @@ test('people and relationships are unique, connected, and stable',()=>{assert.eq
 test('route morphs preserve endpoints and put full capture through the gate',()=>{const a={x:10,y:80},b={x:200,y:130},g={x:160,y:50};for(let c=0;c<=1;c+=.01){const p=route(a,b,g,c,0),q=route(a,b,g,c,1);assert.ok(Math.hypot(p.x-a.x,p.y-a.y)<1e-8);assert.ok(Math.hypot(q.x-b.x,q.y-b.y)<1e-8);}assert.deepEqual(route(a,b,g,1,.5),g);assert.notDeepEqual(route(a,b,g,0,.5),g);});
 test('route morph is continuous rather than a replacement between scenes',()=>{const a={x:10,y:80},b={x:200,y:130},g={x:160,y:50};for(let c=0;c<1;c+=.01)for(let u=0;u<=1;u+=.05){const p=route(a,b,g,c,u),q=route(a,b,g,c+.01,u);assert.ok(Math.hypot(p.x-q.x,p.y-q.y)<3);}});
 
-test('the pitch distinguishes platform ownership and the Techne proposal',()=>{assert.ok(!BEATS.some(b=>b.id==='credit'));for(const id of ['sharing','sdk','remix','federation','fund'])assert.ok(BEATS.some(b=>b.id===id));assert.match(BEATS.find(b=>b.id==='sdk')!.note,/proof-of-concept/i);});
+test('the pitch distinguishes platform ownership and the Techne proposal',()=>{assert.ok(!BEATS.some(b=>b.id==='credit'));for(const id of ['sharing','sdk','remix','federation','future'])assert.ok(BEATS.some(b=>b.id===id));assert.match(BEATS.find(b=>b.id==='sdk')!.note,/proof-of-concept/i);});
 
 test('nested community geometry is finite and the federation has no mandatory central hub',()=>{assert.ok(Math.abs(PHI-1.618)<.001);assert.equal(BRANCHES.length,15);assert.equal(BRANCHES.flatMap(b=>b.leaves).length,75);for(const point of [...HUBS,...BRANCHES.flatMap(b=>[b.branch,...b.leaves])])assert.ok(Number.isFinite(point.x)&&Number.isFinite(point.y));for(let h=0;h<HUBS.length;h++)assert.ok(FEDERATION_LINKS.filter(e=>e.includes(h)).length>=2);});
+
+test('landscape anchors share the exact image transform at every viewport',()=>{for(const [w,h] of [[390,844],[1440,900],[1920,1080],[2560,1440],[3440,1440]])for(const t of [0,1.8,3.25,6.4]){const c=landscapeCamera(w,h,t);assert.ok(c.w>=w&&c.h>=h);for(const [u,v]of [[.59,.74],[.745,.89],[.68,.5]]){const p=c.point(u,v);assert.ok(Math.abs((p.x-c.x)/c.w-u)<1e-12);assert.ok(Math.abs((p.y-c.y)/c.h-v)<1e-12);}}});

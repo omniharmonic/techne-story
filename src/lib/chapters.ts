@@ -1,6 +1,9 @@
-/** Main narration stays brief; chapter notes hold mechanisms, evidence and limits. */
+/** Concise screen narration; evidence and qualifications live in chapter notes. */
 export const SOURCES = {
-  enshittification: { title: "Cory Doctorow · Enshittification", url: "https://pluralistic.net/2023/01/21/potemkin-ai/" },
+  "enshittification": {
+    "title": "Cory Doctorow · Enshittification",
+    "url": "https://pluralistic.net/2023/01/21/potemkin-ai/"
+  },
   "internet": {
     "title": "Internet Society · A brief history, by its builders",
     "url": "https://www.internetsociety.org/internet/history-internet/brief-history-internet/"
@@ -63,64 +66,24 @@ export const BEATS: Chapter[] = [
     "id": "packets",
     "act": "Origins",
     "chapter": "Networks of networks",
-    "title": "No single center.\nMany ways through.",
-    "body": "Messages became packets of light. Separate networks learned a shared language. A university, a laboratory, a person at home: different worlds could finally reach one another.",
-    "scene": 0.2,
+    "title": "A network anyone\ncould build on.",
+    "body": "Shared protocols connected independent networks. The Web let anyone publish a page and link to someone else’s. People could build useful things without asking a platform for permission.",
+    "scene": 0.35,
     "action": "Send a packet",
     "mechanism": "Independent networks · shared rules",
-    "note": "Packets are pieces of data, not literal light in every medium. TCP/IP lets networks interoperate without requiring identical hardware or a single operator. Routes can change; delivery still depends on working infrastructure. The illustration compresses decades of development into a landscape of connected places.",
-    "sources": [
-      "internet"
-    ]
-  },
-  {
-    "id": "open-web",
-    "act": "Origins",
-    "chapter": "The open Web",
-    "title": "A link was\nan open door.",
-    "body": "Then came the Web. Pages linked to pages. People published, discovered, and built on each other’s work. In 1993, CERN released the Web software into the public domain. Permission was no longer the starting point.",
-    "scene": 0.42,
-    "action": "",
-    "mechanism": "Publish · link · discover",
-    "note": "The Web is one service on the internet, not the internet itself. Its shared conventions let independently hosted pages link across organizations. Open publishing did not remove inequalities of access, hosting costs or moderation needs; it widened who could build.",
-    "sources": [
-      "web"
-    ]
-  },
-  {
-    "id": "capture",
-    "act": "Enclosure",
-    "chapter": "The convenient middle",
-    "title": "Then the middle\nmoved in.",
-    "body": "Search helped us find. Social feeds helped us gather. Marketplaces helped us trade. Useful services became the places everyone needed to be. Each new arrival made the center more valuable.",
-    "scene": 0.88,
-    "action": "",
-    "mechanism": "More people → more reasons to stay",
-    "note": "Network effects can create real value: a service is often more useful when others participate. The problem arises when that value is difficult to carry elsewhere. This chapter is a model of platform dependence, not a claim that every large service has the same business model.",
-    "sources": []
-  },
-  {
-    "id": "enclosure",
-    "act": "Enclosure",
-    "chapter": "Relationships behind walls",
-    "title": "Open roads.\nPrivate gates.",
-    "body": "The roads stayed open. The relationships moved behind gates. Facebook mediated our social graph; other platforms did the same for trade and travel. The connections were between us. Control over reaching one another belonged to the platform.",
-    "scene": 1.35,
-    "action": "",
-    "mechanism": "The network stays open. The relationship gets enclosed.",
-    "note": "A social graph records relationships between people. Platforms can control access to those records, visibility and discovery without literally owning a friendship. The internet’s open transport layer does not guarantee that applications will make those relationships portable. Enclosure happens through design, contracts, defaults and data access.",
+    "note": "Packets are pieces of data, not literal light in every medium. TCP/IP lets networks interoperate without requiring identical hardware or a single operator. Routes can change; delivery still depends on working infrastructure. The illustration compresses decades of development into a landscape of connected places. The Web is one service on the internet, not the internet itself. Its shared conventions let independently hosted pages link across organizations. Open publishing did not remove inequalities of access, hosting costs or moderation needs; it widened who could build.",
     "sources": [
       "internet",
-      "protocol"
+      "web"
     ]
   },
   {
     "id": "sharing",
     "act": "Enclosure",
     "chapter": "The sharing promise",
-    "title": "The value was\nalready between us.",
-    "body": "A spare room. A seat in a car. The sharing economy promised to unlock what people already had. Hosts, drivers, guests, and riders made the network valuable. The platform became the gate through which they met.",
-    "scene": 1.55,
+    "title": "We brought\nthe value.",
+    "body": "Hosts brought the rooms. Drivers brought the cars. We brought our friendships. Airbnb, Uber, and Facebook made those networks easier to use—then controlled the gates through which we reached one another.",
+    "scene": 1.1,
     "action": "",
     "mechanism": "People supply the assets. Relationships create the value.",
     "note": "Airbnb and Uber describe networks in which participants attract one another. Their services also contribute discovery, coordination, payments and trust mechanisms. The distinction is between creating a useful service and controlling access to the network that participants sustain. These are examples of platform enclosure, not a claim that every company is legally a monopoly.",
@@ -133,8 +96,8 @@ export const BEATS: Chapter[] = [
     "id": "growth",
     "act": "Enclosure",
     "chapter": "Enshittification",
-    "title": "Our network.\nSomeone else’s return.",
-    "body": "Attract people. Make leaving hard. Then give them less and charge them more. This is enshittification: a valuable network becomes a machine for extracting returns from the people who sustain it.",
+    "title": "Then the terms\nchanged.",
+    "body": "Investors expected returns. Once leaving became costly, platforms could raise fees, sell access, and give us less. That is enshittification: extracting more from the people who make the network valuable.",
     "scene": 1.8,
     "action": "",
     "mechanism": "Investment → enclosure → recurring extraction",
@@ -149,53 +112,14 @@ export const BEATS: Chapter[] = [
     "id": "extraction",
     "act": "The human cost",
     "chapter": "The attention market",
-    "title": "Our attention.\nTheir empire.",
-    "body": "A pause. A click. One more minute. Advertising turns these traces into predictions about what will hold us. The better the system gets at keeping us here, the more attention it can sell.",
-    "scene": 2,
+    "title": "The cost goes\nbeyond the fee.",
+    "body": "Ad-funded feeds compete for our attention. Their rankings shape what we notice, how businesses reach customers, and which voices get heard. Decisions made to increase engagement spill into our lives and our politics.",
+    "scene": 2.4,
     "action": "Trace an exchange",
     "mechanism": "Watch → predict → rank → sell",
-    "note": "The FTC’s 2024 study documented extensive data collection and monetization across major social and video services. Ad-funded models can reward engagement and targeting. The gold flowing inward represents captured value; it is not a literal transaction record or a measurement of any one company.",
+    "note": "The FTC’s 2024 study documented extensive data collection and monetization across major social and video services. Ad-funded models can reward engagement and targeting. The gold flowing inward represents captured value; it is not a literal transaction record or a measurement of any one company. Algorithms shape exposure, but polarization has many causes. In a 2023 Facebook experiment, reducing like-minded content did not measurably reduce political polarization. The chapter’s argument concerns private control of public visibility; the divided light is a metaphor, not evidence that algorithms alone divide society.",
     "sources": [
-      "surveillance"
-    ]
-  },
-  {
-    "id": "psyche",
-    "act": "The human cost",
-    "chapter": "The inner world",
-    "title": "The feed enters\nour inner world.",
-    "body": "Comparison follows us home. Interruptions fracture the day. A system tuned for return visits can pull against sleep, attention, and the slow work of belonging. Connection is real. So is the cost of never quite leaving.",
-    "scene": 2.2,
-    "action": "",
-    "mechanism": "A person’s rhythm. A platform’s rhythm.",
-    "note": "Effects differ across people, platforms and uses. A randomized Facebook deactivation study found improved subjective well-being and more offline activity, but also less factual news knowledge. That result is not a diagnosis of every user or proof that all online connection is harmful.",
-    "sources": [
-      "wellbeing"
-    ]
-  },
-  {
-    "id": "livelihoods",
-    "act": "The human cost",
-    "chapter": "Life at the gate",
-    "title": "A livelihood\non borrowed ground.",
-    "body": "Creators need reach. Shops need discovery. Communities need a place to meet. When one gate controls the way in, a changed ranking or rising fee can reshape a life far beyond the screen.",
-    "scene": 2.36,
-    "action": "",
-    "mechanism": "Those who make the value do not always set the terms.",
-    "note": "This is the economic risk of dependence on an intermediary. A seller may own their products while a platform controls discovery; a creator may make the work while a platform controls distribution. The illustration shows unequal bargaining power, not a quantitative estimate of platform fees or income loss.",
-    "sources": []
-  },
-  {
-    "id": "democracy",
-    "act": "The human cost",
-    "chapter": "The shared world",
-    "title": "A public square.\nA private control room.",
-    "body": "The same machinery helps decide what becomes visible, whose voice travels, and which conflicts fill the day. Democracy needs shared attention. Its conditions are increasingly shaped by systems the public does not govern.",
-    "scene": 2.52,
-    "action": "",
-    "mechanism": "Who sets the conditions for being heard?",
-    "note": "Algorithms shape exposure, but polarization has many causes. In a 2023 Facebook experiment, reducing like-minded content did not measurably reduce political polarization. The chapter’s argument concerns private control of public visibility; the divided light is a metaphor, not evidence that algorithms alone divide society.",
-    "sources": [
+      "surveillance",
       "politics"
     ]
   },
@@ -203,80 +127,41 @@ export const BEATS: Chapter[] = [
     "id": "acceleration",
     "act": "Acceleration",
     "chapter": "The machine eye",
-    "title": "The race\ngets a mind.",
-    "body": "Now AI can generate the message, predict the response, and repeat the experiment at scale. Put that capacity inside an extraction machine, and the machine gains new ways to reach into our lives.",
-    "scene": 2.95,
+    "title": "AI accelerates\nthe same bargain.",
+    "body": "AI can generate content, predict responses, and automate persuasion. When those capabilities serve extraction, the pressure reaches further. We call that competitive trap Moloch: each company races to capture more because the others will.",
+    "scene": 3.25,
     "action": "",
     "mechanism": "Generate → predict → adapt → repeat",
-    "note": "This is a conditional scenario, not an assertion that all AI is used this way. The FTC’s AI partnership study identifies concentration risks around cloud access, contractual commitments and privileged information. AI can also support science, creativity and public benefit. Ownership and incentives help determine the direction.",
+    "note": "This is a conditional scenario, not an assertion that all AI is used this way. The FTC’s AI partnership study identifies concentration risks around cloud access, contractual commitments and privileged information. AI can also support science, creativity and public benefit. Ownership and incentives help determine the direction. Moloch is a metaphor for destructive competitive incentives, not a literal entity or a theory that firms secretly coordinate. The reaching tendrils dramatize a risk: AI capacity and control of infrastructure reinforcing each other. This future is neither certain nor unavoidable.",
     "sources": [
       "ai"
     ]
-  },
-  {
-    "id": "moloch",
-    "act": "Acceleration",
-    "chapter": "The race for everything",
-    "title": "When enough\nis never enough.",
-    "body": "More data. More compute. More territory. Each giant races because the others are racing. This is Moloch: a system that can push its participants to sacrifice the world they all depend on.",
-    "scene": 3.35,
-    "action": "",
-    "mechanism": "The pressure to win can outrun the reason to build.",
-    "note": "Moloch is a metaphor for destructive competitive incentives, not a literal entity or a theory that firms secretly coordinate. The reaching tendrils dramatize a risk: AI capacity and control of infrastructure reinforcing each other. This future is neither certain nor unavoidable.",
-    "sources": [
-      "ai"
-    ]
-  },
-  {
-    "id": "choice",
-    "act": "A living web",
-    "chapter": "The choice",
-    "title": "The rules\ncan be remade.",
-    "body": "The value still lives between us. People can build places to meet, trade, and care for one another—and own the tools together. Connect those places, and small communities gain a way to stand against the giants.",
-    "scene": 3.88,
-    "action": "",
-    "mechanism": "Change the incentives. Change what grows.",
-    "note": "Open technology is one part of the response. Competition policy, privacy protections, public investment, accountable moderation and cooperative ownership address different parts of the problem. The story proposes combining these approaches; no single protocol guarantees a democratic economy.",
-    "sources": []
   },
   {
     "id": "reconnect",
     "act": "A living web",
     "chapter": "Direct relationships",
-    "title": "A different web\nstarts between us.",
-    "body": "A ride. A shared tool. A meal grown nearby. Community-owned apps can help people find each other and exchange locally. Value circulates through relationships of reciprocity, instead of always leaving the place that created it.",
-    "scene": 4.4,
+    "title": "Own the tools\nyou depend on.",
+    "body": "A cooperative can run the services its members need: a calendar, a tool library, a local exchange. Members decide the rules and where the surplus goes. Their relationships become the reason to maintain the service.",
+    "scene": 4.3,
     "action": "Send a spark",
     "mechanism": "Give · receive · share onward",
-    "note": "Peer relationships do not require every device to connect directly to every other device. Servers can still help. The goal is to reduce compulsory dependence on one owner and give people meaningful choice over how they connect. The returning light illustrates reciprocity, not a promised financial return.",
+    "note": "These are design proposals, not claims that every cooperative succeeds. Communities need budgets, accountable decisions, moderation and safe ways to leave. Different groups can choose different arrangements while remaining able to exchange across their boundaries. The circles represent stewardship rather than new walls. Peer relationships do not require every device to connect directly to every other device. Servers can still help. The goal is to reduce compulsory dependence on one owner and give people meaningful choice over how they connect. The returning light illustrates reciprocity, not a promised financial return.",
     "sources": []
-  },
-  {
-    "id": "belong",
-    "act": "A living web",
-    "chapter": "The freedom to leave",
-    "title": "Take your identity.\nKeep your people.",
-    "body": "AT Protocol provides a shared foundation for portable identity and data. Techne builds on that possibility: community-owned tools that can work together, so leaving a giant need not mean starting again alone.",
-    "scene": 5.05,
-    "action": "",
-    "mechanism": "Portable identity · interoperable tools",
-    "note": "AT Protocol is one example: it separates hosting, identity and applications in a federated server architecture. It is not device-to-device networking. Successful migration still depends on keys, data and available services. Portability helps make exit possible; it does not eliminate concentration or governance problems.",
-    "sources": [
-      "protocol"
-    ]
   },
   {
     "id": "sdk",
     "act": "A living web",
     "chapter": "The Techne layer",
-    "title": "Local apps.\nA shared way through.",
-    "body": "The Techne SDK is our proposed distribution layer for community-owned apps. Building on AT Protocol, it helps local tools speak a common language and reach connected communities. Each app can join a network larger than itself.",
-    "scene": 5.22,
+    "title": "Local apps,\nshared reach.",
+    "body": "The Techne SDK is our proposed distribution layer for community-owned apps. It extends AT Protocol’s shared foundation so compatible tools can exchange information and reach connected communities. Each community can build without starting its network from zero.",
+    "scene": 5.05,
     "action": "",
     "mechanism": "AT Protocol → shared app language → community distribution",
-    "note": "This is proof-of-concept storytelling. Techne’s approach adds companion services, or sidecars, and its own lexicons alongside community lexicons. Shared records let compatible apps understand the same events, offers or resources. Distribution means helping communities discover and use these tools. These illustrations describe the intended architecture, not verified deployment or adoption.",
+    "note": "This is proof-of-concept storytelling. Techne’s approach adds companion services, or sidecars, and its own lexicons alongside community lexicons. Shared records let compatible apps understand the same events, offers or resources. Distribution means helping communities discover and use these tools. These illustrations describe the intended architecture, not verified deployment or adoption. AT Protocol is one example: it separates hosting, identity and applications in a federated server architecture. It is not device-to-device networking. Successful migration still depends on keys, data and available services. Portability helps make exit possible; it does not eliminate concentration or governance problems.",
     "sources": [
-      "lexicons"
+      "lexicons",
+      "protocol"
     ]
   },
   {
@@ -284,8 +169,8 @@ export const BEATS: Chapter[] = [
     "act": "A living web",
     "chapter": "Make it your own",
     "title": "Remix the app.\nKeep the connection.",
-    "body": "With AI-assisted “vibe coding,” a community can adapt a calendar, exchange, or tool library to its own needs. Keep the shared language intact, and local differences can flourish while the apps still talk to each other.",
-    "scene": 5.43,
+    "body": "AI-assisted “vibe coding” lets a community adapt an app to local needs. Techne’s shared building blocks would help those variations remain compatible. A different interface need not become another closed network.",
+    "scene": 5.45,
     "action": "Remix a local app",
     "mechanism": "Different local tools · compatible shared records",
     "note": "AI assistance can lower the effort of making software. It does not automatically make code safe, accessible or interoperable. The proposal pairs reusable building blocks with review and compatibility checks. A local remix must preserve agreed record formats, permissions and behavior to remain connected. No production-ready SDK or one-click guarantee is implied.",
@@ -294,24 +179,12 @@ export const BEATS: Chapter[] = [
     ]
   },
   {
-    "id": "stewardship",
-    "act": "A living web",
-    "chapter": "Belonging takes work",
-    "title": "Small enough\nto care for.",
-    "body": "When members own the platform, its purpose can follow the place: useful exchange, shared care, a thriving local economy. Decisions and surplus can serve the people doing the work—and the living systems they depend on.",
-    "scene": 5.65,
-    "action": "",
-    "mechanism": "Shared rules · shared upkeep · a real voice",
-    "note": "These are design proposals, not claims that every cooperative succeeds. Communities need budgets, accountable decisions, moderation and safe ways to leave. Different groups can choose different arrangements while remaining able to exchange across their boundaries. The circles represent stewardship rather than new walls.",
-    "sources": []
-  },
-  {
     "id": "federation",
     "act": "A living web",
     "chapter": "Many small centers",
-    "title": "Small together\nbecomes powerful.",
-    "body": "Cooperatives connect across neighborhoods and watersheds. Local ownership. Shared reach. Together, useful alternatives let people leave the giants without leaving one another.",
-    "scene": 5.98,
+    "title": "Communities grow\nstronger together.",
+    "body": "A neighborhood cooperative connects with others across its watershed. People share services and knowledge while keeping local ownership. As this federation becomes useful, leaving a giant no longer has to mean leaving everyone behind.",
+    "scene": 5.9,
     "action": "Connect the communities",
     "mechanism": "Local ownership · shared reach · network effects that accumulate",
     "note": "This is the David-and-Goliath strategy: combine locally accountable platforms into an interoperable federation. Communities remain distinct; compatible services and consented information can travel between them. Nested circles show social scales, not mandatory administrative layers in AT Protocol. Collective adoption is a goal, not a guaranteed outcome.",
@@ -321,37 +194,25 @@ export const BEATS: Chapter[] = [
     "id": "living",
     "act": "A living web",
     "chapter": "Life beyond the screen",
-    "title": "A web in service\nof life.",
-    "body": "Tools shared. Gardens tended. Neighbors finding each other. Local value circulates through workshops, food cooperatives, and ecovillages. These living networks nest and connect: a web that grows by nourishing the places within it.",
-    "scene": 6.3,
+    "title": "Value stays\nclose to home.",
+    "body": "A borrowed tool. Work for a neighbor. Food from a nearby farm. The apps support exchanges that sustain local livelihoods and ecosystems. The network grows through reciprocity, with each place connected to a wider whole.",
+    "scene": 6.4,
     "action": "Follow the exchange",
     "mechanism": "From connection to community to place",
     "note": "The valley is an imagined possibility. Digital tools do not create housing, ecological restoration or trust by themselves. They can help people coordinate real work, share resources and learn across places. The measure of success is what becomes possible beyond the interface.",
     "sources": []
   },
   {
-    "id": "fund",
-    "act": "A living web",
-    "chapter": "What funding makes possible",
-    "title": "Fund the ground\nwe share.",
-    "body": "AI makes more apps possible. A shared foundation lets them grow together. Funding Techne would support the SDK, compatible app patterns, and community pilots—so each local experiment can strengthen an open alternative to platform enclosure.",
-    "scene": 6.68,
-    "action": "",
-    "mechanism": "Shared tools → local pilots → reusable learning → wider participation",
-    "note": "This is an invitation to fund development and learning, not an investment-return promise. The proposed priorities are shared tooling, interoperability checks, usable community applications and support for early adopters. Specific budgets, milestones and partners should be agreed with prospective funders. Open protocols, policy and other initiatives are complementary; this is a case for Techne’s contribution, not proof that it is the only possible response.",
-    "sources": []
-  },
-  {
     "id": "future",
     "act": "A living web",
-    "chapter": "Techne",
-    "title": "The future is\nsomething we make.",
-    "body": "Techne is the craft of shaping tools—and choosing what they serve. Help communities build, own, and connect the technology of a living web.",
+    "chapter": "Fund the work",
+    "title": "Help build\nthe living web.",
+    "body": "Funding Techne would support the SDK, compatible app patterns, and community pilots. Help us test a practical alternative: technology that communities can own, adapt, and connect.",
     "scene": 7,
     "action": "",
     "mechanism": "",
-    "note": "The invitation is to help develop and test this shared foundation with communities. The SDK and federated community applications shown here are a proof-of-concept vision. Contact Techne to discuss funding, pilots or collaboration.",
+    "note": "This is an invitation to fund development and learning, not an investment-return promise. The proposed priorities are shared tooling, interoperability checks, usable community applications and support for early adopters. Specific budgets, milestones and partners should be agreed with prospective funders. Open protocols, policy and other initiatives are complementary; this is a case for Techne’s contribution, not proof that it is the only possible response.",
     "sources": []
   }
 ];
-export const LAST = BEATS.length - 1;
+export const LAST = BEATS.length-1;

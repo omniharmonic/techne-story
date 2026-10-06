@@ -1,17 +1,16 @@
-# Techne federation release — 2026-10-06
+# Techne polish release — 2026-10-06
 
-The opening and its contrast gradient are preserved. Twenty-three chapters now connect platform enclosure and investor returns to a proof-of-concept Techne distribution layer, community app remixing, federated ownership and local reciprocity. The debt-money detour is removed.
+The approved opening and contrast gradient are preserved. Twelve chapters replace twenty-three, retaining platform enclosure, enshittification, AI acceleration, the proposed Techne SDK, local remixing, cooperative federation and the funding invitation. Repeated arguments move into the supporting notes.
 
-- Production build passed.
-- 13 narrative, geometry and timeline tests passed.
-- 75 browser checks passed, 0 failed.
-- All chapters checked at 1440×900, 820×1180, 390×844, 320×740 and 844×390.
-- Six demonstrations, all 21 chapter notes, source counts and focus return passed. Reading modes, reduced motion, no-JavaScript content, reflow, deep links and Markdown download passed.
-- Frame interval: 17.4ms p95 in local Chromium; 0 samples above 50ms.
-- Compressed production upper bound: 994435 bytes, including 15609 bytes of JavaScript. No additional raster artwork.
+- Production build passed; 14 narrative, geometry and timeline tests passed.
+- 59 browser checks passed, 0 failed.
+- Every chapter checked at 320×740, 390×844, 820×1180, 844×390, 1440×900, 1920×1080, 2560×1440 and 3440×1440.
+- Six exchanges, ten chapter notes and their sources, keyboard focus, reading modes, reduced motion, no-JavaScript content, reflow, deep links, reverse navigation and Markdown download passed.
+- Scroll frame interval: 19.1ms p95 in local Chromium; no samples above 50ms. Separate ultrawide ambient test: 28ms p95, visible movement, identical quiet-mode frames.
+- Compressed production upper bound: 991471 bytes, including 14214 bytes of JavaScript; no new raster payload.
 
-Visual review covered sharing-economy assets, SDK/remix chapters, nested community networks and the funding invitation on desktop and phone. A desktop footer overlap in the federation chapter was fixed by tightening its prose; the full suite then passed. The finale uses five peer hubs, fifteen branches and seventy-five leaves scaled by phi; early relay pavilions no longer recur there.
+Scenery and primary animation anchors now share one artwork-space camera. Tower scaling preserves the central tower's hierarchy on ultrawide displays. Drifting mist, river glints and softly breathing community branches add continuous motion. Canvas painting is capped at two million pixels; native HTML text remains sharp. Large headings cap at 96px after QA caught wrapping at 1920×1080.
 
-The SDK is presented as a proposed architecture, not a released product or verified adoption claim. Fundraising links open an email conversation; no amounts or returns are promised. Platform examples are not labelled blanket legal monopolies or current private-equity holdings.
+Visual review covered ultrawide tower hierarchy, mobile commons, the opening and the integrated atmosphere. The proposed SDK remains a proof of concept; no adoption or funding outcomes are asserted. Fundraising opens an email conversation.
 
-Safari, VoiceOver and physical low-end devices remain untested. Automated checks do not establish subjective aesthetic quality.
+Safari, VoiceOver and physical low-end devices remain untested. Local performance is not a guarantee for every device, and automated checks do not establish subjective aesthetic quality.

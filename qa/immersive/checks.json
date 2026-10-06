@@ -1,7 +1,7 @@
 {
-  "date": "2026-10-06T21:37:31.122Z",
+  "date": "2026-10-06T23:22:51.552Z",
   "url": "http://127.0.0.1:4321/techne-story/",
-  "passed": 75,
+  "passed": 59,
   "failed": 0,
   "results": [
     {
@@ -31,8 +31,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
+            "camera": {
+              "x": -159.53241232731114,
+              "y": -44.999999999999886,
+              "w": 1759.0648246546223,
+              "h": 989.9999999999998
+            },
             "scene": 0,
-            "chapters": 23,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 1440,
@@ -63,8 +69,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 0.2,
-            "chapters": 23,
+            "camera": {
+              "x": -147.04660561074238,
+              "y": -46.67579641113279,
+              "w": 1737.6953982908253,
+              "h": 977.9733072916666
+            },
+            "scene": 0.35,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 1440,
@@ -95,8 +107,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 0.42,
-            "chapters": 23,
+            "camera": {
+              "x": -103.28531740567998,
+              "y": -27.753385416666635,
+              "w": 1657.1652940134609,
+              "h": 932.6510416666666
+            },
+            "scene": 1.1,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 1440,
@@ -127,8 +145,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 0.88,
-            "chapters": 23,
+            "camera": {
+              "x": -99.93992705648431,
+              "y": -27.73152944606414,
+              "w": 1655.1200850159405,
+              "h": 931.5
+            },
+            "scene": 1.8,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 1440,
@@ -148,7 +172,7 @@
             106.546875,
             225,
             846.546875,
-            717.9375
+            833.9375
           ],
           "textInside": true,
           "overflow": 0,
@@ -159,8 +183,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 1.35,
-            "chapters": 23,
+            "camera": {
+              "x": -106.24924443414592,
+              "y": -38.082847424684125,
+              "w": 1669.6308891250442,
+              "h": 939.6666666666666
+            },
+            "scene": 2.4,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 1440,
@@ -180,7 +210,7 @@
             106.546875,
             225,
             846.546875,
-            717.9375
+            748.828125
           ],
           "textInside": true,
           "overflow": 0,
@@ -191,8 +221,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 1.55,
-            "chapters": 23,
+            "camera": {
+              "x": -127.51895278075119,
+              "y": -60.74999999999991,
+              "w": 1711.0903294367693,
+              "h": 962.9999999999999
+            },
+            "scene": 3.25,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 1440,
@@ -212,7 +248,7 @@
             106.546875,
             225,
             846.546875,
-            812.734375
+            833.9375
           ],
           "textInside": true,
           "overflow": 0,
@@ -223,8 +259,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 1.8,
-            "chapters": 23,
+            "camera": {
+              "x": -127.63969737505805,
+              "y": -57.58852040816316,
+              "w": 1704.4815979526772,
+              "h": 959.2806122448978
+            },
+            "scene": 4.3,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 1440,
@@ -244,7 +286,7 @@
             106.546875,
             225,
             846.546875,
-            803.046875
+            779.71875
           ],
           "textInside": true,
           "overflow": 0,
@@ -255,8 +297,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 2,
-            "chapters": 23,
+            "camera": {
+              "x": -110.97055718309475,
+              "y": -38.1585937499999,
+              "w": 1663.8654357066948,
+              "h": 936.4218749999999
+            },
+            "scene": 5.05,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 1440,
@@ -276,7 +324,7 @@
             106.546875,
             225,
             846.546875,
-            717.9375
+            833.9375
           ],
           "textInside": true,
           "overflow": 0,
@@ -287,8 +335,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 2.2,
-            "chapters": 23,
+            "camera": {
+              "x": -108.66643567123177,
+              "y": -33.975,
+              "w": 1655.1200850159405,
+              "h": 931.5
+            },
+            "scene": 5.45,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 1440,
@@ -308,7 +362,7 @@
             106.546875,
             225,
             846.546875,
-            687.046875
+            833.9375
           ],
           "textInside": true,
           "overflow": 0,
@@ -319,8 +373,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 2.36,
-            "chapters": 23,
+            "camera": {
+              "x": -110.9119384389868,
+              "y": -33.975,
+              "w": 1655.1200850159405,
+              "h": 931.5
+            },
+            "scene": 5.9,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 1440,
@@ -340,7 +400,7 @@
             106.546875,
             225,
             846.546875,
-            812.734375
+            833.9375
           ],
           "textInside": true,
           "overflow": 0,
@@ -351,8 +411,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 2.52,
-            "chapters": 23,
+            "camera": {
+              "x": -113.11555163931602,
+              "y": -33.975,
+              "w": 1655.1200850159405,
+              "h": 931.5
+            },
+            "scene": 6.4,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 1440,
@@ -372,7 +438,7 @@
             106.546875,
             225,
             846.546875,
-            687.046875
+            704.484375
           ],
           "textInside": true,
           "overflow": 0,
@@ -383,360 +449,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 2.95,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 1440,
-            "height": 900
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 12,
-          "canvas": [
-            0,
-            0,
-            1440,
-            900
-          ],
-          "copy": [
-            106.546875,
-            225,
-            846.546875,
-            687.046875
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 12,
-            "target": 12,
-            "active": 12,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 3.35,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 1440,
-            "height": 900
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 13,
-          "canvas": [
-            0,
-            0,
-            1440,
-            900
-          ],
-          "copy": [
-            106.546875,
-            225,
-            846.546875,
-            717.9375
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 13,
-            "target": 13,
-            "active": 13,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 3.88,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 1440,
-            "height": 900
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 14,
-          "canvas": [
-            0,
-            0,
-            1440,
-            900
-          ],
-          "copy": [
-            106.546875,
-            225,
-            846.546875,
-            833.9375
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 14,
-            "target": 14,
-            "active": 14,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 4.4,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 1440,
-            "height": 900
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 15,
-          "canvas": [
-            0,
-            0,
-            1440,
-            900
-          ],
-          "copy": [
-            106.546875,
-            225,
-            846.546875,
-            717.9375
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 15,
-            "target": 15,
-            "active": 15,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 5.05,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 1440,
-            "height": 900
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 16,
-          "canvas": [
-            0,
-            0,
-            1440,
-            900
-          ],
-          "copy": [
-            106.546875,
-            225,
-            846.546875,
-            812.734375
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 16,
-            "target": 16,
-            "active": 16,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 5.22,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 1440,
-            "height": 900
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 17,
-          "canvas": [
-            0,
-            0,
-            1440,
-            900
-          ],
-          "copy": [
-            106.546875,
-            225,
-            846.546875,
-            833.9375
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 17,
-            "target": 17,
-            "active": 17,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 5.43,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 1440,
-            "height": 900
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 18,
-          "canvas": [
-            0,
-            0,
-            1440,
-            900
-          ],
-          "copy": [
-            106.546875,
-            225,
-            846.546875,
-            717.9375
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 18,
-            "target": 18,
-            "active": 18,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 5.65,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 1440,
-            "height": 900
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 19,
-          "canvas": [
-            0,
-            0,
-            1440,
-            900
-          ],
-          "copy": [
-            106.546875,
-            225,
-            846.546875,
-            803.046875
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 19,
-            "target": 19,
-            "active": 19,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 5.98,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 1440,
-            "height": 900
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 20,
-          "canvas": [
-            0,
-            0,
-            1440,
-            900
-          ],
-          "copy": [
-            106.546875,
-            225,
-            846.546875,
-            833.9375
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 20,
-            "target": 20,
-            "active": 20,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 6.3,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 1440,
-            "height": 900
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 21,
-          "canvas": [
-            0,
-            0,
-            1440,
-            900
-          ],
-          "copy": [
-            106.546875,
-            225,
-            846.546875,
-            748.828125
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 21,
-            "target": 21,
-            "active": 21,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 6.68,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 1440,
-            "height": 900
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 22,
-          "canvas": [
-            0,
-            0,
-            1440,
-            900
-          ],
-          "copy": [
-            106.546875,
-            225,
-            846.546875,
-            673.59375
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 22,
-            "target": 22,
-            "active": 22,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
+            "camera": {
+              "x": -115.09045718162365,
+              "y": -33.975,
+              "w": 1655.1200850159405,
+              "h": 931.5
+            },
             "scene": 7,
-            "chapters": 23,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 1440,
@@ -748,6 +468,1404 @@
     },
     {
       "name": "1440×900: one canvas throughout",
+      "pass": true
+    },
+    {
+      "name": "1920×1080: full-bleed world, clear text, no panels or overflow at every beat",
+      "pass": true,
+      "detail": [
+        {
+          "i": 0,
+          "canvas": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "copy": [
+            480,
+            270,
+            1440,
+            655.65625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 0,
+            "target": 0,
+            "active": 0,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "camera": {
+              "x": -96,
+              "y": -54.31578947368416,
+              "w": 2112,
+              "h": 1188.6315789473683
+            },
+            "scene": 0,
+            "chapters": 12,
+            "people": 27,
+            "edges": 41,
+            "width": 1920,
+            "height": 1080
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 1,
+          "canvas": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "copy": [
+            142.078125,
+            270,
+            882.078125,
+            859.0625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 1,
+            "target": 1,
+            "active": 1,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "camera": {
+              "x": -80.77006973155072,
+              "y": -56.38443387288791,
+              "w": 2086.3430555555556,
+              "h": 1174.1918751661349
+            },
+            "scene": 0.35,
+            "chapters": 12,
+            "people": 27,
+            "edges": 41,
+            "width": 1920,
+            "height": 1080
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 2,
+          "canvas": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "copy": [
+            142.078125,
+            270,
+            882.078125,
+            776.0625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 2,
+            "target": 2,
+            "active": 2,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "camera": {
+              "x": -27.764671643043712,
+              "y": -33.80980628654957,
+              "w": 1989.6555555555553,
+              "h": 1119.7762426900583
+            },
+            "scene": 1.1,
+            "chapters": 12,
+            "people": 27,
+            "edges": 41,
+            "width": 1920,
+            "height": 1080
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 3,
+          "canvas": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "copy": [
+            142.078125,
+            270,
+            882.078125,
+            743.0625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 3,
+            "target": 3,
+            "active": 3,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "camera": {
+              "x": -23.439846064685312,
+              "y": -33.78295495250183,
+              "w": 1987.1999999999998,
+              "h": 1118.3942583732057
+            },
+            "scene": 1.8,
+            "chapters": 12,
+            "people": 27,
+            "edges": 41,
+            "width": 1920,
+            "height": 1080
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 4,
+          "canvas": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "copy": [
+            142.078125,
+            270,
+            882.078125,
+            892.0625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 4,
+            "target": 4,
+            "active": 4,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "camera": {
+              "x": -30.889510939942788,
+              "y": -46.208965022326865,
+              "w": 2004.622222222222,
+              "h": 1128.1994683678893
+            },
+            "scene": 2.4,
+            "chapters": 12,
+            "people": 27,
+            "edges": 41,
+            "width": 1920,
+            "height": 1080
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 5,
+          "canvas": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "copy": [
+            142.078125,
+            270,
+            882.078125,
+            809.0625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 5,
+            "target": 5,
+            "active": 5,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "camera": {
+              "x": -56.498384083155244,
+              "y": -73.42220095693776,
+              "w": 2054.3999999999996,
+              "h": 1156.2143540669856
+            },
+            "scene": 3.25,
+            "chapters": 12,
+            "people": 27,
+            "edges": 41,
+            "width": 1920,
+            "height": 1080
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 6,
+          "canvas": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "copy": [
+            142.078125,
+            270,
+            882.078125,
+            892.0625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 6,
+            "target": 6,
+            "active": 6,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "camera": {
+              "x": -57.09785092618361,
+              "y": -69.626408553852,
+              "w": 2046.4653061224487,
+              "h": 1151.7487159457082
+            },
+            "scene": 4.3,
+            "chapters": 12,
+            "people": 27,
+            "edges": 41,
+            "width": 1920,
+            "height": 1080
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 7,
+          "canvas": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "copy": [
+            142.078125,
+            270,
+            882.078125,
+            842.0625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 7,
+            "target": 7,
+            "active": 7,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "camera": {
+              "x": -37.5671191063297,
+              "y": -46.29810107655501,
+              "w": 1997.6999999999998,
+              "h": 1124.3036483253588
+            },
+            "scene": 5.05,
+            "chapters": 12,
+            "people": 27,
+            "edges": 41,
+            "width": 1920,
+            "height": 1080
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 8,
+          "canvas": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "copy": [
+            142.078125,
+            270,
+            882.078125,
+            892.0625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 8,
+            "target": 8,
+            "active": 8,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "camera": {
+              "x": -35.0751908843486,
+              "y": -41.27511961722487,
+              "w": 1987.1999999999998,
+              "h": 1118.3942583732057
+            },
+            "scene": 5.45,
+            "chapters": 12,
+            "people": 27,
+            "edges": 41,
+            "width": 1920,
+            "height": 1080
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 9,
+          "canvas": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "copy": [
+            142.078125,
+            270,
+            882.078125,
+            892.0625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 9,
+            "target": 9,
+            "active": 9,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "camera": {
+              "x": -38.069194574688645,
+              "y": -41.27511961722487,
+              "w": 1987.1999999999998,
+              "h": 1118.3942583732057
+            },
+            "scene": 5.9,
+            "chapters": 12,
+            "people": 27,
+            "edges": 41,
+            "width": 1920,
+            "height": 1080
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 10,
+          "canvas": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "copy": [
+            142.078125,
+            270,
+            882.078125,
+            892.0625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 10,
+            "target": 10,
+            "active": 10,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "camera": {
+              "x": -41.007345508460936,
+              "y": -41.27511961722487,
+              "w": 1987.1999999999998,
+              "h": 1118.3942583732057
+            },
+            "scene": 6.4,
+            "chapters": 12,
+            "people": 27,
+            "edges": 41,
+            "width": 1920,
+            "height": 1080
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 11,
+          "canvas": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "copy": [
+            142.078125,
+            270,
+            882.078125,
+            784.90625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 11,
+            "target": 11,
+            "active": 11,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "camera": {
+              "x": -43.64055289820445,
+              "y": -41.27511961722487,
+              "w": 1987.1999999999998,
+              "h": 1118.3942583732057
+            },
+            "scene": 7,
+            "chapters": 12,
+            "people": 27,
+            "edges": 41,
+            "width": 1920,
+            "height": 1080
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        }
+      ]
+    },
+    {
+      "name": "1920×1080: one canvas throughout",
+      "pass": true
+    },
+    {
+      "name": "2560×1440: full-bleed world, clear text, no panels or overflow at every beat",
+      "pass": true,
+      "detail": [
+        {
+          "i": 0,
+          "canvas": [
+            0,
+            0,
+            2560,
+            1440
+          ],
+          "copy": [
+            800,
+            360,
+            1760,
+            745.65625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 0,
+            "target": 0,
+            "active": 0,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "camera": {
+              "x": -127.99999999999977,
+              "y": -72.42105263157885,
+              "w": 2815.9999999999995,
+              "h": 1584.8421052631577
+            },
+            "scene": 0,
+            "chapters": 12,
+            "people": 27,
+            "edges": 41,
+            "width": 2560,
+            "height": 1440
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 1,
+          "canvas": [
+            0,
+            0,
+            2560,
+            1440
+          ],
+          "copy": [
+            189.4375,
+            360,
+            929.4375,
+            949.0625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 1,
+            "target": 1,
+            "active": 1,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "camera": {
+              "x": -107.69342630873422,
+              "y": -75.17924516385064,
+              "w": 2781.7907407407406,
+              "h": 1565.58916688818
+            },
+            "scene": 0.35,
+            "chapters": 12,
+            "people": 27,
+            "edges": 41,
+            "width": 2560,
+            "height": 1440
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 2,
+          "canvas": [
+            0,
+            0,
+            2560,
+            1440
+          ],
+          "copy": [
+            189.4375,
+            360,
+            929.4375,
+            866.0625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 2,
+            "target": 2,
+            "active": 2,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "camera": {
+              "x": -37.0195621907251,
+              "y": -45.079741715399564,
+              "w": 2652.874074074074,
+              "h": 1493.0349902534113
+            },
+            "scene": 1.1,
+            "chapters": 12,
+            "people": 27,
+            "edges": 41,
+            "width": 2560,
+            "height": 1440
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 3,
+          "canvas": [
+            0,
+            0,
+            2560,
+            1440
+          ],
+          "copy": [
+            189.4375,
+            360,
+            929.4375,
+            833.0625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 3,
+            "target": 3,
+            "active": 3,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "camera": {
+              "x": -31.25312808624716,
+              "y": -45.043939936669055,
+              "w": 2649.6,
+              "h": 1491.1923444976076
+            },
+            "scene": 1.8,
+            "chapters": 12,
+            "people": 27,
+            "edges": 41,
+            "width": 2560,
+            "height": 1440
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 4,
+          "canvas": [
+            0,
+            0,
+            2560,
+            1440
+          ],
+          "copy": [
+            189.4375,
+            360,
+            929.4375,
+            982.0625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 4,
+            "target": 4,
+            "active": 4,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "camera": {
+              "x": -41.18601458659039,
+              "y": -61.61195336310255,
+              "w": 2672.8296296296294,
+              "h": 1504.2659578238524
+            },
+            "scene": 2.4,
+            "chapters": 12,
+            "people": 27,
+            "edges": 41,
+            "width": 2560,
+            "height": 1440
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 5,
+          "canvas": [
+            0,
+            0,
+            2560,
+            1440
+          ],
+          "copy": [
+            189.4375,
+            360,
+            929.4375,
+            899.0625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 5,
+            "target": 5,
+            "active": 5,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "camera": {
+              "x": -75.33117877754047,
+              "y": -97.89626794258355,
+              "w": 2739.2,
+              "h": 1541.6191387559807
+            },
+            "scene": 3.25,
+            "chapters": 12,
+            "people": 27,
+            "edges": 41,
+            "width": 2560,
+            "height": 1440
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 6,
+          "canvas": [
+            0,
+            0,
+            2560,
+            1440
+          ],
+          "copy": [
+            189.4375,
+            360,
+            929.4375,
+            982.0625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 6,
+            "target": 6,
+            "active": 6,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "camera": {
+              "x": -76.13046790157814,
+              "y": -92.83521140513592,
+              "w": 2728.620408163265,
+              "h": 1535.6649545942776
+            },
+            "scene": 4.3,
+            "chapters": 12,
+            "people": 27,
+            "edges": 41,
+            "width": 2560,
+            "height": 1440
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 7,
+          "canvas": [
+            0,
+            0,
+            2560,
+            1440
+          ],
+          "copy": [
+            189.4375,
+            360,
+            929.4375,
+            932.0625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 7,
+            "target": 7,
+            "active": 7,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "camera": {
+              "x": -50.08949214177278,
+              "y": -61.73080143540655,
+              "w": 2663.5999999999995,
+              "h": 1499.0715311004783
+            },
+            "scene": 5.05,
+            "chapters": 12,
+            "people": 27,
+            "edges": 41,
+            "width": 2560,
+            "height": 1440
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 8,
+          "canvas": [
+            0,
+            0,
+            2560,
+            1440
+          ],
+          "copy": [
+            189.4375,
+            360,
+            929.4375,
+            982.0625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 8,
+            "target": 8,
+            "active": 8,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "camera": {
+              "x": -46.76692117913154,
+              "y": -55.03349282296642,
+              "w": 2649.6,
+              "h": 1491.1923444976076
+            },
+            "scene": 5.45,
+            "chapters": 12,
+            "people": 27,
+            "edges": 41,
+            "width": 2560,
+            "height": 1440
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 9,
+          "canvas": [
+            0,
+            0,
+            2560,
+            1440
+          ],
+          "copy": [
+            189.4375,
+            360,
+            929.4375,
+            982.0625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 9,
+            "target": 9,
+            "active": 9,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "camera": {
+              "x": -50.75892609958493,
+              "y": -55.03349282296642,
+              "w": 2649.6,
+              "h": 1491.1923444976076
+            },
+            "scene": 5.9,
+            "chapters": 12,
+            "people": 27,
+            "edges": 41,
+            "width": 2560,
+            "height": 1440
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 10,
+          "canvas": [
+            0,
+            0,
+            2560,
+            1440
+          ],
+          "copy": [
+            189.4375,
+            360,
+            929.4375,
+            982.0625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 10,
+            "target": 10,
+            "active": 10,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "camera": {
+              "x": -54.67646067794799,
+              "y": -55.03349282296642,
+              "w": 2649.6,
+              "h": 1491.1923444976076
+            },
+            "scene": 6.4,
+            "chapters": 12,
+            "people": 27,
+            "edges": 41,
+            "width": 2560,
+            "height": 1440
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 11,
+          "canvas": [
+            0,
+            0,
+            2560,
+            1440
+          ],
+          "copy": [
+            189.4375,
+            360,
+            929.4375,
+            874.90625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 11,
+            "target": 11,
+            "active": 11,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "camera": {
+              "x": -58.18740386427267,
+              "y": -55.03349282296642,
+              "w": 2649.6,
+              "h": 1491.1923444976076
+            },
+            "scene": 7,
+            "chapters": 12,
+            "people": 27,
+            "edges": 41,
+            "width": 2560,
+            "height": 1440
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        }
+      ]
+    },
+    {
+      "name": "2560×1440: one canvas throughout",
+      "pass": true
+    },
+    {
+      "name": "3440×1440: full-bleed world, clear text, no panels or overflow at every beat",
+      "pass": true,
+      "detail": [
+        {
+          "i": 0,
+          "canvas": [
+            0,
+            0,
+            3440,
+            1440
+          ],
+          "copy": [
+            1240,
+            360,
+            2200,
+            745.65625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 0,
+            "target": 0,
+            "active": 0,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "camera": {
+              "x": -171.99999999999955,
+              "y": -344.81578947368394,
+              "w": 3783.999999999999,
+              "h": 2129.631578947368
+            },
+            "scene": 0,
+            "chapters": 12,
+            "people": 27,
+            "edges": 41,
+            "width": 3440,
+            "height": 1440
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 1,
+          "canvas": [
+            0,
+            0,
+            3440,
+            1440
+          ],
+          "copy": [
+            254.546875,
+            360,
+            994.546875,
+            949.0625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 1,
+            "target": 1,
+            "active": 1,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "camera": {
+              "x": -144.71304160236141,
+              "y": -397.335298188924,
+              "w": 3738.03130787037,
+              "h": 2103.7604430059914
+            },
+            "scene": 0.35,
+            "chapters": 12,
+            "people": 27,
+            "edges": 41,
+            "width": 3440,
+            "height": 1440
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 2,
+          "canvas": [
+            0,
+            0,
+            3440,
+            1440
+          ],
+          "copy": [
+            254.546875,
+            360,
+            994.546875,
+            866.0625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 2,
+            "target": 2,
+            "active": 2,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "camera": {
+              "x": -49.745036693786716,
+              "y": -481.32590293006814,
+              "w": 3564.7995370370368,
+              "h": 2006.2657681530213
+            },
+            "scene": 1.1,
+            "chapters": 12,
+            "people": 27,
+            "edges": 41,
+            "width": 3440,
+            "height": 1440
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 3,
+          "canvas": [
+            0,
+            0,
+            3440,
+            1440
+          ],
+          "copy": [
+            254.546875,
+            360,
+            994.546875,
+            833.0625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 3,
+            "target": 3,
+            "active": 3,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "camera": {
+              "x": -41.99639086589427,
+              "y": -480.75170309456354,
+              "w": 3560.399999999999,
+              "h": 2003.78971291866
+            },
+            "scene": 1.8,
+            "chapters": 12,
+            "people": 27,
+            "edges": 41,
+            "width": 3440,
+            "height": 1440
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 4,
+          "canvas": [
+            0,
+            0,
+            3440,
+            1440
+          ],
+          "copy": [
+            254.546875,
+            360,
+            994.546875,
+            982.0625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 4,
+            "target": 4,
+            "active": 4,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "camera": {
+              "x": -55.34370710073062,
+              "y": -501.1396629147591,
+              "w": 3591.614814814814,
+              "h": 2021.3573808258013
+            },
+            "scene": 2.4,
+            "chapters": 12,
+            "people": 27,
+            "edges": 41,
+            "width": 3440,
+            "height": 1440
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 5,
+          "canvas": [
+            0,
+            0,
+            3440,
+            1440
+          ],
+          "copy": [
+            254.546875,
+            360,
+            994.546875,
+            899.0625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 5,
+            "target": 5,
+            "active": 5,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "camera": {
+              "x": -101.22627148231977,
+              "y": -548.3381100478464,
+              "w": 3680.7999999999993,
+              "h": 2071.5507177033487
+            },
+            "scene": 3.25,
+            "chapters": 12,
+            "people": 27,
+            "edges": 41,
+            "width": 3440,
+            "height": 1440
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 6,
+          "canvas": [
+            0,
+            0,
+            3440,
+            1440
+          ],
+          "copy": [
+            254.546875,
+            360,
+            994.546875,
+            982.0625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 6,
+            "target": 6,
+            "active": 6,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "camera": {
+              "x": -102.30031624274554,
+              "y": -541.5373153256513,
+              "w": 3666.583673469387,
+              "h": 2063.5497827360605
+            },
+            "scene": 4.3,
+            "chapters": 12,
+            "people": 27,
+            "edges": 41,
+            "width": 3440,
+            "height": 1440
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 7,
+          "canvas": [
+            0,
+            0,
+            3440,
+            1440
+          ],
+          "copy": [
+            254.546875,
+            360,
+            994.546875,
+            932.0625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 7,
+            "target": 7,
+            "active": 7,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "camera": {
+              "x": -67.30775506550714,
+              "y": -499.7407644288274,
+              "w": 3579.212499999999,
+              "h": 2014.3773699162675
+            },
+            "scene": 5.05,
+            "chapters": 12,
+            "people": 27,
+            "edges": 41,
+            "width": 3440,
+            "height": 1440
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 8,
+          "canvas": [
+            0,
+            0,
+            3440,
+            1440
+          ],
+          "copy": [
+            254.546875,
+            360,
+            994.546875,
+            982.0625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 8,
+            "target": 8,
+            "active": 8,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "camera": {
+              "x": -62.843050334457665,
+              "y": -490.7412559808609,
+              "w": 3560.399999999999,
+              "h": 2003.78971291866
+            },
+            "scene": 5.45,
+            "chapters": 12,
+            "people": 27,
+            "edges": 41,
+            "width": 3440,
+            "height": 1440
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 9,
+          "canvas": [
+            0,
+            0,
+            3440,
+            1440
+          ],
+          "copy": [
+            254.546875,
+            360,
+            994.546875,
+            982.0625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 9,
+            "target": 9,
+            "active": 9,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "camera": {
+              "x": -68.2073069463169,
+              "y": -490.7412559808609,
+              "w": 3560.399999999999,
+              "h": 2003.78971291866
+            },
+            "scene": 5.9,
+            "chapters": 12,
+            "people": 27,
+            "edges": 41,
+            "width": 3440,
+            "height": 1440
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 10,
+          "canvas": [
+            0,
+            0,
+            3440,
+            1440
+          ],
+          "copy": [
+            254.546875,
+            360,
+            994.546875,
+            982.0625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 10,
+            "target": 10,
+            "active": 10,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "camera": {
+              "x": -73.47149403599227,
+              "y": -490.7412559808609,
+              "w": 3560.399999999999,
+              "h": 2003.78971291866
+            },
+            "scene": 6.4,
+            "chapters": 12,
+            "people": 27,
+            "edges": 41,
+            "width": 3440,
+            "height": 1440
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 11,
+          "canvas": [
+            0,
+            0,
+            3440,
+            1440
+          ],
+          "copy": [
+            254.546875,
+            360,
+            994.546875,
+            874.90625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 11,
+            "target": 11,
+            "active": 11,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "camera": {
+              "x": -78.18932394261606,
+              "y": -490.7412559808609,
+              "w": 3560.399999999999,
+              "h": 2003.78971291866
+            },
+            "scene": 7,
+            "chapters": 12,
+            "people": 27,
+            "edges": 41,
+            "width": 3440,
+            "height": 1440
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        }
+      ]
+    },
+    {
+      "name": "3440×1440: one canvas throughout",
       "pass": true
     },
     {
@@ -777,8 +1895,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
+            "camera": {
+              "x": -743.1647183846969,
+              "y": -58.999999999999886,
+              "w": 2306.329436769394,
+              "h": 1297.9999999999998
+            },
             "scene": 0,
-            "chapters": 23,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 820,
@@ -809,8 +1933,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 0.2,
-            "chapters": 23,
+            "camera": {
+              "x": -728.1302495056312,
+              "y": -61.19715529459616,
+              "w": 2278.311744425748,
+              "h": 1282.2316695601849
+            },
+            "scene": 0.35,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 820,
@@ -841,8 +1971,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 0.42,
-            "chapters": 23,
+            "camera": {
+              "x": -673.3473800526705,
+              "y": -36.38777199074059,
+              "w": 2172.7278299287595,
+              "h": 1222.8091435185183
+            },
+            "scene": 1.1,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 820,
@@ -873,8 +2009,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 0.88,
-            "chapters": 23,
+            "camera": {
+              "x": -670.683934433909,
+              "y": -36.35911638483942,
+              "w": 2170.046333687566,
+              "h": 1221.2999999999997
+            },
+            "scene": 1.8,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 820,
@@ -894,7 +2036,7 @@
             60.671875,
             295,
             487.0625,
-            682.96875
+            798.96875
           ],
           "textInside": true,
           "overflow": 0,
@@ -905,8 +2047,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 1.35,
-            "chapters": 23,
+            "camera": {
+              "x": -679.6578300199811,
+              "y": -49.93084440125228,
+              "w": 2189.0716101861685,
+              "h": 1232.007407407407
+            },
+            "scene": 2.4,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 820,
@@ -926,7 +2074,7 @@
             60.671875,
             295,
             487.0625,
-            682.96875
+            709.96875
           ],
           "textInside": true,
           "overflow": 0,
@@ -937,8 +2085,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 1.55,
-            "chapters": 23,
+            "camera": {
+              "x": -707.1442897218407,
+              "y": -79.64999999999972,
+              "w": 2243.4295430393195,
+              "h": 1262.5999999999997
+            },
+            "scene": 3.25,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 820,
@@ -958,7 +2112,7 @@
             60.671875,
             295,
             487.0625,
-            736.953125
+            798.96875
           ],
           "textInside": true,
           "overflow": 0,
@@ -969,8 +2123,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 1.8,
-            "chapters": 23,
+            "camera": {
+              "x": -704.7623091349146,
+              "y": -75.50494897959166,
+              "w": 2234.7647617601765,
+              "h": 1257.723469387755
+            },
+            "scene": 4.3,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 820,
@@ -990,7 +2150,7 @@
             60.671875,
             295,
             487.0625,
-            771.96875
+            736.96875
           ],
           "textInside": true,
           "overflow": 0,
@@ -1001,8 +2161,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 2,
-            "chapters": 23,
+            "camera": {
+              "x": -680.2083330260504,
+              "y": -50.03015624999976,
+              "w": 2181.5124601487773,
+              "h": 1227.7531249999997
+            },
+            "scene": 5.05,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 820,
@@ -1022,7 +2188,7 @@
             60.671875,
             295,
             487.0625,
-            682.96875
+            798.96875
           ],
           "textInside": true,
           "overflow": 0,
@@ -1033,8 +2199,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 2.2,
-            "chapters": 23,
+            "camera": {
+              "x": -675.6531962839736,
+              "y": -44.54499999999977,
+              "w": 2170.046333687566,
+              "h": 1221.2999999999997
+            },
+            "scene": 5.45,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 820,
@@ -1054,7 +2226,7 @@
             60.671875,
             295,
             487.0625,
-            655.96875
+            798.96875
           ],
           "textInside": true,
           "overflow": 0,
@@ -1065,8 +2237,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 2.36,
-            "chapters": 23,
+            "camera": {
+              "x": -676.9318853600563,
+              "y": -44.54499999999977,
+              "w": 2170.046333687566,
+              "h": 1221.2999999999997
+            },
+            "scene": 5.9,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 820,
@@ -1086,7 +2264,7 @@
             60.671875,
             295,
             487.0625,
-            736.953125
+            798.96875
           ],
           "textInside": true,
           "overflow": 0,
@@ -1097,8 +2275,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 2.52,
-            "chapters": 23,
+            "camera": {
+              "x": -678.1867206546882,
+              "y": -44.54499999999977,
+              "w": 2170.046333687566,
+              "h": 1221.2999999999997
+            },
+            "scene": 6.4,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 820,
@@ -1118,7 +2302,7 @@
             60.671875,
             295,
             487.0625,
-            655.96875
+            684.875
           ],
           "textInside": true,
           "overflow": 0,
@@ -1129,360 +2313,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 2.95,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 820,
-            "height": 1180
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 12,
-          "canvas": [
-            0,
-            0,
-            820,
-            1180
-          ],
-          "copy": [
-            60.671875,
-            295,
-            487.0625,
-            655.96875
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 12,
-            "target": 12,
-            "active": 12,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 3.35,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 820,
-            "height": 1180
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 13,
-          "canvas": [
-            0,
-            0,
-            820,
-            1180
-          ],
-          "copy": [
-            60.671875,
-            295,
-            487.0625,
-            682.96875
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 13,
-            "target": 13,
-            "active": 13,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 3.88,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 820,
-            "height": 1180
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 14,
-          "canvas": [
-            0,
-            0,
-            820,
-            1180
-          ],
-          "copy": [
-            60.671875,
-            295,
-            487.0625,
-            798.96875
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 14,
-            "target": 14,
-            "active": 14,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 4.4,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 820,
-            "height": 1180
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 15,
-          "canvas": [
-            0,
-            0,
-            820,
-            1180
-          ],
-          "copy": [
-            60.671875,
-            295,
-            487.0625,
-            682.96875
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 15,
-            "target": 15,
-            "active": 15,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 5.05,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 820,
-            "height": 1180
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 16,
-          "canvas": [
-            0,
-            0,
-            820,
-            1180
-          ],
-          "copy": [
-            60.671875,
-            295,
-            487.0625,
-            736.953125
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 16,
-            "target": 16,
-            "active": 16,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 5.22,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 820,
-            "height": 1180
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 17,
-          "canvas": [
-            0,
-            0,
-            820,
-            1180
-          ],
-          "copy": [
-            60.671875,
-            295,
-            487.0625,
-            798.96875
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 17,
-            "target": 17,
-            "active": 17,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 5.43,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 820,
-            "height": 1180
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 18,
-          "canvas": [
-            0,
-            0,
-            820,
-            1180
-          ],
-          "copy": [
-            60.671875,
-            295,
-            487.0625,
-            682.96875
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 18,
-            "target": 18,
-            "active": 18,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 5.65,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 820,
-            "height": 1180
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 19,
-          "canvas": [
-            0,
-            0,
-            820,
-            1180
-          ],
-          "copy": [
-            60.671875,
-            295,
-            487.0625,
-            771.96875
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 19,
-            "target": 19,
-            "active": 19,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 5.98,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 820,
-            "height": 1180
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 20,
-          "canvas": [
-            0,
-            0,
-            820,
-            1180
-          ],
-          "copy": [
-            60.671875,
-            295,
-            487.0625,
-            798.96875
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 20,
-            "target": 20,
-            "active": 20,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 6.3,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 820,
-            "height": 1180
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 21,
-          "canvas": [
-            0,
-            0,
-            820,
-            1180
-          ],
-          "copy": [
-            60.671875,
-            295,
-            487.0625,
-            709.96875
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 21,
-            "target": 21,
-            "active": 21,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 6.68,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 820,
-            "height": 1180
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 22,
-          "canvas": [
-            0,
-            0,
-            820,
-            1180
-          ],
-          "copy": [
-            60.671875,
-            295,
-            487.0625,
-            657.875
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 22,
-            "target": 22,
-            "active": 22,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
+            "camera": {
+              "x": -679.3113196440578,
+              "y": -44.54499999999977,
+              "w": 2170.046333687566,
+              "h": 1221.2999999999997
+            },
             "scene": 7,
-            "chapters": 23,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 820,
@@ -1523,8 +2361,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
+            "camera": {
+              "x": -755.767141339001,
+              "y": -42.19999999999999,
+              "w": 1649.6119022316684,
+              "h": 928.4
+            },
             "scene": 0,
-            "chapters": 23,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 390,
@@ -1542,7 +2386,7 @@
           ],
           "copy": [
             24,
-            374.3221435546875,
+            351.9315185546875,
             366,
             749.9940185546875
           ],
@@ -1555,8 +2399,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 0.20003651545523027,
-            "chapters": 23,
+            "camera": {
+              "x": -743.2477887604048,
+              "y": -43.771649948862425,
+              "w": 1629.5595931020944,
+              "h": 917.1145796106882
+            },
+            "scene": 0.35012448450646677,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 390,
@@ -1574,7 +2424,7 @@
           ],
           "copy": [
             24,
-            445.925537109375,
+            423.534912109375,
             366,
             749.988037109375
           ],
@@ -1587,8 +2437,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 0.4201527009945992,
-            "chapters": 23,
+            "camera": {
+              "x": -696.9915356078907,
+              "y": -26.02237384008518,
+              "w": 1554.044144602891,
+              "h": 874.6145574589237
+            },
+            "scene": 1.100232371078738,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 390,
@@ -1619,8 +2475,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 0.8798531721205776,
-            "chapters": 23,
+            "camera": {
+              "x": -695.2172677755618,
+              "y": -26.00510020147978,
+              "w": 1552.1348352816153,
+              "h": 873.54
+            },
+            "scene": 1.7997765662704441,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 390,
@@ -1638,7 +2500,7 @@
           ],
           "copy": [
             24,
-            423.5523986816406,
+            329.5523986816406,
             366,
             750.0054931640625
           ],
@@ -1651,8 +2513,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 1.3499279905008748,
-            "chapters": 23,
+            "camera": {
+              "x": -703.1224347455712,
+              "y": -35.7101623435495,
+              "w": 1565.7373840726748,
+              "h": 881.1955014428152
+            },
+            "scene": 2.39990807297984,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 390,
@@ -1683,8 +2551,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 1.5500031919104222,
-            "chapters": 23,
+            "camera": {
+              "x": -726.5997332642816,
+              "y": -56.96999999999994,
+              "w": 1604.6224867162591,
+              "h": 903.0799999999999
+            },
+            "scene": 3.2500134060237733,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 390,
@@ -1702,7 +2576,7 @@
           ],
           "copy": [
             24,
-            445.9310607910156,
+            351.9310607910156,
             366,
             749.9935302734375
           ],
@@ -1715,8 +2589,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 1.800035749396729,
-            "chapters": 23,
+            "camera": {
+              "x": -723.8059598337187,
+              "y": -54.00280539447594,
+              "w": 1598.4198870032678,
+              "h": 899.5891828170305
+            },
+            "scene": 4.300134060237733,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 390,
@@ -1734,7 +2614,7 @@
           ],
           "copy": [
             24,
-            374.3157043457031,
+            401.1438293457031,
             366,
             749.987548828125
           ],
@@ -1747,8 +2627,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 2.00006894526512,
-            "chapters": 23,
+            "camera": {
+              "x": -701.9377366296975,
+              "y": -35.781499415426104,
+              "w": 1560.3302156936832,
+              "h": 878.1523522534425
+            },
+            "scene": 5.05013789053024,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 390,
@@ -1766,7 +2652,7 @@
           ],
           "copy": [
             24,
-            445.9485168457031,
+            351.9485168457031,
             366,
             750.010986328125
           ],
@@ -1779,8 +2665,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 2.1999387153198935,
-            "chapters": 23,
+            "camera": {
+              "x": -697.5803786459392,
+              "y": -31.86099999999997,
+              "w": 1552.1348352816153,
+              "h": 873.54
+            },
+            "scene": 5.449877430639787,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 390,
@@ -1798,7 +2690,7 @@
           ],
           "copy": [
             24,
-            445.94256591796875,
+            329.55194091796875,
             366,
             750.0050659179688
           ],
@@ -1811,8 +2703,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 2.3599775289506275,
-            "chapters": 23,
+            "camera": {
+              "x": -698.1886245332747,
+              "y": -31.86099999999997,
+              "w": 1552.1348352816153,
+              "h": 873.54
+            },
+            "scene": 5.89993680017364,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 390,
@@ -1830,7 +2728,7 @@
           ],
           "copy": [
             24,
-            445.93658447265625,
+            329.54595947265625,
             366,
             749.9990844726562
           ],
@@ -1843,8 +2741,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 2.520010980171852,
-            "chapters": 23,
+            "camera": {
+              "x": -698.7855346998226,
+              "y": -31.86099999999997,
+              "w": 1552.1348352816153,
+              "h": 873.54
+            },
+            "scene": 6.400015321170027,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 390,
@@ -1862,373 +2766,27 @@
           ],
           "copy": [
             24,
-            445.93060302734375,
-            366,
-            749.9931030273438
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 11.000191514625334,
-            "target": 11.000191514625334,
-            "active": 11,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 2.9500766058501338,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 390,
-            "height": 844
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 12,
-          "canvas": [
-            0,
-            0,
-            390,
-            844
-          ],
-          "copy": [
-            24,
-            468.31524658203125,
-            366,
-            749.9871215820312
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 12.00035749396729,
-            "target": 12.00035749396729,
-            "active": 12,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 3.3501894718026635,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 390,
-            "height": 844
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 13,
-          "canvas": [
-            0,
-            0,
-            390,
-            844
-          ],
-          "copy": [
-            24,
-            445.94805908203125,
-            366,
-            750.0105590820312
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 12.999706344241154,
-            "target": 12.999706344241154,
-            "active": 13,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 3.8798443624478116,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 390,
-            "height": 844
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 14,
-          "canvas": [
-            0,
-            0,
-            390,
-            844
-          ],
-          "copy": [
-            24,
-            329.5514831542969,
-            366,
-            750.004638671875
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 13.99987232358311,
-            "target": 13.99987232358311,
-            "active": 14,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 4.399933608263217,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 390,
-            "height": 844
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 15,
-          "canvas": [
-            0,
-            0,
-            390,
-            844
-          ],
-          "copy": [
-            24,
-            445.9361267089844,
-            366,
-            749.9986572265625
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 15.000038302925066,
-            "target": 15.000038302925066,
-            "active": 15,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 5.050006511497261,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 390,
-            "height": 844
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 16,
-          "canvas": [
-            0,
-            0,
-            390,
-            844
-          ],
-          "copy": [
-            24,
-            423.5395202636719,
-            366,
-            749.99267578125
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 16.000204282267024,
-            "target": 16.000204282267024,
-            "active": 16,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 5.220042899276075,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 390,
-            "height": 844
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 17,
-          "canvas": [
-            0,
-            0,
-            390,
-            844
-          ],
-          "copy": [
-            24,
-            329.5335388183594,
-            366,
-            749.9866943359375
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 17.00037026160898,
-            "target": 17.00037026160898,
-            "active": 17,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 5.430081457553975,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 390,
-            "height": 844
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 18,
-          "canvas": [
-            0,
-            0,
-            390,
-            844
-          ],
-          "copy": [
-            24,
-            445.9476013183594,
-            366,
-            750.0101318359375
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 17.999719111882843,
-            "target": 17.999719111882843,
-            "active": 18,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 5.649938204614226,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 390,
-            "height": 844
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 19,
-          "canvas": [
-            0,
-            0,
-            390,
-            844
-          ],
-          "copy": [
-            24,
-            374.332275390625,
-            366,
-            750.004150390625
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 18.9998850912248,
-            "target": 18.9998850912248,
-            "active": 19,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 5.979962080104185,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 390,
-            "height": 844
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 20,
-          "canvas": [
-            0,
-            0,
-            390,
-            844
-          ],
-          "copy": [
-            24,
-            329.5450439453125,
-            366,
-            749.9981689453125
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 20.000051070566755,
-            "target": 20.000051070566755,
-            "active": 20,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 6.300019406815367,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 390,
-            "height": 844
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 21,
-          "canvas": [
-            0,
-            0,
-            390,
-            844
-          ],
-          "copy": [
-            24,
-            423.5390625,
-            366,
-            749.9921875
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 21.000217049908713,
-            "target": 21.000217049908713,
-            "active": 21,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 6.680069455970788,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 390,
-            "height": 844
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 22,
-          "canvas": [
-            0,
-            0,
-            390,
-            844
-          ],
-          "copy": [
-            24,
-            450.71875,
+            405.9375,
             366,
             740
           ],
           "textInside": true,
           "overflow": 0,
           "state": {
-            "progress": 22,
-            "target": 22,
-            "active": 22,
+            "progress": 11,
+            "target": 11,
+            "active": 11,
             "quiet": false,
             "reading": false,
             "ready": true,
+            "camera": {
+              "x": -699.320388476417,
+              "y": -31.86099999999997,
+              "w": 1552.1348352816153,
+              "h": 873.54
+            },
             "scene": 7,
-            "chapters": 23,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 390,
@@ -2269,8 +2827,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
+            "camera": {
+              "x": -675.8053134962804,
+              "y": -36.99999999999994,
+              "w": 1446.3421891604673,
+              "h": 813.9999999999999
+            },
             "scene": 0,
-            "chapters": 23,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 320,
@@ -2288,7 +2852,7 @@
           ],
           "copy": [
             24,
-            236.796875,
+            253.15625,
             296,
             646
           ],
@@ -2301,8 +2865,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 0.2,
-            "chapters": 23,
+            "camera": {
+              "x": -664.8628201491025,
+              "y": -38.377877049153575,
+              "w": 1428.7717719280117,
+              "h": 804.1113859953703
+            },
+            "scene": 0.35,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 320,
@@ -2320,7 +2890,7 @@
           ],
           "copy": [
             24,
-            347.15625,
+            324.765625,
             296,
             646
           ],
@@ -2333,8 +2903,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 0.42,
-            "chapters": 23,
+            "camera": {
+              "x": -624.357694024185,
+              "y": -22.819450231481447,
+              "w": 1362.55813063329,
+              "h": 766.846412037037
+            },
+            "scene": 1.1,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 320,
@@ -2365,8 +2941,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 0.88,
-            "chapters": 23,
+            "camera": {
+              "x": -622.8325496186449,
+              "y": -22.80147976676383,
+              "w": 1360.87651434644,
+              "h": 765.9
+            },
+            "scene": 1.8,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 320,
@@ -2384,7 +2966,7 @@
           ],
           "copy": [
             24,
-            324.765625,
+            230.765625,
             296,
             646
           ],
@@ -2397,8 +2979,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 1.35,
-            "chapters": 23,
+            "camera": {
+              "x": -629.780971939827,
+              "y": -31.31256343807357,
+              "w": 1372.8076199472584,
+              "h": 772.6148148148147
+            },
+            "scene": 2.4,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 320,
@@ -2429,8 +3017,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 1.55,
-            "chapters": 23,
+            "camera": {
+              "x": -650.3542932026653,
+              "y": -49.94999999999996,
+              "w": 1406.8964930924546,
+              "h": 791.8
+            },
+            "scene": 3.25,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 320,
@@ -2448,7 +3042,7 @@
           ],
           "copy": [
             24,
-            308.40625,
+            253.15625,
             296,
             646
           ],
@@ -2461,8 +3055,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 1.8,
-            "chapters": 23,
+            "camera": {
+              "x": -647.855121300814,
+              "y": -47.35056122448976,
+              "w": 1401.4626472055347,
+              "h": 788.7418367346938
+            },
+            "scene": 4.3,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 320,
@@ -2480,7 +3080,7 @@
           ],
           "copy": [
             24,
-            275.546875,
+            302.375,
             296,
             646
           ],
@@ -2493,8 +3093,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 2,
-            "chapters": 23,
+            "camera": {
+              "x": -628.6264681330243,
+              "y": -31.374843749999883,
+              "w": 1368.0671360255046,
+              "h": 769.9468749999999
+            },
+            "scene": 5.05,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 320,
@@ -2512,7 +3118,7 @@
           ],
           "copy": [
             24,
-            347.15625,
+            214.40625,
             296,
             646
           ],
@@ -2525,8 +3131,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 2.2,
-            "chapters": 23,
+            "camera": {
+              "x": -624.7717737552554,
+              "y": -27.93499999999998,
+              "w": 1360.87651434644,
+              "h": 765.9
+            },
+            "scene": 5.45,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 320,
@@ -2544,7 +3156,7 @@
           ],
           "copy": [
             24,
-            308.40625,
+            230.765625,
             296,
             646
           ],
@@ -2557,8 +3169,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 2.36,
-            "chapters": 23,
+            "camera": {
+              "x": -625.2707743703121,
+              "y": -27.93499999999998,
+              "w": 1360.87651434644,
+              "h": 765.9
+            },
+            "scene": 5.9,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 320,
@@ -2576,7 +3194,7 @@
           ],
           "copy": [
             24,
-            308.40625,
+            230.765625,
             296,
             646
           ],
@@ -2589,8 +3207,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 2.52,
-            "chapters": 23,
+            "camera": {
+              "x": -625.7604661926074,
+              "y": -27.93499999999998,
+              "w": 1360.87651434644,
+              "h": 765.9
+            },
+            "scene": 6.4,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 320,
@@ -2608,9 +3232,9 @@
           ],
           "copy": [
             24,
-            347.15625,
+            254.15625,
             296,
-            646
+            636
           ],
           "textInside": true,
           "overflow": 0,
@@ -2621,360 +3245,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 2.95,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 320,
-            "height": 740
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 12,
-          "canvas": [
-            0,
-            0,
-            320,
-            740
-          ],
-          "copy": [
-            24,
-            369.546875,
-            296,
-            646
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 12,
-            "target": 12,
-            "active": 12,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 3.35,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 320,
-            "height": 740
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 13,
-          "canvas": [
-            0,
-            0,
-            320,
-            740
-          ],
-          "copy": [
-            24,
-            347.15625,
-            296,
-            646
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 13,
-            "target": 13,
-            "active": 13,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 3.88,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 320,
-            "height": 740
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 14,
-          "canvas": [
-            0,
-            0,
-            320,
-            740
-          ],
-          "copy": [
-            24,
-            230.765625,
-            296,
-            646
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 14,
-            "target": 14,
-            "active": 14,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 4.4,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 320,
-            "height": 740
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 15,
-          "canvas": [
-            0,
-            0,
-            320,
-            740
-          ],
-          "copy": [
-            24,
-            347.15625,
-            296,
-            646
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 15,
-            "target": 15,
-            "active": 15,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 5.05,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 320,
-            "height": 740
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 16,
-          "canvas": [
-            0,
-            0,
-            320,
-            740
-          ],
-          "copy": [
-            24,
-            286.015625,
-            296,
-            646
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 16,
-            "target": 16,
-            "active": 16,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 5.22,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 320,
-            "height": 740
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 17,
-          "canvas": [
-            0,
-            0,
-            320,
-            740
-          ],
-          "copy": [
-            24,
-            192.015625,
-            296,
-            646
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 17,
-            "target": 17,
-            "active": 17,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 5.43,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 320,
-            "height": 740
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 18,
-          "canvas": [
-            0,
-            0,
-            320,
-            740
-          ],
-          "copy": [
-            24,
-            347.15625,
-            296,
-            646
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 18,
-            "target": 18,
-            "active": 18,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 5.65,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 320,
-            "height": 740
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 19,
-          "canvas": [
-            0,
-            0,
-            320,
-            740
-          ],
-          "copy": [
-            24,
-            275.546875,
-            296,
-            646
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 19,
-            "target": 19,
-            "active": 19,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 5.98,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 320,
-            "height": 740
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 20,
-          "canvas": [
-            0,
-            0,
-            320,
-            740
-          ],
-          "copy": [
-            24,
-            230.765625,
-            296,
-            646
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 20,
-            "target": 20,
-            "active": 20,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 6.3,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 320,
-            "height": 740
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 21,
-          "canvas": [
-            0,
-            0,
-            320,
-            740
-          ],
-          "copy": [
-            24,
-            324.765625,
-            296,
-            646
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 21,
-            "target": 21,
-            "active": 21,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 6.68,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 320,
-            "height": 740
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 22,
-          "canvas": [
-            0,
-            0,
-            320,
-            740
-          ],
-          "copy": [
-            24,
-            260.1875,
-            296,
-            636
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 22,
-            "target": 22,
-            "active": 22,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
+            "camera": {
+              "x": -626.199334090898,
+              "y": -27.93499999999998,
+              "w": 1360.87651434644,
+              "h": 765.9
+            },
             "scene": 7,
-            "chapters": 23,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 320,
@@ -3015,8 +3293,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
+            "camera": {
+              "x": -42.19999999999993,
+              "y": -66.25131578947367,
+              "w": 928.3999999999999,
+              "h": 522.5026315789473
+            },
             "scene": 0,
-            "chapters": 23,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 844,
@@ -3047,8 +3331,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 0.2001945181255526,
-            "chapters": 23,
+            "camera": {
+              "x": -35.484405857681885,
+              "y": -75.5453773048417,
+              "w": 917.0840345930051,
+              "h": 516.1340170765657
+            },
+            "scene": 0.3506631299734747,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 844,
@@ -3079,8 +3369,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 0.42,
-            "chapters": 23,
+            "camera": {
+              "x": -12.204886909754686,
+              "y": -86.89972734679584,
+              "w": 874.6194212962963,
+              "h": 492.2349733491716
+            },
+            "scene": 1.1,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 844,
@@ -3111,8 +3407,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 0.8804155614500442,
-            "chapters": 23,
+            "camera": {
+              "x": -10.30300616588489,
+              "y": -86.7988518564801,
+              "w": 873.5399999999998,
+              "h": 491.62747607655496
+            },
+            "scene": 1.8005305039787798,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 844,
@@ -3132,7 +3434,7 @@
             62.453125,
             70.1875,
             501.328125,
-            287.46875
+            333.46875
           ],
           "textInside": true,
           "overflow": 0,
@@ -3143,8 +3445,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 1.35,
-            "chapters": 23,
+            "camera": {
+              "x": -13.578514184016512,
+              "y": -91.93904218635123,
+              "w": 881.1985185185184,
+              "h": 495.93768297005136
+            },
+            "scene": 2.4,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 844,
@@ -3164,7 +3472,7 @@
             62.453125,
             70.1300277709961,
             501.328125,
-            269.2237777709961
+            287.4112777709961
           ],
           "textInside": true,
           "overflow": 0,
@@ -3175,8 +3483,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 1.5502210433244916,
-            "chapters": 23,
+            "camera": {
+              "x": -24.83679293750556,
+              "y": -103.63467583732051,
+              "w": 903.0799999999999,
+              "h": 508.2525598086124
+            },
+            "scene": 3.2509283819628645,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 844,
@@ -3196,7 +3510,7 @@
             62.453125,
             70.1875,
             501.328125,
-            269.28125
+            315.28125
           ],
           "textInside": true,
           "overflow": 0,
@@ -3207,8 +3521,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 1.8,
-            "chapters": 23,
+            "camera": {
+              "x": -25.099263636301533,
+              "y": -101.96610876013081,
+              "w": 899.5920408163264,
+              "h": 506.28953971780095
+            },
+            "scene": 4.3,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 844,
@@ -3228,7 +3548,7 @@
             62.453125,
             70.1300277709961,
             501.328125,
-            315.2237777709961
+            305.5987777709961
           ],
           "textInside": true,
           "overflow": 0,
@@ -3239,8 +3559,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 2.000176834659593,
-            "chapters": 23,
+            "camera": {
+              "x": -16.51075115971211,
+              "y": -91.70735885029735,
+              "w": 878.1472326032346,
+              "h": 494.2204221768204
+            },
+            "scene": 5.050353669319186,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 844,
@@ -3260,7 +3586,7 @@
             62.453125,
             70.1875,
             501.328125,
-            269.28125
+            315.28125
           ],
           "textInside": true,
           "overflow": 0,
@@ -3271,8 +3597,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 2.2,
-            "chapters": 23,
+            "camera": {
+              "x": -15.418469326244871,
+              "y": -89.50335466507171,
+              "w": 873.5399999999998,
+              "h": 491.62747607655496
+            },
+            "scene": 5.45,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 844,
@@ -3292,7 +3624,7 @@
             62.453125,
             70.1300277709961,
             501.328125,
-            269.2237777709961
+            333.4112777709961
           ],
           "textInside": true,
           "overflow": 0,
@@ -3303,8 +3635,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 2.3601414677276744,
-            "chapters": 23,
+            "camera": {
+              "x": -16.73582141320039,
+              "y": -89.50335466507171,
+              "w": 873.5399999999998,
+              "h": 491.62747607655496
+            },
+            "scene": 5.900442086648984,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 844,
@@ -3324,7 +3662,7 @@
             62.453125,
             70.1875,
             501.328125,
-            287.46875
+            333.46875
           ],
           "textInside": true,
           "overflow": 0,
@@ -3335,8 +3673,14 @@
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 2.52,
-            "chapters": 23,
+            "camera": {
+              "x": -18.02614562976092,
+              "y": -89.50335466507171,
+              "w": 873.5399999999998,
+              "h": 491.62747607655496
+            },
+            "scene": 6.4,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 844,
@@ -3354,373 +3698,27 @@
           ],
           "copy": [
             62.453125,
-            70.1300277709961,
+            85.796875,
             501.328125,
-            269.2237777709961
+            318.890625
           ],
           "textInside": true,
           "overflow": 0,
           "state": {
-            "progress": 11.000884173297967,
-            "target": 11.000884173297967,
+            "progress": 11,
+            "target": 11,
             "active": 11,
             "quiet": false,
             "reading": false,
             "ready": true,
-            "scene": 2.950353669319187,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 844,
-            "height": 390
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 12,
-          "canvas": [
-            0,
-            0,
-            844,
-            390
-          ],
-          "copy": [
-            62.453125,
-            70.1875,
-            501.328125,
-            269.28125
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 12,
-            "target": 12,
-            "active": 12,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 3.35,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 844,
-            "height": 390
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 13,
-          "canvas": [
-            0,
-            0,
-            844,
-            390
-          ],
-          "copy": [
-            62.453125,
-            70.1300277709961,
-            501.328125,
-            269.2237777709961
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 13.000884173297967,
-            "target": 13.000884173297967,
-            "active": 13,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 3.880459770114943,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 844,
-            "height": 390
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 14,
-          "canvas": [
-            0,
-            0,
-            844,
-            390
-          ],
-          "copy": [
-            62.453125,
-            70.1875,
-            501.328125,
-            333.46875
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 14,
-            "target": 14,
-            "active": 14,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 4.4,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 844,
-            "height": 390
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 15,
-          "canvas": [
-            0,
-            0,
-            844,
-            390
-          ],
-          "copy": [
-            62.453125,
-            70.1300277709961,
-            501.328125,
-            269.2237777709961
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 15.000884173297967,
-            "target": 15.000884173297967,
-            "active": 15,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 5.050150309460654,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 844,
-            "height": 390
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 16,
-          "canvas": [
-            0,
-            0,
-            844,
-            390
-          ],
-          "copy": [
-            62.453125,
-            70.1875,
-            501.328125,
-            287.46875
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 16,
-            "target": 16,
-            "active": 16,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 5.22,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 844,
-            "height": 390
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 17,
-          "canvas": [
-            0,
-            0,
-            844,
-            390
-          ],
-          "copy": [
-            62.453125,
-            70.1300277709961,
-            501.328125,
-            315.2237777709961
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 17.000884173297965,
-            "target": 17.000884173297965,
-            "active": 17,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 5.430194518125552,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 844,
-            "height": 390
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 18,
-          "canvas": [
-            0,
-            0,
-            844,
-            390
-          ],
-          "copy": [
-            62.453125,
-            70.1875,
-            501.328125,
-            269.28125
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 18,
-            "target": 18,
-            "active": 18,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 5.65,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 844,
-            "height": 390
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 19,
-          "canvas": [
-            0,
-            0,
-            844,
-            390
-          ],
-          "copy": [
-            62.453125,
-            70.1300277709961,
-            501.328125,
-            315.2237777709961
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 19.000884173297965,
-            "target": 19.000884173297965,
-            "active": 19,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 5.9802829354553495,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 844,
-            "height": 390
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 20,
-          "canvas": [
-            0,
-            0,
-            844,
-            390
-          ],
-          "copy": [
-            62.453125,
-            70.1875,
-            501.328125,
-            333.46875
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 20,
-            "target": 20,
-            "active": 20,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 6.3,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 844,
-            "height": 390
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 21,
-          "canvas": [
-            0,
-            0,
-            844,
-            390
-          ],
-          "copy": [
-            62.453125,
-            70.1300277709961,
-            501.328125,
-            287.4112777709961
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 21.000884173297965,
-            "target": 21.000884173297965,
-            "active": 21,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
-            "scene": 6.680282935455349,
-            "chapters": 23,
-            "people": 27,
-            "edges": 41,
-            "width": 844,
-            "height": 390
-          },
-          "background": "rgba(0, 0, 0, 0)"
-        },
-        {
-          "i": 22,
-          "canvas": [
-            0,
-            0,
-            844,
-            390
-          ],
-          "copy": [
-            62.453125,
-            85.796875,
-            501.328125,
-            300.703125
-          ],
-          "textInside": true,
-          "overflow": 0,
-          "state": {
-            "progress": 22,
-            "target": 22,
-            "active": 22,
-            "quiet": false,
-            "reading": false,
-            "ready": true,
+            "camera": {
+              "x": -19.183659711502337,
+              "y": -89.50335466507171,
+              "w": 873.5399999999998,
+              "h": 491.62747607655496
+            },
             "scene": 7,
-            "chapters": 23,
+            "chapters": 12,
             "people": 27,
             "edges": 41,
             "width": 844,
@@ -3787,30 +3785,6 @@
       "pass": true
     },
     {
-      "name": "chapter note and evidence: open-web",
-      "pass": true
-    },
-    {
-      "name": "note restores focus: open-web",
-      "pass": true
-    },
-    {
-      "name": "chapter note and evidence: capture",
-      "pass": true
-    },
-    {
-      "name": "note restores focus: capture",
-      "pass": true
-    },
-    {
-      "name": "chapter note and evidence: enclosure",
-      "pass": true
-    },
-    {
-      "name": "note restores focus: enclosure",
-      "pass": true
-    },
-    {
       "name": "chapter note and evidence: sharing",
       "pass": true
     },
@@ -3835,30 +3809,6 @@
       "pass": true
     },
     {
-      "name": "chapter note and evidence: psyche",
-      "pass": true
-    },
-    {
-      "name": "note restores focus: psyche",
-      "pass": true
-    },
-    {
-      "name": "chapter note and evidence: livelihoods",
-      "pass": true
-    },
-    {
-      "name": "note restores focus: livelihoods",
-      "pass": true
-    },
-    {
-      "name": "chapter note and evidence: democracy",
-      "pass": true
-    },
-    {
-      "name": "note restores focus: democracy",
-      "pass": true
-    },
-    {
       "name": "chapter note and evidence: acceleration",
       "pass": true
     },
@@ -3867,35 +3817,11 @@
       "pass": true
     },
     {
-      "name": "chapter note and evidence: moloch",
-      "pass": true
-    },
-    {
-      "name": "note restores focus: moloch",
-      "pass": true
-    },
-    {
-      "name": "chapter note and evidence: choice",
-      "pass": true
-    },
-    {
-      "name": "note restores focus: choice",
-      "pass": true
-    },
-    {
       "name": "chapter note and evidence: reconnect",
       "pass": true
     },
     {
       "name": "note restores focus: reconnect",
-      "pass": true
-    },
-    {
-      "name": "chapter note and evidence: belong",
-      "pass": true
-    },
-    {
-      "name": "note restores focus: belong",
       "pass": true
     },
     {
@@ -3915,14 +3841,6 @@
       "pass": true
     },
     {
-      "name": "chapter note and evidence: stewardship",
-      "pass": true
-    },
-    {
-      "name": "note restores focus: stewardship",
-      "pass": true
-    },
-    {
       "name": "chapter note and evidence: federation",
       "pass": true
     },
@@ -3939,14 +3857,6 @@
       "pass": true
     },
     {
-      "name": "chapter note and evidence: fund",
-      "pass": true
-    },
-    {
-      "name": "note restores focus: fund",
-      "pass": true
-    },
-    {
       "name": "quiet mode retains the world and settles animation",
       "pass": true
     },
@@ -3955,7 +3865,7 @@
       "pass": true
     },
     {
-      "name": "simple reading exposes all twenty-three passages",
+      "name": "simple reading exposes all twelve passages",
       "pass": true
     },
     {
@@ -3966,7 +3876,7 @@
       "name": "scroll frame timing stays below 34ms p95",
       "pass": true,
       "detail": {
-        "p95": 17.40000009536743,
+        "p95": 19.100000143051147,
         "over50": 0
       }
     },
@@ -3975,7 +3885,7 @@
       "pass": true
     },
     {
-      "name": "download includes all and only the new twenty-three passages",
+      "name": "download includes all and only the new twelve passages",
       "pass": true
     },
     {
@@ -3983,7 +3893,7 @@
       "pass": true
     },
     {
-      "name": "without JavaScript all twenty-three chapters are readable",
+      "name": "without JavaScript all twelve chapters are readable",
       "pass": true
     },
     {
