@@ -1,5 +1,6 @@
 /** Main narration stays brief; chapter notes hold mechanisms, evidence and limits. */
 export const SOURCES = {
+  enshittification: { title: "Cory Doctorow · Enshittification", url: "https://pluralistic.net/2023/01/21/potemkin-ai/" },
   "internet": {
     "title": "Internet Society · A brief history, by its builders",
     "url": "https://www.internetsociety.org/internet/history-internet/brief-history-internet/"
@@ -131,14 +132,15 @@ export const BEATS: Chapter[] = [
   {
     "id": "growth",
     "act": "Enclosure",
-    "chapter": "The growth bargain",
+    "chapter": "Enshittification",
     "title": "Our network.\nSomeone else’s return.",
-    "body": "Private capital funds expansion and expects a return. Once a platform controls access to a valuable network, it can charge for reaching it. Digital scale makes that toll easier to repeat—across millions of relationships.",
+    "body": "Attract people. Make leaving hard. Then give them less and charge them more. This is enshittification: a valuable network becomes a machine for extracting returns from the people who sustain it.",
     "scene": 1.8,
     "action": "",
     "mechanism": "Investment → enclosure → recurring extraction",
-    "note": "Venture capital, private equity and public share ownership are different financing arrangements. The common pressure discussed here is the pursuit of returns through a privately controlled platform. Airbnb and Uber are examples of network businesses, not examples of present-day private-equity ownership. Profit can reward useful service; enclosure can let returns grow without equivalent benefits for participants.",
+    "note": "Cory Doctorow calls this pattern enshittification: platforms attract users, shift value toward business customers, then squeeze both to benefit the platform. Venture capital, private equity and public share ownership are different financing arrangements. The common pressure discussed here is the pursuit of returns through a privately controlled platform. Airbnb and Uber are examples of network businesses, not examples of present-day private-equity ownership. Profit can reward useful service; enclosure can let returns grow without equivalent benefits for participants.",
     "sources": [
+      "enshittification",
       "sharing",
       "mobility"
     ]
