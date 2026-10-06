@@ -14,6 +14,8 @@ button { border: 0; background: none; }
 #world { opacity: 0; transition: opacity 800ms ease; }
 .world.ready #world { opacity: 1; }
 .readability { position: absolute; inset: 0; background: linear-gradient(90deg,rgba(3,20,24,.79),rgba(3,20,24,.49) 30%,rgba(3,20,24,0) 65%); opacity: var(--read-shade); }
+.hero-shade { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse 65% 48% at 50% 42%,rgba(3,20,24,.42) 0%,rgba(3,20,24,.30) 42%,rgba(3,20,24,0) 100%); opacity: var(--hero-shade,1); }
+html.reading .hero-shade, html:not(.js) .hero-shade { display: none; }
 .edge-shade { position: absolute; inset: 0; background: linear-gradient(180deg,rgba(3,15,20,.56),transparent 17%,transparent 80%,rgba(3,15,20,.7)); }
 .film-header { position: fixed; z-index: 20; top: 0; left: 0; right: 0; padding: 28px 3.5vw; display: flex; align-items: center; justify-content: space-between; pointer-events: none; }
 .film-header > * { pointer-events: auto; }

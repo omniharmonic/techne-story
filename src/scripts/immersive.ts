@@ -302,6 +302,7 @@ function updateCopy(t:number) {
     sections[i].setAttribute('aria-hidden',String(opacity<.1));
   });
   root.style.setProperty('--read-shade',String(mix(.35,.98,smooth(.3,.8,t))));
+  root.style.setProperty('--hero-shade',String(1-smooth(.12,.65,t)));
   progressFill.style.transform='scaleX('+clamp(t/LAST)+')';
   if(nearest!==active){
     active=nearest;chapterLabel.textContent=BEATS[active].chapter;
