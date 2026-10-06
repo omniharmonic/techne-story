@@ -1,15 +1,15 @@
-# Immersive release validation — 2026-10-06
+# Expanded chapter validation — 2026-10-06
 
-This report applies to the continuous-landscape redesign, replacing the previous split composition.
+The approved opening remains unchanged. The story now has nineteen chapters across five acts, with seventeen optional explanations and primary-source links.
 
-- Production Astro build: passed.
-- Pure narrative/state/route tests: 9 passed.
-- Chromium browser checks: 30 passed, 0 failed. Full details in `checks.json`.
-- Viewports: 1440×900, 820×1180, 390×844, 320×740, and 844×390; all eight chapters checked at each.
-- All three exchange outcomes, cancellation, chapter navigation, modal focus return, quiet mode, system reduced motion, simple reading, no-JavaScript reading, 400% reflow, deep links, and canonical Markdown download passed.
-- Scroll frame interval: 18.1ms p95, no intervals over 50ms in the local Chromium sample. This is a lab observation, not a promise about every device.
-- Compressed production payload upper bound: 980,950 bytes; JavaScript: 6,037 bytes; generated artwork: 899,372 bytes. Gzip text plus native image/font sizes; details in `transfer.json`.
+- Production build: passed.
+- Narrative, opening regression, timeline mapping, and route tests: 11 passed.
+- Chromium browser checks: 65 passed, 0 failed.
+- Every chapter checked at 1440×900, 820×1180, 390×844, 320×740, and 844×390.
+- Four exchanges, all chapter-note contents and source counts, dialog focus return, chapter navigation, reverse navigation, reduced motion, reading mode, no-JavaScript content, 400% reflow, deep links, and Markdown download passed.
+- Local scroll frame interval: 18.0ms p95; 0 intervals over 50ms. This is a Chromium lab result, not a guarantee for all devices.
+- Compressed production upper bound: 991,194 bytes; first-party JavaScript: 13,217 bytes. Artwork unchanged at 899,372 bytes.
 
-Visual review inspected opening, corporate peak, and planted commons on desktop, tablet, and phone, plus the intermediate transformation at progress 4.7. Copy overlays the same full-bleed environment throughout. Six representative desktop/phone screenshots are retained here.
+Visual review included relay stations and linked pages, credit flows, attention loops, public spheres, the expanded machine eye, and the planted commons on desktop and phone. Compact landscape interaction layout was corrected after a failed geometry check, then the complete suite passed. The six release captures show the opening, AI chapter, and commons; their numeric filename suffixes refer to world keyframes, not narrative chapter indices.
 
-Safari, VoiceOver, and physical low-end devices were not tested. Automated geometry/state checks do not establish subjective aesthetic quality; the user's visual assessment remains decisive.
+Safari, VoiceOver and physical low-end devices remain untested. The user's visual assessment determines aesthetic success; automated checks validate mechanics and geometry.

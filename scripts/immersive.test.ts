@@ -1,7 +1,9 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {BEATS,PEOPLE,RELATIONS,filmState,route} from '../src/lib/immersive.ts';
-test('eight distinct, concise narrative beats',()=>{assert.equal(BEATS.length,8);assert.equal(new Set(BEATS.map(b=>b.id)).size,8);assert.ok(BEATS.reduce((n,b)=>n+b.body.split(/\s+/).length,0)<230);});
+import {BEATS,LAST,sceneAt,PEOPLE,RELATIONS,filmState,route} from '../src/lib/immersive.ts';
+test('nineteen distinct chapters with concise narration and deeper notes',()=>{assert.equal(BEATS.length,19);assert.equal(new Set(BEATS.map(b=>b.id)).size,19);for(const b of BEATS){assert.ok(b.body.split(/\s+/).length<48);assert.ok(b.note.length>50);}assert.equal(new Set(BEATS.map(b=>b.act)).size,5);});
+test('the approved opening remains intact',()=>{assert.equal(BEATS[0].title,'Another web\nis possible.');assert.equal(BEATS[0].body,'The internet began with a beautiful idea. People could connect directly. The network belonged to everyone.');assert.equal(sceneAt(0),0);});
+test('narrative-to-landscape mapping is continuous, monotonic and bounded',()=>{assert.equal(sceneAt(-1),0);assert.equal(sceneAt(100),7);let previous=0;for(let i=0;i<=LAST*100;i++){const scene=sceneAt(i/100);assert.ok(scene>=previous&&scene-previous<.02);previous=scene;}for(let i=0;i<BEATS.length;i++)assert.equal(sceneAt(i),BEATS[i].scene);});
 test('the film clock is bounded at both scroll extremes',()=>{assert.deepEqual(filmState(-10),filmState(0));assert.deepEqual(filmState(20),filmState(7));});
 test('reversing the scroll returns exactly the same landscape state',()=>{for(let i=0;i<=700;i++){const t=i/100;const a=filmState(t),b=filmState(7-(7-t));for(const k of Object.keys(a) as (keyof typeof a)[])assert.ok(Math.abs(a[k]-b[k])<1e-10);}});
 test('every interpolated state stays finite and in range',()=>{for(let i=0;i<=700;i++)for(const [k,v]of Object.entries(filmState(i/100))){assert.ok(Number.isFinite(v));if(k!=='t')assert.ok(v>=0&&v<=1,k);}});

@@ -1,14 +1,6 @@
 /** One reversible clock for the film. All visual states derive from progress. */
-export const BEATS = [
-  { id: 'connection', chapter: 'Connection', title: 'Another web\nis possible.', body: 'The internet began with a beautiful idea. People could connect directly. The network belonged to everyone.', action: '' },
-  { id: 'capture', chapter: 'Capture', title: 'Then the middle\nmoved in.', body: 'Platforms made connection easy. Then they put themselves between us. Our relationships became their territory.', action: '' },
-  { id: 'extraction', chapter: 'Extraction', title: 'Our attention.\nTheir empire.', body: 'What we share flows inward. Data becomes influence. Attention becomes profit. The towers keep growing.', action: 'Trace an exchange' },
-  { id: 'acceleration', chapter: 'Acceleration', title: 'The race\ngets a mind.', body: 'AI can accelerate the same incentives. More capture. More power. Less room for us to shape our shared world.', action: '' },
-  { id: 'reconnect', chapter: 'Reconnection', title: 'A different web\nstarts between us.', body: 'One connection can go around the middle. Then another. We begin to take the network back.', action: 'Send a spark' },
-  { id: 'belong', chapter: 'Belonging', title: 'Small enough\nto belong.', body: 'Choose your tools. Carry your identity. Build places people stay because they want to—not because they are trapped.', action: '' },
-  { id: 'living', chapter: 'Life', title: 'A web in service\nof life.', body: 'Tools shared. Gardens tended. Neighbors finding each other. A digital network rooted in living relationships.', action: 'Follow the exchange' },
-  { id: 'future', chapter: 'Techne', title: 'The future is\nsomething we make.', body: 'Techne is the craft of shaping tools—and choosing what they serve. Let’s build for life.', action: '' },
-] as const;
+import { BEATS, LAST } from './chapters.ts';
+export { BEATS, LAST } from './chapters.ts';
 export const clamp = (n: number, lo = 0, hi = 1) => Math.max(lo, Math.min(hi, n));
 export const mix = (a: number, b: number, t: number) => a + (b - a) * t;
 export const smooth = (a: number, b: number, n: number) => { const t = clamp((n - a) / (b - a)); return t * t * (3 - 2 * t); };
@@ -43,3 +35,10 @@ export function route(a: Point, b: Point, gate: Point, capture: number, u: numbe
   const via = { x: mix(start.x, end.x, half), y: mix(start.y, end.y, half) - Math.sin(half * Math.PI) * Math.abs(start.x - end.x) * .07 };
   return { x: mix(direct.x, via.x, capture), y: mix(direct.y, via.y, capture) };
 }
+
+/** Narrative progress and world progress are separate so chapters can breathe. */
+export function sceneAt(progress: number) {
+  const p=clamp(progress,0,LAST), i=Math.floor(p);
+  return mix(BEATS[i].scene,BEATS[Math.min(LAST,i+1)].scene,p-i);
+}
+export const chapterIndex = (id:string) => BEATS.findIndex(b=>b.id===id);

@@ -143,3 +143,48 @@ html.reading .copy,html.reading .opening .copy,html.reading .ending .copy {
   width: 100% !important; max-width: 700px; position: relative;
 }
 .end-actions { flex-wrap: wrap; row-gap: 8px; }
+
+/* Chapters give the journey structure; the approved opening stays untouched. */
+.act-label { display:flex; align-items:center; gap:18px; margin:0 0 16px; color:var(--mint); font-size:14px; font-weight:400; letter-spacing:0; }
+.act-label span { color:#d1e0d790; font-size:12px; }
+.chapter-note-button { display:flex; gap:14px; align-items:center; min-height:44px; padding:4px 0; margin-top:12px; color:#d1e0d7; font-size:14px; }
+.chapter-note-button:hover { color:var(--mint); }
+.act-group { margin-top:24px; }
+.act-group h2 { font-size:15px; font-weight:500; color:var(--mint); line-height:1.4; letter-spacing:0; margin-bottom:8px; }
+#chapter-note h2 { font-size:38px; line-height:1.06; letter-spacing:-.035em; margin:12px 0 20px; }
+#note-mechanism { color:var(--mint); font-size:18px; line-height:1.45; }
+#note-body { font-size:18px; line-height:1.65; }
+#note-sources { padding-left:20px; font-size:15px; line-height:1.6; }
+#note-sources li { margin:10px 0; }
+.note-foot { font-size:13px; line-height:1.6; color:#aac3b9; border-top:1px solid #b5f5d229; padding-top:18px; }
+.js .beat:not(.opening):not(.ending) .copy { top:25%; }
+@media(max-width:700px) {
+  .js .beat:not(.opening):not(.ending) .copy { top:auto; bottom:94px; }
+  .act-label { margin-bottom:12px; font-size:12px; gap:12px; }
+  .act-label span { font-size:11px; }
+  .chapter-note-button { margin-top:6px; font-size:13px; min-height:36px; }
+  .beat:not(.opening) .narration { font-size:16px; line-height:1.4; margin-top:16px; }
+  .beat:not(.opening) .exchange { margin-top:10px; }
+}
+@media(max-height:650px) {
+  .act-label { margin-bottom:8px; }
+  .chapter-note-button { margin-top:2px; }
+  .js .beat:not(.opening):not(.ending) .copy { top:20%; }
+}
+@media(max-height:650px) and (max-width:700px) {
+  .js .beat:not(.opening):not(.ending) .copy { top:auto; bottom:70px; }
+  .beat:not(.opening) .narration { font-size:15px; }
+}
+@media(max-height:520px) and (min-width:600px) {
+  .act-label { margin-bottom:6px; font-size:12px; }
+  .beat:not(.opening) h2 { font-size:32px; }
+  .beat:not(.opening) .narration { margin-top:10px; max-width:48ch; font-size:14px; }
+  .chapter-note-button { min-height:28px; font-size:12px; }
+  .exchange-result { margin-top:0; }
+}
+html:not(.js) .chapter-note-button { display:none; }
+@media print { .chapter-note-button { display:none; } }
+@media(max-height:520px) and (min-width:600px) {
+  .js .beat:not(.opening):not(.ending) .copy { top:18%; }
+  .copy:has(.exchange) .chapter-note-button { position:absolute; right:0; bottom:24px; margin:0; }
+}
