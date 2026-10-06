@@ -1,0 +1,18 @@
+node_modules
+node_modules.nosync
+dist
+.astro
+.DS_Store
+
+.claude/
+qa/screenshots/
+qa/recordings/
+qa/frames/
+qa/lighthouse*.html
+
+# Internal handoff and design source are retained locally, not published.
+design/
+HANDOFF-TO-DESIGN.md
+qa/REPORT.md
+qa/lighthouse-mobile.report.json
+qa/identity-test-results.txt

@@ -1,0 +1,43 @@
+# Builds the static story and publishes it to GitHub Pages, following the Astro
+# GitHub Pages recipe (docs.astro.build/en/guides/deploy/github/, read 2026-10-06).
+# Published at the user's direction; every main branch update rebuilds the static site.
+name: Deploy story to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout your repository using git
+        uses: actions/checkout@v7
+      - name: Install, build, and upload your site
+        uses: withastro/action@v6
+        with:
+          node-version: 24
+        env:
+          # Repository variable holding the Pages origin, e.g. https://<owner>.github.io
+          SITE_ORIGIN: ${{ vars.SITE_ORIGIN }}
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

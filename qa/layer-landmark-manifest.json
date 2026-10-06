@@ -1,0 +1,1973 @@
+{
+  "generated": "2026-10-06T19:39:29.775Z",
+  "coordinateSystems": {
+    "world": "u,v in [0,1] on the ground plane; canvas x = 70 + 860u, y = 255 + 560v",
+    "graph": "graph box gx,gy in [0,1]; u = .04 + .92gx, v = .10 + .86gy (one shared affine)",
+    "essentialRect": {
+      "x": 0,
+      "y": 0,
+      "w": 1000,
+      "h": 860
+    },
+    "camera": "scale about canvas (560,300); keyframes in timeline.camera, pan in panX/panY"
+  },
+  "layers": [
+    {
+      "order": 0,
+      "id": "pFar",
+      "contents": "distant plane: sky, sky glow, two mountain ranges, far hills, haze"
+    },
+    {
+      "order": 1,
+      "id": "pMid / terrain",
+      "contents": "ground, rolling swells, plateaus, river (bank, water, glints)"
+    },
+    {
+      "order": 2,
+      "id": "pMid / civic",
+      "contents": "L3 common paths, existing footbridge, L1 library pavilion, L2 assembly circle, lanterns, huts"
+    },
+    {
+      "order": 3,
+      "id": "pMid / treesBack",
+      "contents": "conifer scatter (deterministic seed 20261006)"
+    },
+    {
+      "order": 4,
+      "id": "pMid / gardens, groves",
+      "contents": "village beds and groves that grow in Alive 9 to 10"
+    },
+    {
+      "order": 5,
+      "id": "pMid / shade",
+      "contents": "shade over L1, L2 and L3 during the acceleration"
+    },
+    {
+      "order": 6,
+      "id": "pMid / rings",
+      "contents": "four porous community perimeters"
+    },
+    {
+      "order": 7,
+      "id": "pMid / ribbonBack",
+      "contents": "back halves of the three lavender feedback loops"
+    },
+    {
+      "order": 8,
+      "id": "pMid / towers",
+      "contents": "per tower: cast shade, foundation, courtyard, 8 segments, channel, reservoir"
+    },
+    {
+      "order": 9,
+      "id": "pMid / ribbonFront",
+      "contents": "front halves of the feedback loops, with direction ticks"
+    },
+    {
+      "order": 10,
+      "id": "pMid / routes",
+      "contents": "36 relationships (casing + line), temporary 37th, waiting line, 6 demo highlights"
+    },
+    {
+      "order": 11,
+      "id": "pMid / glyphs",
+      "contents": "recapture sites, community hosts, demo homes, function pieces and lenses"
+    },
+    {
+      "order": 12,
+      "id": "pMid / people",
+      "contents": "24 person beads n01..n24"
+    },
+    {
+      "order": 13,
+      "id": "pMid / marks",
+      "contents": "6 amber extraction beads, 3 reciprocal pulses, gift, copy, diamond, square, record"
+    },
+    {
+      "order": 14,
+      "id": "pFg",
+      "contents": "foreground conifer silhouettes"
+    },
+    {
+      "order": 15,
+      "id": "labels",
+      "contents": "you, your friend, demo labels (screen-sized)"
+    },
+    {
+      "order": 16,
+      "id": "HTML",
+      "contents": "header, act navigation, narrative, controls, statuses, captions"
+    }
+  ],
+  "landmarks": {
+    "river": [
+      {
+        "u": 0.52,
+        "v": 0.02,
+        "canvas": {
+          "x": 517.2,
+          "y": 266.2
+        }
+      },
+      {
+        "u": 0.6,
+        "v": 0.32,
+        "canvas": {
+          "x": 586,
+          "y": 434.2
+        }
+      },
+      {
+        "u": 0.48,
+        "v": 0.56,
+        "canvas": {
+          "x": 482.8,
+          "y": 568.6
+        }
+      },
+      {
+        "u": 0.56,
+        "v": 0.8,
+        "canvas": {
+          "x": 551.6,
+          "y": 703
+        }
+      },
+      {
+        "u": 0.44,
+        "v": 0.98,
+        "canvas": {
+          "x": 448.4,
+          "y": 803.8
+        }
+      }
+    ],
+    "L1": {
+      "u": 0.57,
+      "v": 0.67,
+      "name": "library pavilion",
+      "canvas": {
+        "x": 560.2,
+        "y": 630.2
+      }
+    },
+    "L2": {
+      "u": 0.73,
+      "v": 0.79,
+      "name": "assembly circle",
+      "canvas": {
+        "x": 697.8,
+        "y": 697.4
+      }
+    },
+    "L3": {
+      "path": [
+        "V1",
+        "V2",
+        "V3",
+        "V4"
+      ],
+      "name": "common paths"
+    },
+    "towers": [
+      {
+        "id": "T1",
+        "u": 0.68,
+        "v": 0.56,
+        "wLow": 190,
+        "wPeak": 176,
+        "hLow": 96,
+        "hPeak": 540,
+        "to": [
+          2,
+          3
+        ],
+        "canvas": {
+          "x": 654.8,
+          "y": 568.6
+        },
+        "unfurlsToward": [
+          "V3",
+          "V4"
+        ]
+      },
+      {
+        "id": "T2",
+        "u": 0.45,
+        "v": 0.45,
+        "wLow": 128,
+        "wPeak": 118,
+        "hLow": 62,
+        "hPeak": 325,
+        "to": [
+          0,
+          1
+        ],
+        "canvas": {
+          "x": 457,
+          "y": 507
+        },
+        "unfurlsToward": [
+          "V1",
+          "V2"
+        ]
+      },
+      {
+        "id": "T3",
+        "u": 0.87,
+        "v": 0.58,
+        "wLow": 138,
+        "wPeak": 128,
+        "hLow": 72,
+        "hPeak": 390,
+        "to": [
+          3,
+          2
+        ],
+        "canvas": {
+          "x": 818.2,
+          "y": 579.8
+        },
+        "unfurlsToward": [
+          "V4",
+          "V3"
+        ]
+      }
+    ],
+    "villages": [
+      {
+        "id": "V1",
+        "u": 0.27,
+        "v": 0.73,
+        "group": "A",
+        "canvas": {
+          "x": 302.2,
+          "y": 663.8
+        }
+      },
+      {
+        "id": "V2",
+        "u": 0.43,
+        "v": 0.39,
+        "group": "B",
+        "canvas": {
+          "x": 439.8,
+          "y": 473.4
+        }
+      },
+      {
+        "id": "V3",
+        "u": 0.68,
+        "v": 0.72,
+        "group": "C",
+        "canvas": {
+          "x": 654.8,
+          "y": 658.2
+        }
+      },
+      {
+        "id": "V4",
+        "u": 0.86,
+        "v": 0.36,
+        "group": "D",
+        "canvas": {
+          "x": 809.6,
+          "y": 456.6
+        }
+      }
+    ],
+    "demoHomes": [
+      {
+        "id": "home0",
+        "label": "Home A",
+        "gx": 0.15,
+        "gy": 0.85
+      },
+      {
+        "id": "home1",
+        "label": "Home B",
+        "gx": 0.45,
+        "gy": 0.85
+      },
+      {
+        "id": "home2",
+        "label": "Home C",
+        "gx": 0.75,
+        "gy": 0.85
+      }
+    ],
+    "recaptureSites": [
+      {
+        "id": "risk0",
+        "gx": 0.35,
+        "gy": 0.32,
+        "bends": [
+          "e07-08",
+          "e08-09"
+        ]
+      },
+      {
+        "id": "risk1",
+        "gx": 0.56,
+        "gy": 0.55,
+        "bends": [
+          "e01-24",
+          "e14-15"
+        ]
+      },
+      {
+        "id": "risk2",
+        "gx": 0.74,
+        "gy": 0.73,
+        "bends": [
+          "e16-17",
+          "e17-18"
+        ]
+      }
+    ]
+  },
+  "people": [
+    {
+      "id": "n01",
+      "role": "you",
+      "group": "A",
+      "owner": "T1",
+      "open": {
+        "gx": 0.69,
+        "gy": 0.94,
+        "canvas": {
+          "x": 650.3,
+          "y": 763.7
+        }
+      },
+      "community": {
+        "x": 250.5,
+        "y": 703.4
+      }
+    },
+    {
+      "id": "n02",
+      "group": "A",
+      "owner": "T1",
+      "open": {
+        "gx": 0.16,
+        "gy": 0.7,
+        "canvas": {
+          "x": 231,
+          "y": 648.1
+        }
+      },
+      "community": {
+        "x": 231.6,
+        "y": 649.3
+      }
+    },
+    {
+      "id": "n03",
+      "group": "A",
+      "owner": "T1",
+      "open": {
+        "gx": 0.08,
+        "gy": 0.49,
+        "canvas": {
+          "x": 167.7,
+          "y": 547
+        }
+      },
+      "community": {
+        "x": 283.3,
+        "y": 609.7
+      }
+    },
+    {
+      "id": "n04",
+      "group": "A",
+      "owner": "T1",
+      "open": {
+        "gx": 0.2,
+        "gy": 0.57,
+        "canvas": {
+          "x": 262.6,
+          "y": 585.5
+        }
+      },
+      "community": {
+        "x": 353.9,
+        "y": 624.2
+      }
+    },
+    {
+      "id": "n05",
+      "group": "A",
+      "owner": "T1",
+      "open": {
+        "gx": 0.31,
+        "gy": 0.75,
+        "canvas": {
+          "x": 349.7,
+          "y": 672.2
+        }
+      },
+      "community": {
+        "x": 372.8,
+        "y": 678.3
+      }
+    },
+    {
+      "id": "n06",
+      "group": "A",
+      "owner": "T1",
+      "open": {
+        "gx": 0.29,
+        "gy": 0.91,
+        "canvas": {
+          "x": 333.8,
+          "y": 749.3
+        }
+      },
+      "community": {
+        "x": 321.1,
+        "y": 717.9
+      }
+    },
+    {
+      "id": "n07",
+      "group": "B",
+      "owner": "T1",
+      "open": {
+        "gx": 0.13,
+        "gy": 0.25,
+        "canvas": {
+          "x": 207.3,
+          "y": 431.4
+        }
+      },
+      "community": {
+        "x": 388.1,
+        "y": 513
+      }
+    },
+    {
+      "id": "n08",
+      "group": "B",
+      "owner": "T1",
+      "open": {
+        "gx": 0.3,
+        "gy": 0.09,
+        "canvas": {
+          "x": 341.8,
+          "y": 354.3
+        }
+      },
+      "community": {
+        "x": 369.2,
+        "y": 458.9
+      }
+    },
+    {
+      "id": "n09",
+      "group": "B",
+      "owner": "T1",
+      "open": {
+        "gx": 0.44,
+        "gy": 0.04,
+        "canvas": {
+          "x": 452.5,
+          "y": 330.3
+        }
+      },
+      "community": {
+        "x": 420.9,
+        "y": 419.3
+      }
+    },
+    {
+      "id": "n10",
+      "group": "B",
+      "owner": "T1",
+      "open": {
+        "gx": 0.48,
+        "gy": 0.26,
+        "canvas": {
+          "x": 484.2,
+          "y": 436.2
+        }
+      },
+      "community": {
+        "x": 491.5,
+        "y": 433.8
+      }
+    },
+    {
+      "id": "n11",
+      "group": "B",
+      "owner": "T1",
+      "open": {
+        "gx": 0.35,
+        "gy": 0.37,
+        "canvas": {
+          "x": 381.3,
+          "y": 489.2
+        }
+      },
+      "community": {
+        "x": 510.4,
+        "y": 487.9
+      }
+    },
+    {
+      "id": "n12",
+      "group": "B",
+      "owner": "T1",
+      "open": {
+        "gx": 0.23,
+        "gy": 0.4,
+        "canvas": {
+          "x": 286.4,
+          "y": 503.6
+        }
+      },
+      "community": {
+        "x": 458.7,
+        "y": 527.5
+      }
+    },
+    {
+      "id": "n13",
+      "group": "C",
+      "owner": "T2",
+      "open": {
+        "gx": 0.45,
+        "gy": 0.55,
+        "canvas": {
+          "x": 460.4,
+          "y": 575.9
+        }
+      },
+      "community": {
+        "x": 603.1,
+        "y": 697.8
+      }
+    },
+    {
+      "id": "n14",
+      "group": "C",
+      "owner": "T2",
+      "open": {
+        "gx": 0.49,
+        "gy": 0.78,
+        "canvas": {
+          "x": 492.1,
+          "y": 686.6
+        }
+      },
+      "community": {
+        "x": 584.2,
+        "y": 643.7
+      }
+    },
+    {
+      "id": "n15",
+      "group": "C",
+      "owner": "T2",
+      "open": {
+        "gx": 0.58,
+        "gy": 0.95,
+        "canvas": {
+          "x": 563.3,
+          "y": 768.5
+        }
+      },
+      "community": {
+        "x": 635.9,
+        "y": 604.1
+      }
+    },
+    {
+      "id": "n16",
+      "group": "C",
+      "owner": "T2",
+      "open": {
+        "gx": 0.77,
+        "gy": 0.87,
+        "canvas": {
+          "x": 713.6,
+          "y": 730
+        }
+      },
+      "community": {
+        "x": 706.5,
+        "y": 618.6
+      }
+    },
+    {
+      "id": "n17",
+      "group": "C",
+      "owner": "T2",
+      "open": {
+        "gx": 0.9,
+        "gy": 0.91,
+        "canvas": {
+          "x": 816.5,
+          "y": 749.3
+        }
+      },
+      "community": {
+        "x": 725.4,
+        "y": 672.7
+      }
+    },
+    {
+      "id": "n18",
+      "group": "C",
+      "owner": "T2",
+      "open": {
+        "gx": 0.84,
+        "gy": 0.64,
+        "canvas": {
+          "x": 769,
+          "y": 619.2
+        }
+      },
+      "community": {
+        "x": 673.7,
+        "y": 712.3
+      }
+    },
+    {
+      "id": "n19",
+      "group": "D",
+      "owner": "T3",
+      "open": {
+        "gx": 0.68,
+        "gy": 0.54,
+        "canvas": {
+          "x": 642.4,
+          "y": 571.1
+        }
+      },
+      "community": {
+        "x": 757.9,
+        "y": 496.2
+      }
+    },
+    {
+      "id": "n20",
+      "group": "D",
+      "owner": "T3",
+      "open": {
+        "gx": 0.73,
+        "gy": 0.34,
+        "canvas": {
+          "x": 682,
+          "y": 474.7
+        }
+      },
+      "community": {
+        "x": 739,
+        "y": 442.1
+      }
+    },
+    {
+      "id": "n21",
+      "group": "D",
+      "owner": "T3",
+      "open": {
+        "gx": 0.91,
+        "gy": 0.4,
+        "canvas": {
+          "x": 824.4,
+          "y": 503.6
+        }
+      },
+      "community": {
+        "x": 790.7,
+        "y": 402.5
+      }
+    },
+    {
+      "id": "n22",
+      "group": "D",
+      "owner": "T3",
+      "open": {
+        "gx": 0.88,
+        "gy": 0.24,
+        "canvas": {
+          "x": 800.7,
+          "y": 426.6
+        }
+      },
+      "community": {
+        "x": 828.5,
+        "y": 510.7
+      }
+    },
+    {
+      "id": "n23",
+      "group": "D",
+      "owner": "T3",
+      "open": {
+        "gx": 0.65,
+        "gy": 0.09,
+        "canvas": {
+          "x": 618.7,
+          "y": 354.3
+        }
+      },
+      "community": {
+        "x": 880.2,
+        "y": 471.1
+      }
+    },
+    {
+      "id": "n24",
+      "role": "your friend",
+      "group": "D",
+      "owner": "T3",
+      "open": {
+        "gx": 0.84,
+        "gy": 0.88,
+        "canvas": {
+          "x": 769,
+          "y": 734.8
+        }
+      },
+      "community": {
+        "x": 861.3,
+        "y": 417
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "id": "e01-02",
+      "a": "n01",
+      "b": "n02",
+      "kind": "A",
+      "order": 0,
+      "capturedVia": [
+        "T1"
+      ]
+    },
+    {
+      "id": "e01-06",
+      "a": "n01",
+      "b": "n06",
+      "kind": "A",
+      "order": 1,
+      "capturedVia": [
+        "T1"
+      ]
+    },
+    {
+      "id": "e01-24",
+      "a": "n01",
+      "b": "n24",
+      "kind": "bridge",
+      "order": 2,
+      "capturedVia": [
+        "T1",
+        "T3"
+      ]
+    },
+    {
+      "id": "e02-03",
+      "a": "n02",
+      "b": "n03",
+      "kind": "A",
+      "order": 3,
+      "capturedVia": [
+        "T1"
+      ]
+    },
+    {
+      "id": "e02-12",
+      "a": "n02",
+      "b": "n12",
+      "kind": "bridge",
+      "order": 4,
+      "capturedVia": [
+        "T1"
+      ]
+    },
+    {
+      "id": "e03-04",
+      "a": "n03",
+      "b": "n04",
+      "kind": "A",
+      "order": 5,
+      "capturedVia": [
+        "T1"
+      ]
+    },
+    {
+      "id": "e03-07",
+      "a": "n03",
+      "b": "n07",
+      "kind": "bridge",
+      "order": 6,
+      "capturedVia": [
+        "T1"
+      ]
+    },
+    {
+      "id": "e04-05",
+      "a": "n04",
+      "b": "n05",
+      "kind": "A",
+      "order": 7,
+      "capturedVia": [
+        "T1"
+      ]
+    },
+    {
+      "id": "e04-13",
+      "a": "n04",
+      "b": "n13",
+      "kind": "bridge",
+      "order": 8,
+      "capturedVia": [
+        "T1",
+        "T2"
+      ]
+    },
+    {
+      "id": "e05-06",
+      "a": "n05",
+      "b": "n06",
+      "kind": "A",
+      "order": 9,
+      "capturedVia": [
+        "T1"
+      ]
+    },
+    {
+      "id": "e05-14",
+      "a": "n05",
+      "b": "n14",
+      "kind": "bridge",
+      "order": 10,
+      "capturedVia": [
+        "T1",
+        "T2"
+      ]
+    },
+    {
+      "id": "e06-15",
+      "a": "n06",
+      "b": "n15",
+      "kind": "bridge",
+      "order": 11,
+      "capturedVia": [
+        "T1",
+        "T2"
+      ]
+    },
+    {
+      "id": "e07-08",
+      "a": "n07",
+      "b": "n08",
+      "kind": "B",
+      "order": 12,
+      "capturedVia": [
+        "T1"
+      ]
+    },
+    {
+      "id": "e07-12",
+      "a": "n07",
+      "b": "n12",
+      "kind": "B",
+      "order": 13,
+      "capturedVia": [
+        "T1"
+      ]
+    },
+    {
+      "id": "e08-09",
+      "a": "n08",
+      "b": "n09",
+      "kind": "B",
+      "order": 14,
+      "capturedVia": [
+        "T1"
+      ]
+    },
+    {
+      "id": "e08-23",
+      "a": "n08",
+      "b": "n23",
+      "kind": "bridge",
+      "order": 15,
+      "capturedVia": [
+        "T1",
+        "T3"
+      ]
+    },
+    {
+      "id": "e09-10",
+      "a": "n09",
+      "b": "n10",
+      "kind": "B",
+      "order": 16,
+      "capturedVia": [
+        "T1"
+      ]
+    },
+    {
+      "id": "e09-22",
+      "a": "n09",
+      "b": "n22",
+      "kind": "bridge",
+      "order": 17,
+      "capturedVia": [
+        "T1",
+        "T3"
+      ]
+    },
+    {
+      "id": "e10-11",
+      "a": "n10",
+      "b": "n11",
+      "kind": "B",
+      "order": 18,
+      "capturedVia": [
+        "T1"
+      ]
+    },
+    {
+      "id": "e10-20",
+      "a": "n10",
+      "b": "n20",
+      "kind": "bridge",
+      "order": 19,
+      "capturedVia": [
+        "T1",
+        "T3"
+      ]
+    },
+    {
+      "id": "e11-12",
+      "a": "n11",
+      "b": "n12",
+      "kind": "B",
+      "order": 20,
+      "capturedVia": [
+        "T1"
+      ]
+    },
+    {
+      "id": "e11-19",
+      "a": "n11",
+      "b": "n19",
+      "kind": "bridge",
+      "order": 21,
+      "capturedVia": [
+        "T1",
+        "T3"
+      ]
+    },
+    {
+      "id": "e13-14",
+      "a": "n13",
+      "b": "n14",
+      "kind": "C",
+      "order": 22,
+      "capturedVia": [
+        "T2"
+      ]
+    },
+    {
+      "id": "e13-18",
+      "a": "n13",
+      "b": "n18",
+      "kind": "C",
+      "order": 23,
+      "capturedVia": [
+        "T2"
+      ]
+    },
+    {
+      "id": "e14-15",
+      "a": "n14",
+      "b": "n15",
+      "kind": "C",
+      "order": 24,
+      "capturedVia": [
+        "T2"
+      ]
+    },
+    {
+      "id": "e15-16",
+      "a": "n15",
+      "b": "n16",
+      "kind": "C",
+      "order": 25,
+      "capturedVia": [
+        "T2"
+      ]
+    },
+    {
+      "id": "e16-17",
+      "a": "n16",
+      "b": "n17",
+      "kind": "C",
+      "order": 26,
+      "capturedVia": [
+        "T2"
+      ]
+    },
+    {
+      "id": "e16-21",
+      "a": "n16",
+      "b": "n21",
+      "kind": "bridge",
+      "order": 27,
+      "capturedVia": [
+        "T2",
+        "T3"
+      ]
+    },
+    {
+      "id": "e17-18",
+      "a": "n17",
+      "b": "n18",
+      "kind": "C",
+      "order": 28,
+      "capturedVia": [
+        "T2"
+      ]
+    },
+    {
+      "id": "e18-24",
+      "a": "n18",
+      "b": "n24",
+      "kind": "bridge",
+      "order": 29,
+      "capturedVia": [
+        "T2",
+        "T3"
+      ]
+    },
+    {
+      "id": "e19-20",
+      "a": "n19",
+      "b": "n20",
+      "kind": "D",
+      "order": 30,
+      "capturedVia": [
+        "T3"
+      ]
+    },
+    {
+      "id": "e19-24",
+      "a": "n19",
+      "b": "n24",
+      "kind": "D",
+      "order": 31,
+      "capturedVia": [
+        "T3"
+      ]
+    },
+    {
+      "id": "e20-21",
+      "a": "n20",
+      "b": "n21",
+      "kind": "D",
+      "order": 32,
+      "capturedVia": [
+        "T3"
+      ]
+    },
+    {
+      "id": "e21-22",
+      "a": "n21",
+      "b": "n22",
+      "kind": "D",
+      "order": 33,
+      "capturedVia": [
+        "T3"
+      ]
+    },
+    {
+      "id": "e22-23",
+      "a": "n22",
+      "b": "n23",
+      "kind": "D",
+      "order": 34,
+      "capturedVia": [
+        "T3"
+      ]
+    },
+    {
+      "id": "e23-24",
+      "a": "n23",
+      "b": "n24",
+      "kind": "D",
+      "order": 35,
+      "capturedVia": [
+        "T3"
+      ]
+    }
+  ],
+  "temporaryRelationship": {
+    "id": "e01-04",
+    "a": "n01",
+    "b": "n04",
+    "appears": "Alive send only, final step"
+  },
+  "segments": [
+    {
+      "id": "T1-01",
+      "tower": "T1",
+      "role": "buttress",
+      "becomes": "pavilion",
+      "at": {
+        "x": 555.9,
+        "y": 641.4
+      },
+      "size": {
+        "w": 46,
+        "h": 30
+      }
+    },
+    {
+      "id": "T1-02",
+      "tower": "T1",
+      "role": "buttress",
+      "becomes": "pavilion",
+      "at": {
+        "x": 758,
+        "y": 633
+      },
+      "size": {
+        "w": 44,
+        "h": 28
+      }
+    },
+    {
+      "id": "T1-03",
+      "tower": "T1",
+      "role": "stack 1 of 6 (base up)",
+      "becomes": "bridge",
+      "at": {
+        "x": 530.1,
+        "y": 666.6
+      },
+      "size": {
+        "w": 78,
+        "h": 22
+      }
+    },
+    {
+      "id": "T1-04",
+      "tower": "T1",
+      "role": "stack 2 of 6 (base up)",
+      "becomes": "pavilion",
+      "at": {
+        "x": 620.4,
+        "y": 579.8
+      },
+      "size": {
+        "w": 52,
+        "h": 34
+      }
+    },
+    {
+      "id": "T1-05",
+      "tower": "T1",
+      "role": "stack 3 of 6 (base up)",
+      "becomes": "pavilion",
+      "at": {
+        "x": 697.8,
+        "y": 582.6
+      },
+      "size": {
+        "w": 40,
+        "h": 30
+      }
+    },
+    {
+      "id": "T1-06",
+      "tower": "T1",
+      "role": "stack 4 of 6 (base up)",
+      "becomes": "terrace",
+      "at": {
+        "x": 719.3,
+        "y": 498.6
+      },
+      "size": {
+        "w": 58,
+        "h": 16
+      }
+    },
+    {
+      "id": "T1-07",
+      "tower": "T1",
+      "role": "stack 5 of 6 (base up)",
+      "becomes": "pavilion",
+      "at": {
+        "x": 826.8,
+        "y": 532.2
+      },
+      "size": {
+        "w": 40,
+        "h": 26
+      }
+    },
+    {
+      "id": "T1-08",
+      "tower": "T1",
+      "role": "stack 6 of 6 (base up)",
+      "becomes": "pavilion",
+      "at": {
+        "x": 895.6,
+        "y": 518.2
+      },
+      "size": {
+        "w": 34,
+        "h": 24
+      }
+    },
+    {
+      "id": "T2-01",
+      "tower": "T2",
+      "role": "buttress",
+      "becomes": "pavilion",
+      "at": {
+        "x": 216.2,
+        "y": 621.8
+      },
+      "size": {
+        "w": 42,
+        "h": 28
+      }
+    },
+    {
+      "id": "T2-02",
+      "tower": "T2",
+      "role": "buttress",
+      "becomes": "pavilion",
+      "at": {
+        "x": 340.9,
+        "y": 462.2
+      },
+      "size": {
+        "w": 40,
+        "h": 26
+      }
+    },
+    {
+      "id": "T2-03",
+      "tower": "T2",
+      "role": "stack 1 of 6 (base up)",
+      "becomes": "bridge",
+      "at": {
+        "x": 573.1,
+        "y": 403.4
+      },
+      "size": {
+        "w": 60,
+        "h": 16
+      }
+    },
+    {
+      "id": "T2-04",
+      "tower": "T2",
+      "role": "stack 2 of 6 (base up)",
+      "becomes": "pavilion",
+      "at": {
+        "x": 285,
+        "y": 585.4
+      },
+      "size": {
+        "w": 48,
+        "h": 32
+      }
+    },
+    {
+      "id": "T2-05",
+      "tower": "T2",
+      "role": "stack 3 of 6 (base up)",
+      "becomes": "pavilion",
+      "at": {
+        "x": 366.7,
+        "y": 599.4
+      },
+      "size": {
+        "w": 38,
+        "h": 26
+      }
+    },
+    {
+      "id": "T2-06",
+      "tower": "T2",
+      "role": "stack 4 of 6 (base up)",
+      "becomes": "pavilion",
+      "at": {
+        "x": 388.2,
+        "y": 403.4
+      },
+      "size": {
+        "w": 44,
+        "h": 28
+      }
+    },
+    {
+      "id": "T2-07",
+      "tower": "T2",
+      "role": "stack 5 of 6 (base up)",
+      "becomes": "terrace",
+      "at": {
+        "x": 409.7,
+        "y": 652.6
+      },
+      "size": {
+        "w": 54,
+        "h": 15
+      }
+    },
+    {
+      "id": "T2-08",
+      "tower": "T2",
+      "role": "stack 6 of 6 (base up)",
+      "becomes": "pavilion",
+      "at": {
+        "x": 478.5,
+        "y": 400.6
+      },
+      "size": {
+        "w": 34,
+        "h": 24
+      }
+    },
+    {
+      "id": "T3-01",
+      "tower": "T3",
+      "role": "buttress",
+      "becomes": "pavilion",
+      "at": {
+        "x": 732.2,
+        "y": 392.2
+      },
+      "size": {
+        "w": 40,
+        "h": 26
+      }
+    },
+    {
+      "id": "T3-02",
+      "tower": "T3",
+      "role": "buttress",
+      "becomes": "pavilion",
+      "at": {
+        "x": 882.7,
+        "y": 395
+      },
+      "size": {
+        "w": 38,
+        "h": 26
+      }
+    },
+    {
+      "id": "T3-03",
+      "tower": "T3",
+      "role": "stack 1 of 6 (base up)",
+      "becomes": "pavilion",
+      "at": {
+        "x": 805.3,
+        "y": 375.4
+      },
+      "size": {
+        "w": 50,
+        "h": 32
+      }
+    },
+    {
+      "id": "T3-04",
+      "tower": "T3",
+      "role": "stack 2 of 6 (base up)",
+      "becomes": "terrace",
+      "at": {
+        "x": 762.3,
+        "y": 691.8
+      },
+      "size": {
+        "w": 56,
+        "h": 16
+      }
+    },
+    {
+      "id": "T3-05",
+      "tower": "T3",
+      "role": "stack 3 of 6 (base up)",
+      "becomes": "pavilion",
+      "at": {
+        "x": 917.1,
+        "y": 456.6
+      },
+      "size": {
+        "w": 36,
+        "h": 24
+      }
+    },
+    {
+      "id": "T3-06",
+      "tower": "T3",
+      "role": "stack 4 of 6 (base up)",
+      "becomes": "pavilion",
+      "at": {
+        "x": 547.3,
+        "y": 697.4
+      },
+      "size": {
+        "w": 38,
+        "h": 26
+      }
+    },
+    {
+      "id": "T3-07",
+      "tower": "T3",
+      "role": "stack 5 of 6 (base up)",
+      "becomes": "pavilion",
+      "at": {
+        "x": 667.7,
+        "y": 733.8
+      },
+      "size": {
+        "w": 42,
+        "h": 26
+      }
+    },
+    {
+      "id": "T3-08",
+      "tower": "T3",
+      "role": "stack 6 of 6 (base up)",
+      "becomes": "pavilion",
+      "at": {
+        "x": 702.1,
+        "y": 439.8
+      },
+      "size": {
+        "w": 32,
+        "h": 22
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "T": 0,
+      "id": "open"
+    },
+    {
+      "T": 1,
+      "id": "peers"
+    },
+    {
+      "T": 2,
+      "id": "captured"
+    },
+    {
+      "T": 3,
+      "id": "flow"
+    },
+    {
+      "T": 4,
+      "id": "acceleration"
+    },
+    {
+      "T": 5,
+      "id": "leave-captured"
+    },
+    {
+      "T": 6,
+      "id": "freed"
+    },
+    {
+      "T": 7,
+      "id": "homes"
+    },
+    {
+      "T": 8,
+      "id": "groups"
+    },
+    {
+      "T": 9,
+      "id": "alive"
+    },
+    {
+      "T": 10,
+      "id": "place"
+    },
+    {
+      "T": 11,
+      "id": "unfinished"
+    },
+    {
+      "T": 12,
+      "id": "techne"
+    }
+  ],
+  "timeline": {
+    "note": "T = k is the endpoint of scene k; (k-1,k) is the transition into it. Each track is [T, value] keys with smoothstep between keys.",
+    "tracks": {
+      "platform": [
+        [
+          1,
+          0
+        ],
+        [
+          1.2,
+          1
+        ]
+      ],
+      "captureIn": [
+        [
+          1.2,
+          0
+        ],
+        [
+          1.75,
+          1
+        ]
+      ],
+      "friendBypass": [
+        [
+          5,
+          0
+        ],
+        [
+          5.25,
+          1
+        ]
+      ],
+      "releaseOut": [
+        [
+          5.25,
+          0
+        ],
+        [
+          5.6,
+          1
+        ]
+      ],
+      "functions": [
+        [
+          5.6,
+          0
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          7.2,
+          1
+        ],
+        [
+          7.6,
+          0
+        ]
+      ],
+      "extract": [
+        [
+          1.75,
+          0
+        ],
+        [
+          2,
+          0.3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          5.25,
+          1
+        ],
+        [
+          6,
+          0.6
+        ],
+        [
+          7,
+          0.4
+        ],
+        [
+          7.3,
+          0
+        ]
+      ],
+      "ribbon": [
+        [
+          3,
+          0
+        ],
+        [
+          3.25,
+          1
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "height": [
+        [
+          3.25,
+          0
+        ],
+        [
+          3.75,
+          0.92
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "fill": [
+        [
+          1.75,
+          0
+        ],
+        [
+          2,
+          0.12
+        ],
+        [
+          3,
+          0.25
+        ],
+        [
+          3.25,
+          0.25
+        ],
+        [
+          3.75,
+          0.85
+        ],
+        [
+          7,
+          0.85
+        ],
+        [
+          7.3,
+          0
+        ]
+      ],
+      "shadow": [
+        [
+          3.75,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          7.3,
+          0.5
+        ],
+        [
+          8,
+          0
+        ]
+      ],
+      "lampDim": [
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0.2
+        ],
+        [
+          4,
+          0.55
+        ],
+        [
+          7,
+          0.55
+        ],
+        [
+          8,
+          0
+        ]
+      ],
+      "nodeDim": [
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0.3
+        ],
+        [
+          5.25,
+          0.3
+        ],
+        [
+          6,
+          0.1
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "homes": [
+        [
+          6.1,
+          0
+        ],
+        [
+          6.6,
+          1
+        ],
+        [
+          7.3,
+          1
+        ],
+        [
+          7.7,
+          0
+        ]
+      ],
+      "seams": [
+        [
+          6.6,
+          0
+        ],
+        [
+          7,
+          0.25
+        ],
+        [
+          7.3,
+          0.25
+        ],
+        [
+          7.6,
+          1
+        ]
+      ],
+      "fan": [
+        [
+          7.6,
+          0
+        ],
+        [
+          7.9,
+          1
+        ]
+      ],
+      "move": [
+        [
+          7.1,
+          0
+        ],
+        [
+          7.9,
+          1
+        ]
+      ],
+      "paths": [
+        [
+          7.9,
+          0
+        ],
+        [
+          8,
+          1
+        ]
+      ],
+      "boundary": [
+        [
+          7.6,
+          0
+        ],
+        [
+          8,
+          1
+        ]
+      ],
+      "day": [
+        [
+          7.6,
+          0
+        ],
+        [
+          8,
+          0.3
+        ],
+        [
+          9,
+          0.45
+        ],
+        [
+          9.65,
+          0.72
+        ],
+        [
+          10,
+          1
+        ]
+      ],
+      "loops": [
+        [
+          8,
+          0
+        ],
+        [
+          9,
+          1
+        ]
+      ],
+      "garden": [
+        [
+          9,
+          0
+        ],
+        [
+          9.3,
+          1
+        ]
+      ],
+      "trees": [
+        [
+          9.3,
+          0
+        ],
+        [
+          9.65,
+          1
+        ]
+      ],
+      "lights": [
+        [
+          9.65,
+          0
+        ],
+        [
+          10,
+          1
+        ]
+      ],
+      "recapture": [
+        [
+          10,
+          0
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          12,
+          0
+        ]
+      ],
+      "cta": [
+        [
+          11.4,
+          0
+        ],
+        [
+          12,
+          1
+        ]
+      ],
+      "camera": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1.08
+        ],
+        [
+          3,
+          1.08
+        ],
+        [
+          4,
+          1.12
+        ],
+        [
+          5,
+          1.12
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          9,
+          1
+        ],
+        [
+          10,
+          0.92
+        ]
+      ],
+      "panX": [
+        [
+          1,
+          0
+        ],
+        [
+          4,
+          10
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          10,
+          -8
+        ]
+      ],
+      "panY": [
+        [
+          1,
+          0
+        ],
+        [
+          4,
+          -12
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          10,
+          5
+        ]
+      ]
+    }
+  },
+  "bounds": {
+    "people": 24,
+    "relationships": 36,
+    "temporaryRelationships": 1,
+    "segments": 24,
+    "reservoirs": 3,
+    "depthPlanes": 3,
+    "extractionBeads": 6,
+    "reciprocalBeads": 3
+  }
+}

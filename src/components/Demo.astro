@@ -1,0 +1,164 @@
+---
+// The interactive block for one scene. Controls are real HTML beside the story;
+// each has an explicit text outcome so the illustration is never required.
+import Pair from './Pair.astro';
+interface Props { id: string }
+const { id } = Astro.props;
+const SEND = 'Send something to your friend';
+const people = Array.from({ length: 24 }, (_, i) => ({
+  value: i,
+  label: i === 0 ? 'You' : i === 23 ? 'Your friend' : `Person ${i + 1}`,
+}));
+---
+{id === 'open' && (
+  <div class="legend" aria-label="Legend">
+    <p><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="5" fill="#E7AE74"/><circle cx="10" cy="10" r="8.5" fill="none" stroke="#E7AE74" stroke-width="1.5"/></svg>A bead is a person. The double ring is you.</p>
+    <p><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2 14 Q10 4 18 12" fill="none" stroke="#A9D3B1" stroke-width="2"/></svg>A line is a relationship between two people.</p>
+    <p><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="4" fill="#F1EBDD"/></svg>An ivory circle is something given.</p>
+  </div>
+)}
+{id === 'flow' && (
+  <div class="legend" aria-label="Legend">
+    <p><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="4" fill="#F1EBDD"/></svg>What you give</p>
+    <p><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="7" y="3" width="6" height="14" rx="3" fill="#E9BC67"/></svg>Value gathered in the middle</p>
+  </div>
+)}
+{id === 'acceleration' && (
+  <div class="legend" aria-label="Legend">
+    <p><svg viewBox="0 0 20 20" aria-hidden="true"><ellipse cx="10" cy="10" rx="8" ry="4" fill="none" stroke="#B7A9DC" stroke-width="2"/><path d="M14 5.5 l3 1.5 -3 1.5" fill="none" stroke="#B7A9DC" stroke-width="1.5"/></svg>Tools accelerating the same incentives</p>
+  </div>
+  <Pair name="acceleration" always />
+)}
+
+{['open', 'captured', 'freed', 'alive'].includes(id) && (
+  <div class="demo" data-demo="send" data-kind={`send-${id}`}>
+    {id === 'captured' && (
+      <div class="legend" aria-label="Legend">
+        <p><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3 L17 10 L10 17 L3 10Z" fill="none" stroke="#E9BC67" stroke-width="2"/></svg>Something else chosen by the platform.</p>
+      </div>
+    )}
+    <div class="actions">
+      <button type="button" class="btn primary" data-action="send">{SEND}</button>
+      <button type="button" class="btn secondary" data-action="replay" hidden>Replay</button>
+    </div>
+    <p class="status" role="status" aria-live="polite"></p>
+  </div>
+  <Pair name={id} />
+)}
+
+{(id === 'peers' || id === 'flow') && (
+  <div class="demo" data-demo="ripple" data-kind={id === 'peers' ? 'ripple' : 'ripple-captured'}>
+    <div class="field">
+      <label for={`person-${id}`}>Choose a person</label>
+      <select id={`person-${id}`}>
+        {people.map((p) => <option value={p.value}>{p.label}</option>)}
+      </select>
+    </div>
+    <div class="actions"><button type="button" class="btn secondary" data-action="ripple">Start ripple</button></div>
+    <p class="status" role="status" aria-live="polite"></p>
+  </div>
+)}
+
+{id === 'leave-captured' && (
+  <div class="demo" data-demo="leave">
+    <div class="actions">
+      <button type="button" class="btn secondary" data-action="leave">Leave</button>
+      <button type="button" class="btn secondary" data-action="back" hidden>Go back</button>
+      <button type="button" class="btn secondary" data-action="reset" hidden>Reset demo</button>
+    </div>
+    <p class="status" role="status" aria-live="polite"></p>
+  </div>
+  <Pair name="leave-captured" />
+)}
+
+{id === 'freed' && (
+  <div class="demo" data-demo="migrate">
+    <p class="demo-lead">Now try leaving. Here it means moving to a different home.</p>
+    <div class="actions">
+      <button type="button" class="btn secondary" data-action="leave">Leave</button>
+      <button type="button" class="btn secondary" data-action="reset" hidden>Reset demo</button>
+    </div>
+    <p class="status" role="status" aria-live="polite"></p>
+  </div>
+  <Pair name="freed-move" />
+)}
+
+{id === 'homes' && (
+  <div class="demo" data-demo="homes">
+    <p class="demo-lead">Three homes, labelled as demo choices only. Pick one, or drag your bead to it in the illustration.</p>
+    <div class="actions">
+      <button type="button" class="btn secondary" data-home="0" aria-pressed="false">Choose Home A</button>
+      <button type="button" class="btn secondary" data-home="1" aria-pressed="false">Choose Home B</button>
+      <button type="button" class="btn secondary" data-home="2" aria-pressed="false">Choose Home C</button>
+    </div>
+    <p class="status" role="status" aria-live="polite"></p>
+  </div>
+)}
+
+{id === 'groups' && (
+  <div class="demo" data-demo="scope">
+    <fieldset>
+      <legend>Choose a community</legend>
+      <div class="actions">
+        {['A', 'B', 'C', 'D'].map((g, i) => <button type="button" class="btn secondary small" data-group={i} aria-pressed={i === 0 ? 'true' : 'false'}>{`Community ${g}`}</button>)}
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Share something with</legend>
+      <div class="actions">
+        <button type="button" class="btn secondary small" data-scope="0">Everyone</button>
+        <button type="button" class="btn secondary small" data-scope="1">Members</button>
+        <button type="button" class="btn secondary small" data-scope="2">Only me</button>
+      </div>
+    </fieldset>
+    <div class="legend" aria-label="Legend">
+      <p><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="4" fill="#F1EBDD"/></svg>A circle that crosses the edge goes out to everyone.</p>
+      <p><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2 10 h3 M7 10 h3" stroke="#F1EBDD" stroke-width="2"/><circle cx="15" cy="10" r="3.5" fill="#F1EBDD"/></svg>A circle with a dashed trail circulates among members.</p>
+      <p><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="5" y="5" width="10" height="10" fill="none" stroke="#F1EBDD" stroke-width="2"/></svg>A square stays with one person.</p>
+    </div>
+    <p class="status" role="status" aria-live="polite"></p>
+  </div>
+  <Pair name="groups" always />
+)}
+
+{id === 'place' && (
+  <p class="imagined">An imagined living landscape.</p>
+  <p>Explore what these imagined communities might tend together.</p>
+  <div class="demo" data-demo="place">
+    <fieldset>
+      <legend>Look at a community</legend>
+      <div class="actions">
+        {['Gardens', 'Tools', 'Gatherings', 'Watersheds'].map((g, i) => <button type="button" class="btn secondary small" data-community={i} aria-pressed="false">{g}</button>)}
+      </div>
+    </fieldset>
+    <p class="status" role="status" aria-live="polite"></p>
+  </div>
+)}
+
+{id === 'unfinished' && (
+  <div class="demo" data-demo="risks">
+    <div class="risk">
+      <button type="button" class="btn secondary" data-risk="0" aria-expanded="false" aria-controls="risk-0">Who says who we are</button>
+      <div id="risk-0" class="risk-text" hidden><p>A shared identity directory can become a new center if everyone depends on one operator. Independent copies and open governance help keep it accountable.</p></div>
+    </div>
+    <div class="risk">
+      <button type="button" class="btn secondary" data-risk="1" aria-expanded="false" aria-controls="risk-1">Who helps us find each other</button>
+      <div id="risk-1" class="risk-text" hidden><p>An index of the whole network is costly to run, so few can afford to offer one. If only one service can help people find each other, the middle has grown back.</p></div>
+    </div>
+    <div class="risk">
+      <button type="button" class="btn secondary" data-risk="2" aria-expanded="false" aria-controls="risk-2">Who shapes our shared words</button>
+      <div id="risk-2" class="risk-text" hidden><p>Tools understand each other through shared vocabularies. Whoever governs those words shapes what everyone can say, so they need governing in the open.</p></div>
+    </div>
+    <p class="status" role="status" aria-live="polite"></p>
+
+  </div>
+)}
+
+{id === 'techne' && (
+  <p class="imagined">An imagined living landscape.</p>
+  <p>The next part is something we make together.</p>
+  <div class="actions">
+    <a class="btn primary" href="https://unforcedagi.github.io/techne-www/writing/protocols-of-belonging/">Read the writing <span aria-hidden="true">↗</span></a>
+    <a class="btn secondary" href="mailto:synergy@benjaminlife.one">Get in touch</a>
+  </div>
+)}

@@ -1,0 +1,637 @@
+{
+  "date": "2026-10-06T19:38:48.987Z",
+  "browser": "Chromium 153.0.8010.12 (headless, Playwright)",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+  "platform": "darwin arm64",
+  "passed": 49,
+  "failed": 1,
+  "timing": {
+    "frames": 701,
+    "median": 16.699999999999818,
+    "p95": 16.700000000000728,
+    "max": 16.80000000000109,
+    "over50": 0,
+    "longTasks": 0
+  },
+  "vitals": {
+    "lcpMs": 64,
+    "cls": 0.002
+  },
+  "geometry": {
+    "h2": [
+      "64px",
+      "68px"
+    ],
+    "h2long": [
+      "52px",
+      "57px"
+    ],
+    "body": [
+      "20px",
+      "30px"
+    ],
+    "caption": [
+      "16px",
+      "23px"
+    ],
+    "narrative": {
+      "x": 48,
+      "w": 448
+    },
+    "wordmark": {
+      "x": 32,
+      "y": 16
+    },
+    "nav": {
+      "left": 32,
+      "bottom": 28,
+      "w": 480
+    },
+    "primary": {
+      "h": 48,
+      "radius": "8px"
+    },
+    "ground": "rgb(16, 39, 45)",
+    "ink": "rgb(241, 235, 221)",
+    "families": [
+      "Newsreader",
+      "\"Source Sans 3\""
+    ],
+    "fontsLoaded": [
+      "Newsreader 400 normal",
+      "Source Sans 3 400 normal",
+      "Source Sans 3 500 normal"
+    ]
+  },
+  "requests": [
+    "200 document /techne-story/",
+    "304 stylesheet /techne-story/assets/index.CnEGgCQy.css",
+    "304 image /techne-story/art/terrain-night.webp",
+    "304 image /techne-story/art/terrain-day.webp",
+    "304 script /techne-story/assets/index.astro_astro_type_script_index_0_lang.uPn1nSjb.js",
+    "200 font /techne-story/assets/newsreader-latin-400-normal.BFBkh4jY.woff2",
+    "200 font /techne-story/assets/source-sans-3-latin-400-normal.DQi5PRDE.woff2",
+    "200 font /techne-story/assets/source-sans-3-latin-500-normal.DiWS0tcR.woff2"
+  ],
+  "results": [
+    {
+      "name": "24 people, 36 relationships, 24 segments in the DOM",
+      "pass": true,
+      "detail": {
+        "T": 0,
+        "scene": "open",
+        "intro": 1,
+        "loop": true,
+        "ambient": true,
+        "tweens": 0,
+        "demo": null,
+        "people": 24,
+        "relationships": 36,
+        "segments": 24,
+        "elements": 1091,
+        "flags": {
+          "story": false,
+          "paused": false,
+          "reduce": false,
+          "unpinned": false,
+          "expanded": false
+        },
+        "view": {
+          "upp": 1.1574074074074074,
+          "mobile": false,
+          "bounds": {
+            "x0": -648.1481481481482,
+            "y0": -123.24074074074076,
+            "x1": 1018.5185185185186,
+            "y1": 918.425925925926
+          }
+        }
+      }
+    },
+    {
+      "name": "send in open: label, single run, result copy, Replay",
+      "pass": true,
+      "detail": {
+        "label": "Send something to your friend",
+        "disabled": "true",
+        "got": "Your friend received it. Something came back directly.",
+        "replay": true
+      }
+    },
+    {
+      "name": "send in captured: label, single run, result copy, Replay",
+      "pass": true,
+      "detail": {
+        "label": "Send something to your friend",
+        "disabled": "true",
+        "got": "Your friend received it with something else. Nothing came back directly.",
+        "replay": true
+      }
+    },
+    {
+      "name": "captured send shows the copy-kept status mid-way",
+      "pass": true
+    },
+    {
+      "name": "send in freed: label, single run, result copy, Replay",
+      "pass": true,
+      "detail": {
+        "label": "Send something to your friend",
+        "disabled": "true",
+        "got": "It went directly. Your copy rests in the home you chose.",
+        "replay": true
+      }
+    },
+    {
+      "name": "send in alive: label, single run, result copy, Replay",
+      "pass": true,
+      "detail": {
+        "label": "Send something to your friend",
+        "disabled": "true",
+        "got": "Your gift traveled on. Something returned from someone you had not met.",
+        "replay": true
+      }
+    },
+    {
+      "name": "captured send pauses under platform control with status",
+      "pass": true
+    },
+    {
+      "name": "leaving a scene cancels its demo and announces the reset",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "re-entering a scene restores its initial demo state",
+      "pass": true
+    },
+    {
+      "name": "ripple spreads and returns",
+      "pass": true
+    },
+    {
+      "name": "captured ripple stops at the middle",
+      "pass": true
+    },
+    {
+      "name": "captured Leave cuts every line; Go back restores and returns focus to Leave",
+      "pass": true,
+      "detail": {
+        "left": "You left. Your connections here were cut.",
+        "cut": "0",
+        "focus": "leave"
+      }
+    },
+    {
+      "name": "freed Leave is a migration: lines hold",
+      "pass": true,
+      "detail": 0.84
+    },
+    {
+      "name": "choose a home by button",
+      "pass": true
+    },
+    {
+      "name": "drag your bead to a home",
+      "pass": true,
+      "detail": "You moved to Home C. Every relationship came with you."
+    },
+    {
+      "name": "a drop outside every home restores the previous position",
+      "pass": true,
+      "detail": {
+        "from": {
+          "x": 1163.95751953125,
+          "y": 704.1405334472656
+        },
+        "back": {
+          "x": 1163.95751953125,
+          "y": 704.1405334472656
+        }
+      }
+    },
+    {
+      "name": "Escape cancels a drag",
+      "pass": true
+    },
+    {
+      "name": "three sharing scopes with distinct outcomes",
+      "pass": true
+    },
+    {
+      "name": "place disclosure is in-flow and labelled as imagined",
+      "pass": true
+    },
+    {
+      "name": "three risk disclosures open in flow",
+      "pass": true
+    },
+    {
+      "name": "fast jump from scene 2 to scene 10 lands on the scene 10 endpoint",
+      "pass": true,
+      "detail": 10
+    },
+    {
+      "name": "backward scroll returns the same timeline value",
+      "pass": true,
+      "detail": 7.5
+    },
+    {
+      "name": "toggling Just the story (on, then off) mid-morph preserves the reading anchor",
+      "pass": true,
+      "detail": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "opening source notes remeasures and preserves the reading anchor",
+      "pass": true,
+      "detail": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "closing Reading options returns focus to its opener",
+      "pass": true
+    },
+    {
+      "name": "resize mid-demo: no error, people intact, demo settles or resets",
+      "pass": true,
+      "detail": {
+        "kind": "send-open",
+        "ms": 2600,
+        "running": false
+      }
+    },
+    {
+      "name": "reload at #place shows the place endpoint without replaying the intro",
+      "pass": true,
+      "detail": {
+        "T": 10,
+        "scene": "place",
+        "intro": 1,
+        "loop": true,
+        "ambient": true,
+        "tweens": 0,
+        "demo": null,
+        "people": 24,
+        "relationships": 36,
+        "segments": 24,
+        "elements": 1091,
+        "flags": {
+          "story": false,
+          "paused": false,
+          "reduce": false,
+          "unpinned": false,
+          "expanded": false
+        },
+        "view": {
+          "upp": 1.1574074074074074,
+          "mobile": false,
+          "bounds": {
+            "x0": -648.1481481481482,
+            "y0": -123.24074074074076,
+            "x1": 1018.5185185185186,
+            "y1": 918.425925925926
+          }
+        }
+      }
+    },
+    {
+      "name": "after 24 traversals: element, person, segment and relationship counts unchanged",
+      "pass": true,
+      "detail": {
+        "elements": 1091,
+        "elements0": 1091
+      }
+    },
+    {
+      "name": "hidden tab stops the animation loop",
+      "pass": true
+    },
+    {
+      "name": "scrolling the whole film: p95 frame at or under 16.7ms budget (+1ms tolerance), no frames over 50ms",
+      "pass": true,
+      "detail": {
+        "frames": 701,
+        "median": 16.699999999999818,
+        "p95": 16.700000000000728,
+        "max": 16.80000000000109,
+        "over50": 0,
+        "longTasks": 0
+      }
+    },
+    {
+      "name": "6x CPU throttle still lands on the correct endpoint",
+      "pass": true,
+      "detail": 8
+    },
+    {
+      "name": "reduced motion on first paint: no intro, endpoints only",
+      "pass": true,
+      "detail": {
+        "intro": 1,
+        "snap": 1
+      }
+    },
+    {
+      "name": "reduced motion toggled mid-demo finishes into the static outcome",
+      "pass": true,
+      "detail": {
+        "kind": "send-captured",
+        "ms": 3200,
+        "running": false
+      }
+    },
+    {
+      "name": "keyboard: skip link first, no people in tab order, Send works with Enter",
+      "pass": true,
+      "detail": {
+        "order": [
+          "skip",
+          "techne",
+          "optionsBtn",
+          "1 / Open",
+          "2 / Captured",
+          "3 / Freed",
+          "4 / Alive",
+          "btn primary",
+          "Under the hood and sourc"
+        ],
+        "svgTab": 0,
+        "kb": "Your friend received it. Something came back directly.",
+        "outline": "solid"
+      }
+    },
+    {
+      "name": "focused control is clear of the header and the act navigation",
+      "pass": true,
+      "detail": {
+        "top": 412,
+        "bottom": 460,
+        "navTop": 800
+      }
+    },
+    {
+      "name": "desktop type: title 64/68, long 52/57, body 20/30, captions 16/23",
+      "pass": true,
+      "detail": {
+        "h2": [
+          "64px",
+          "68px"
+        ],
+        "h2long": [
+          "52px",
+          "57px"
+        ],
+        "body": [
+          "20px",
+          "30px"
+        ],
+        "caption": [
+          "16px",
+          "23px"
+        ],
+        "narrative": {
+          "x": 48,
+          "w": 448
+        },
+        "wordmark": {
+          "x": 32,
+          "y": 16
+        },
+        "nav": {
+          "left": 32,
+          "bottom": 28,
+          "w": 480
+        },
+        "primary": {
+          "h": 48,
+          "radius": "8px"
+        },
+        "ground": "rgb(16, 39, 45)",
+        "ink": "rgb(241, 235, 221)",
+        "families": [
+          "Newsreader",
+          "\"Source Sans 3\""
+        ],
+        "fontsLoaded": [
+          "Newsreader 400 normal",
+          "Source Sans 3 400 normal",
+          "Source Sans 3 500 normal"
+        ]
+      }
+    },
+    {
+      "name": "desktop geometry: narrative x48±8 w448±16, wordmark x32±8 y24±8, nav left32 bottom28 w480",
+      "pass": true,
+      "detail": {
+        "h2": [
+          "64px",
+          "68px"
+        ],
+        "h2long": [
+          "52px",
+          "57px"
+        ],
+        "body": [
+          "20px",
+          "30px"
+        ],
+        "caption": [
+          "16px",
+          "23px"
+        ],
+        "narrative": {
+          "x": 48,
+          "w": 448
+        },
+        "wordmark": {
+          "x": 32,
+          "y": 16
+        },
+        "nav": {
+          "left": 32,
+          "bottom": 28,
+          "w": 480
+        },
+        "primary": {
+          "h": 48,
+          "radius": "8px"
+        },
+        "ground": "rgb(16, 39, 45)",
+        "ink": "rgb(241, 235, 221)",
+        "families": [
+          "Newsreader",
+          "\"Source Sans 3\""
+        ],
+        "fontsLoaded": [
+          "Newsreader 400 normal",
+          "Source Sans 3 400 normal",
+          "Source Sans 3 500 normal"
+        ]
+      }
+    },
+    {
+      "name": "tokens: ground #10272D, ivory #F1EBDD; primary 48px/8px; local Newsreader and Source Sans 3",
+      "pass": true,
+      "detail": {
+        "h2": [
+          "64px",
+          "68px"
+        ],
+        "h2long": [
+          "52px",
+          "57px"
+        ],
+        "body": [
+          "20px",
+          "30px"
+        ],
+        "caption": [
+          "16px",
+          "23px"
+        ],
+        "narrative": {
+          "x": 48,
+          "w": 448
+        },
+        "wordmark": {
+          "x": 32,
+          "y": 16
+        },
+        "nav": {
+          "left": 32,
+          "bottom": 28,
+          "w": 480
+        },
+        "primary": {
+          "h": 48,
+          "radius": "8px"
+        },
+        "ground": "rgb(16, 39, 45)",
+        "ink": "rgb(241, 235, 221)",
+        "families": [
+          "Newsreader",
+          "\"Source Sans 3\""
+        ],
+        "fontsLoaded": [
+          "Newsreader 400 normal",
+          "Source Sans 3 400 normal",
+          "Source Sans 3 500 normal"
+        ]
+      }
+    },
+    {
+      "name": "no person or structure enters the narrative lane at any endpoint (1440x900)",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "all visible controls are at least 44x44",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "mobile 390x844: sticky window in clamp, margins 24±4, body 18px, no overflow, reader/friend/reservoir visible at peak",
+      "pass": true,
+      "detail": {
+        "stageH": 354.46875,
+        "stageTop": 64,
+        "headerH": 64,
+        "margin": 24,
+        "body": "18px",
+        "overflow": 0,
+        "navFixed": "static",
+        "specialInside": true,
+        "reservoirInside": true
+      }
+    },
+    {
+      "name": "mobile 320x740: sticky window in clamp, margins 20±4, body 18px, no overflow, reader/friend/reservoir visible at peak",
+      "pass": true,
+      "detail": {
+        "stageH": 310.796875,
+        "stageTop": 64,
+        "headerH": 64,
+        "margin": 20,
+        "body": "18px",
+        "overflow": 0,
+        "navFixed": "static",
+        "specialInside": true,
+        "reservoirInside": true
+      }
+    },
+    {
+      "name": "short landscape (844x390): world unpins, in-flow figures appear, no horizontal overflow",
+      "pass": true,
+      "detail": {
+        "unpinned": true,
+        "stage": "none",
+        "still": "block",
+        "overflow": 0
+      }
+    },
+    {
+      "name": "400% reflow (320x256): world unpins, in-flow figures appear, no horizontal overflow",
+      "pass": true,
+      "detail": {
+        "unpinned": true,
+        "stage": "none",
+        "still": "block",
+        "overflow": 0
+      }
+    },
+    {
+      "name": "no JavaScript: 13 scenes, 13 stills, 8 comparison pairs, controls hidden, download and notes present",
+      "pass": false,
+      "detail": {
+        "scenes": 13,
+        "stills": 13,
+        "pairs": 8,
+        "demos": 0,
+        "download": "/techne-story/story.md",
+        "details": 9
+      }
+    },
+    {
+      "name": "all requests same-origin, none failed; no cookies or storage",
+      "pass": true,
+      "detail": {
+        "foreign": [],
+        "failed": [],
+        "priv": {
+          "cookie": "",
+          "ls": 0,
+          "ss": 0
+        }
+      }
+    },
+    {
+      "name": "Markdown download is byte-identical to the story source",
+      "pass": true
+    },
+    {
+      "name": "every paragraph of the story source is rendered on the page",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "lab LCP at or under 2.5s and CLS at or under .05 (local preview, diagnostic)",
+      "pass": true,
+      "detail": {
+        "lcpMs": 64,
+        "cls": 0.002
+      }
+    },
+    {
+      "name": "no page errors or console errors during the whole run",
+      "pass": true,
+      "detail": []
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "name": "mobile",
+    "captionClear": true,
+    "overflow": 0,
+    "errors": []
+  },
+  {
+    "name": "tablet",
+    "captionClear": true,
+    "overflow": 0,
+    "errors": []
+  }
+]
