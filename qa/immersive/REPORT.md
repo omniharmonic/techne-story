@@ -1,15 +1,17 @@
-# Expanded chapter validation — 2026-10-06
+# Techne federation release — 2026-10-06
 
-The approved opening remains unchanged. The story now has nineteen chapters across five acts, with seventeen optional explanations and primary-source links.
+The opening and its contrast gradient are preserved. Twenty-three chapters now connect platform enclosure and investor returns to a proof-of-concept Techne distribution layer, community app remixing, federated ownership and local reciprocity. The debt-money detour is removed.
 
-- Production build: passed.
-- Narrative, opening regression, timeline mapping, and route tests: 11 passed.
-- Chromium browser checks: 65 passed, 0 failed.
-- Every chapter checked at 1440×900, 820×1180, 390×844, 320×740, and 844×390.
-- Four exchanges, all chapter-note contents and source counts, dialog focus return, chapter navigation, reverse navigation, reduced motion, reading mode, no-JavaScript content, 400% reflow, deep links, and Markdown download passed.
-- Local scroll frame interval: 18.0ms p95; 0 intervals over 50ms. This is a Chromium lab result, not a guarantee for all devices.
-- Compressed production upper bound: 991,194 bytes; first-party JavaScript: 13,217 bytes. Artwork unchanged at 899,372 bytes.
+- Production build passed.
+- 13 narrative, geometry and timeline tests passed.
+- 75 browser checks passed, 0 failed.
+- All chapters checked at 1440×900, 820×1180, 390×844, 320×740 and 844×390.
+- Six demonstrations, all 21 chapter notes, source counts and focus return passed. Reading modes, reduced motion, no-JavaScript content, reflow, deep links and Markdown download passed.
+- Frame interval: 17.4ms p95 in local Chromium; 0 samples above 50ms.
+- Compressed production upper bound: 994435 bytes, including 15609 bytes of JavaScript. No additional raster artwork.
 
-Visual review included relay stations and linked pages, credit flows, attention loops, public spheres, the expanded machine eye, and the planted commons on desktop and phone. Compact landscape interaction layout was corrected after a failed geometry check, then the complete suite passed. The six release captures show the opening, AI chapter, and commons; their numeric filename suffixes refer to world keyframes, not narrative chapter indices.
+Visual review covered sharing-economy assets, SDK/remix chapters, nested community networks and the funding invitation on desktop and phone. A desktop footer overlap in the federation chapter was fixed by tightening its prose; the full suite then passed. The finale uses five peer hubs, fifteen branches and seventy-five leaves scaled by phi; early relay pavilions no longer recur there.
 
-Safari, VoiceOver and physical low-end devices remain untested. The user's visual assessment determines aesthetic success; automated checks validate mechanics and geometry.
+The SDK is presented as a proposed architecture, not a released product or verified adoption claim. Fundraising links open an email conversation; no amounts or returns are promised. Platform examples are not labelled blanket legal monopolies or current private-equity holdings.
+
+Safari, VoiceOver and physical low-end devices remain untested. Automated checks do not establish subjective aesthetic quality.

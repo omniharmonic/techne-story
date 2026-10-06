@@ -4,7 +4,7 @@ This redesign supersedes the earlier split-lane, diagram-based implementation. T
 
 ## Composition
 
-One viewport-filling canvas stays fixed behind the entire story. Native page scroll drives a continuous, reversible narrative clock from 0 to 18, mapped continuously onto the existing world clock from 0 to 7. Each chapter has 145 small-viewport heights of travel; the last occupies one viewport. The renderer eases toward the actual scroll position over approximately 110 ms. Wheel and touch scrolling are never intercepted.
+One viewport-filling canvas stays fixed behind the entire story. Native page scroll drives a continuous, reversible narrative clock from 0 to 22, mapped continuously onto the existing world clock from 0 to 7. Each chapter has 145 small-viewport heights of travel; the last occupies one viewport. The renderer eases toward the actual scroll position over approximately 110 ms. Wheel and touch scrolling are never intercepted.
 
 Desktop opening: centered title, two lines, at 25% viewport height. Subsequent copy: left 7.4%, top 25%, max 740px; body max 36 characters. Architecture occupies the right-hand valley. Mobile (700px and below): imagery continues behind everything, title/body overlay the foreground with 24px side margins and a 94px bottom reserve (104px for the opening/finale). The principal citadel occupies the upper 60%. There is no border or transition between an illustration area and a text area. Compact landscape screens get a smaller type scale; 400% reflow uses natural reading flow.
 
@@ -29,15 +29,15 @@ Capture interpolates from 0.55–1.65. Tower rise spans 0.48–1.4; growth spans
 
 ## Interaction and accessibility
 
-Four optional exchanges demonstrate the contrast. A packet first travels between independent networks. In extraction, light travels into the platform and stays there. In reconnection, it travels directly and something returns. In the living commons, it continues through several relationships. Every outcome also appears as a short live text status. Leaving a chapter cancels its demonstration cleanly.
+Six optional exchanges demonstrate the contrast. A packet first travels between independent networks. In extraction, light travels into the platform and stays there. In reconnection, it travels directly and something returns. In the living commons, it continues through several relationships. Every outcome also appears as a short live text status. Leaving a chapter cancels its demonstration cleanly.
 
-Explore opens a native modal with chapter links, simple reading mode, sources and the Markdown download. Escape closes it and focus returns to the opener. Invisible chapter controls are inert. The skip link enters simple reading mode. System reduced motion is honored on first paint; quiet mode stops ambient motion and shows deterministic scene states. Without JavaScript all nineteen passages remain readable. Print displays all passages in natural flow.
+Explore opens a native modal with chapter links, simple reading mode, sources and the Markdown download. Escape closes it and focus returns to the opener. Invisible chapter controls are inert. The skip link enters simple reading mode. System reduced motion is honored on first paint; quiet mode stops ambient motion and shows deterministic scene states. Without JavaScript all twenty-three passages remain readable. Print displays all passages in natural flow.
 
 No flashing effects, autoplay audio, scroll hijacking, scroll traps, repeated card layouts, giant node labels, legends over the artwork or separate mobile illustration panels.
 
 ## Acceptance checks
 
-1. Canvas bounds equal viewport bounds at 1440×900, 820×1180, 390×844, 320×740 and 844×390 for all nineteen beats.
+1. Canvas bounds equal viewport bounds at 1440×900, 820×1180, 390×844, 320×740 and 844×390 for all twenty-three beats.
 2. At each settled beat, text remains inside the viewport and clear of header/footer controls; no horizontal overflow. Copy backgrounds remain transparent.
 3. Only one canvas exists throughout. Reverse scroll recovers the same world state; relationships remain attached through route interpolation.
 4. Capture precedes acceleration; direct connections return before the mature commons. No towers or eye remain at the end.
@@ -49,18 +49,28 @@ No flashing effects, autoplay audio, scroll hijacking, scroll traps, repeated ca
 
 ## Expanded educational arc
 
-The approved opening is preserved: identical copy, terrain, camera, typography, network, and composition at progress zero. All added illustration layers have zero opacity there. Nineteen chapters form five acts: Origins, Enclosure, The human cost, Acceleration, and A living web. Each main passage remains under 48 words. Non-opening chapters show the act and position; Explore groups navigation by act.
+The approved opening is preserved: identical copy, terrain, camera, typography, network, and composition at progress zero. All added illustration layers have zero opacity there. Twenty-three chapters form five acts: Origins, Enclosure, The human cost, Acceleration, and A living web. Each main passage remains under 48 words. Non-opening chapters show the act and position; Explore groups navigation by act.
 
 `src/lib/chapters.ts` is the canonical content and pacing map. Its `scene` values are monotonic and interpolate linearly; the existing world functions retain their smooth transitions. Mechanism layers blend around their narrative positions, reverse with scrolling, and use the same world projection.
 
 - Origins: illuminated relay pavilions, joining ripples, packet routes, published pages and cross-links.
-- Enclosure: useful hubs become dominant; layered elliptical walls and vertical gates appear around their foundations. Paired deposit/debt rings describe credit; capital streams move toward growing towers.
+- Enclosure: useful hubs become dominant; layered elliptical walls and vertical gates appear around their foundations. Homes and vehicles show participant-owned assets whose exchanges are routed through the platform; capital streams move toward growing towers.
 - Human cost: orbiting attention prompts pull against a person's own rhythm; livelihoods depend on gate paths; separate public spheres connect to private control centers.
 - Acceleration: the machine eye gains reaching filaments, synchronized gold pulses and capture rings across the network.
-- A living web: filaments release, direct paths return, community pavilions and stewardship circles accompany the planted commons.
+- A living web: filaments release, direct paths return, golden-ratio branches and nested peer-connected community hubs accompany the planted commons.
 
 Each intermediate chapter has a Look closer button. Its native modal provides mechanism, context, and chapter-specific primary sources, while pausing the world. Escape restores focus to that chapter's button. All notes and source links also appear in the Markdown download. Reduced motion produces static illustrations and immediate exchange outcomes.
 
-Editorial constraints: distinguish internet transport from platform architecture, debt from equity, data from wealth, risk scenarios from inevitability, and empirical findings from normative proposals. Do not imply interest makes endless growth mathematically necessary or algorithms alone cause polarization. The story's financial and social argument should remain clear without treating metaphors as evidence.
+Editorial constraints: distinguish internet transport from platform architecture, private equity from venture capital and public share ownership, data from wealth, risk scenarios from inevitability, and empirical findings from normative proposals. Do not label every named platform a legal monopoly or imply algorithms alone cause polarization. The story's financial and social argument should remain clear without treating metaphors as evidence.
 
-Compact landscape layouts place the note button beside the exchange control, reserving the lower edge for navigation. All nineteen chapters and seventeen note dialogs are included in browser QA. The hero content is separately regression-tested.
+Compact landscape layouts place the note button beside the exchange control, reserving the lower edge for navigation. All twenty-three chapters and twenty-one note dialogs are included in browser QA. The hero content is separately regression-tested.
+
+## Techne and the living federation
+
+The financial detour is replaced with the sharing-economy pattern: participants contribute rooms, vehicles, work and relationships; platforms provide coordination and can enclose access to the resulting network. Private capital and the profit motive can intensify extraction at digital scale. Airbnb and Uber illustrate platform intermediation, not a claim about their current private-equity ownership or legal monopoly status.
+
+The final act now explains the Techne SDK as a proposed distribution layer, local AI-assisted app remixing, cooperative stewardship, federated reach, local reciprocity and the funding invitation. The SDK is a proof of concept; companion services and lexicons appear in the optional note only. No public SDK link, adoption statistics, partner commitments, funding target or released capability is invented. The primary final link opens an email to discuss funding.
+
+The early relay-pavilion illustration never returns at the end. Five stable community hubs each have three local branches and five leaves per branch, with scale ratios derived from phi. Seven peer links avoid a single central distributor. Soft nested petal forms replace hard enclosure walls. Branches grow across the SDK/remix/federation chapters, exchanging light in both directions. Regional arcs are open, not enclosing borders. These forms represent the proposed social architecture, not AT Protocol server topology.
+
+Two new demonstrations show a remix keeping its shared connections, and peer communities exchanging across the federation. Their textual outcomes remain available with reduced motion. The original landscape, hero layout and hero contrast gradient remain intact.

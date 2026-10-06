@@ -1,6 +1,6 @@
 # Techne — Another web is possible
 
-An immersive, full-bleed story about moving from extraction to connection. Nineteen short chapters across five acts travel through one cinematic river valley: a luminous peer network, rising corporate citadels, an accelerating eye, reconnection, and a planted solarpunk commons.
+An immersive, full-bleed story about moving from extraction to connection. Twenty-three short chapters across five acts travel through one cinematic river valley: a luminous peer network, rising corporate citadels, an accelerating eye, reconnection, and a planted solarpunk commons.
 
 [Live experience](https://omniharmonic.github.io/techne-story/)
 
@@ -23,8 +23,9 @@ On a fresh machine, install the browser for QA with `npx playwright install chro
 ## Implementation
 
 - `src/lib/chapters.ts`: canonical narration, deeper chapter notes, source links and the narrative-to-world timeline.
+- `src/lib/federation.ts`: golden-ratio local branches and peer-connected community hubs.
 - `src/lib/immersive.ts`: stable people/relationships, reversible world state and route interpolation.
-- `src/scripts/immersive.ts`: a single Canvas 2D compositor, native-scroll clock, responsive framing, atmosphere, architecture, eye, relay pavilions, enclosure walls, credit flows, attention loops, public spheres, exchanges and accessible reading modes.
+- `src/scripts/immersive.ts`: a single Canvas 2D compositor, native-scroll clock, responsive framing, atmosphere, architecture, eye, relay pavilions, enclosure walls, shared-asset exchanges, attention loops, public spheres, a botanical community federation, exchanges and accessible reading modes.
 - `src/styles/immersive.css`: full-viewport composition and overlaid typography. No separate illustration window or opaque text panel.
 - `src/pages/index.astro`: semantic story and optional chapter/source dialog.
 - `public/art/immersive/`: three optimized production images. Citadel alpha is preserved; valley and commons share geography.

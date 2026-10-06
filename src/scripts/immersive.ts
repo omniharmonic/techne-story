@@ -1,3 +1,4 @@
+import { PHI, HUBS, BRANCHES, FEDERATION_LINKS } from '../lib/federation';
 import { SOURCES } from '../lib/chapters';
 import { BEATS, LAST, sceneAt, chapterIndex, PEOPLE, RELATIONS, filmState, clamp, mix, smooth, route, type Point } from '../lib/immersive';
 
@@ -23,6 +24,7 @@ let ready = false;
 let opener: HTMLElement | null = null;
 let demo: { chapter: number; start: number; done: boolean; button: HTMLButtonElement } | null = null;
 const assets: Record<string, HTMLImageElement> = {};
+const exchangeOutcome=(id:string)=>({packets:'A message crosses independent networks.',extraction:'The platform keeps the value.',living:'Shared onward. Returned in another form.',remix:'A local variation. The same shared language.',federation:'More communities. Shared reach. Local control.'}[id]||'A direct connection. Something comes back.');
 const mint = [181, 245, 210], gold = [246, 181, 98];
 const color = (c: number[], a: number) => 'rgba(' + c.map(Math.round).join(',') + ',' + clamp(a) + ')';
 const isMobile = () => width <= 700;
@@ -92,15 +94,15 @@ function eye(x:number,y:number,r:number,intensity:number,time:number) {
 function drawMechanisms(n:number,points:Point[],ts:ReturnType<typeof towers>,state:ReturnType<typeof filmState>) {
   const at=(id:string,spread=.95)=>{const d=Math.abs(n-chapterIndex(id));return 1-smooth(.25,spread,d);};
   const origins=smooth(.18,.85,n)*(1-smooth(2.4,4,n));
-  const villages=smooth(15.5,17,n);
+
   const scale=isMobile()?.72:1;
   const stroke=(a:Point,b:Point,c:number[],opacity:number,bend=40)=>{
     ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.quadraticCurveTo((a.x+b.x)/2,Math.min(a.y,b.y)-bend,b.x,b.y);ctx.strokeStyle=color(c,opacity);ctx.lineWidth=1;ctx.stroke();
   };
   ctx.save();
   // Small inhabited relay pavilions, with copper roofs and glass interiors.
-  if(origins>0||villages>0){
-    const alpha=Math.max(origins,villages*.7);
+  if(origins>0){
+    const alpha=origins;
     for(let i=0;i<points.length;i+=3){
       const p=points[i],r=(12+PEOPLE[i].depth*11)*scale;
       ctx.save();ctx.translate(p.x,p.y);ctx.globalAlpha=alpha;
@@ -138,18 +140,16 @@ function drawMechanisms(n:number,points:Point[],ts:ReturnType<typeof towers>,sta
     }
     for(let k=0;k<18;k++){const a=k/18*Math.PI*2;const x=tower.x+Math.cos(a)*rx,y=tower.y+Math.sin(a)*ry-8;ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x,y-26*walls);ctx.strokeStyle=color(gold,walls*.3);ctx.stroke();}
   });}
-  // Credit appears as paired claims, not coins mined or wealth conjured.
-  const credit=at('credit',1.1);
-  if(credit>0){
-    const x=width*(isMobile()?.52:.76),y=height*(isMobile()?.27:.37),r=(isMobile()?36:64);
-    for(let side=-1;side<=1;side+=2){
-      const cx=x+side*r*1.2;ctx.beginPath();ctx.ellipse(cx,y,r,r*.48,0,0,Math.PI*2);ctx.strokeStyle=color(side<0?mint:gold,credit*.85);ctx.lineWidth=1.4;ctx.stroke();
-      for(let k=0;k<7;k++){const angle=(quiet?0:phase*.35)+k/7*Math.PI*2;glow(cx+Math.cos(angle)*r,y+Math.sin(angle)*r*.48,4,side<0?mint:gold,credit*.8);}
-      ctx.font='400 '+(isMobile()?12:15)+'px "Source Sans 3"';ctx.textAlign='center';ctx.fillStyle=color(side<0?mint:gold,credit);ctx.fillText(side<0?'Deposit':'Debt',cx,y+5);
-      stroke({x:cx,y:y+r*.5},points[side<0?0:12],side<0?mint:gold,credit*.5,0);
-    }
-    ctx.beginPath();ctx.moveTo(x-r*.2,y);ctx.lineTo(x+r*.2,y);ctx.strokeStyle=color(mint,credit*.6);ctx.stroke();
-  }
+  // The rooms and vehicles belong to participants; the gateway encloses access.
+  const sharing=at('sharing',1.1);
+  if(sharing>0){for(let i=0;i<9;i++){
+    const p=points[i*3],r=(isMobile()?10:17);ctx.save();ctx.translate(p.x,p.y-r);
+    ctx.strokeStyle=color(mint,sharing*.85);ctx.lineWidth=1.1;
+    if(i%2===0){ctx.beginPath();ctx.moveTo(-r,0);ctx.lineTo(0,-r);ctx.lineTo(r,0);ctx.lineTo(r,r);ctx.lineTo(-r,r);ctx.closePath();ctx.stroke();ctx.strokeRect(-r*.2,r*.3,r*.4,r*.7);}
+    else {ctx.beginPath();ctx.roundRect(-r,-r*.2,r*2,r*.8,3);ctx.stroke();ctx.beginPath();ctx.moveTo(-r*.65,-r*.2);ctx.lineTo(-r*.3,-r*.75);ctx.lineTo(r*.4,-r*.75);ctx.lineTo(r*.75,-r*.2);ctx.stroke();for(const x of [-r*.6,r*.6]){ctx.beginPath();ctx.arc(x,r*.65,r*.18,0,Math.PI*2);ctx.stroke();}}
+    ctx.restore();const gate=ts[i%3];stroke(p,{x:gate.x,y:gate.y},gold,sharing*.42,30);
+    const u=quiet?.5:(phase*.16+i*.19)%1;glow(mix(p.x,gate.x,u),mix(p.y,gate.y,u),6,gold,sharing*.65);
+  }}
   const capital=at('growth',1.1);
   if(capital>0){ts.forEach((tower,j)=>{for(let k=0;k<7;k++){
     const a=points[(j*7+k)%27],b={x:tower.x,y:tower.y-tower.h*.7};const u=quiet?.5:(phase*.2+k*.12)%1;
@@ -190,10 +190,66 @@ function drawMechanisms(n:number,points:Point[],ts:ReturnType<typeof towers>,sta
       if(i%3===0){ctx.beginPath();ctx.ellipse(a.x,a.y,18*reach,5*reach,0,0,Math.PI*2);ctx.strokeStyle=color(gold,reach*.65);ctx.stroke();}
     }
   }
-  const care=smooth(15.4,16.2,n)*(1-smooth(17.6,18,n));
-  if(care>0){for(let i=0;i<4;i++){
-    const p=points[i*6],r=(isMobile()?27:48);ctx.beginPath();ctx.ellipse(p.x,p.y,r,r*.36,0,0,Math.PI*2);ctx.strokeStyle=color(mint,care*.5);ctx.lineWidth=1;ctx.stroke();
-    for(let k=0;k<6;k++){const a=k/6*Math.PI*2;const x=p.x+Math.cos(a)*r,y=p.y+Math.sin(a)*r*.36;glow(x,y,6,mint,care*.5);}
+  ctx.restore();
+}
+
+function drawFederation(n:number,now:number) {
+  const start=chapterIndex('belong'),strength=smooth(start-.4,start+1.1,n);
+  if(strength<=0)return;
+  const mature=smooth(chapterIndex('sdk'),chapterIndex('federation')+.5,n);
+  const map=(p:Point):Point=>isMobile()?{x:width*(.05+p.x*.9),y:height*(.20+p.y*.33)}:{x:width*(.40+p.x*.58),y:height*(.48+p.y*.45)};
+  const hubs=HUBS.map(map),r=(isMobile()?19:34),demoId=demo?BEATS[demo.chapter].id:'';
+  const demoProgress=demo&&(demoId==='remix'||demoId==='federation')?(quiet?1:clamp((now-demo.start)/3400)):0;
+  const line=(a:Point,b:Point,alpha:number,weight=1)=>{
+    ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.bezierCurveTo(mix(a.x,b.x,.38),a.y-Math.abs(a.x-b.x)*.13,mix(a.x,b.x,.7),b.y-Math.abs(a.x-b.x)*.1,b.x,b.y);ctx.strokeStyle=color(mint,alpha*strength);ctx.lineWidth=weight;ctx.stroke();
+  };
+  ctx.save();ctx.globalCompositeOperation='screen';
+  // Every hub connects to several peers; no central distribution tower.
+  FEDERATION_LINKS.forEach(([a,b],i)=>{
+    const alpha=(.20+mature*.28);line(hubs[a],hubs[b],alpha,isMobile()?.85:1.3);
+    if(!quiet||demoProgress){for(let side=0;side<2;side++){
+      let u=quiet?demoProgress:(phase*.075+i*.137+side*.48)%1;if(side)u=1-u;
+      const p={x:mix(hubs[a].x,hubs[b].x,u),y:mix(hubs[a].y,hubs[b].y,u)-Math.sin(u*Math.PI)*Math.abs(hubs[a].x-hubs[b].x)*.10};
+      glow(p.x,p.y,isMobile()?5:8,side?gold:mint,strength*.65);
+    }}
+  });
+  // Branches divide by the golden ratio. They grow into local exchange loops.
+  BRANCHES.forEach(({hub,branch,leaves},i)=>{
+    const emergence=smooth(start+.1+(i%3)*.18,chapterIndex('federation')+(i%3)*.12,n);
+    const b=map(branch),a=hubs[hub];line(a,{x:mix(a.x,b.x,emergence),y:mix(a.y,b.y,emergence)},.42,1.1);
+    if(emergence>.05){
+      leaves.forEach((leaf,j)=>{
+        const e=map(leaf),u=clamp(emergence*1.6-j*.12);const end={x:mix(b.x,e.x,u),y:mix(b.y,e.y,u)};
+        line(b,end,.31*u,.65);glow(end.x,end.y,(isMobile()?3:5),mint,u*strength*.48);
+        ctx.beginPath();ctx.ellipse(end.x,end.y,2.7*u,1.6*u,-.45,0,Math.PI*2);ctx.fillStyle=color(mint,strength*u*.65);ctx.fill();
+        if(j>0)line(map(leaves[j-1]),end,.1*u,.55);
+      });
+      glow(b.x,b.y,r*.32,mint,.45*strength*emergence);
+    }
+  });
+  hubs.forEach((p,i)=>{
+    const size=r*(.83+(i%3)*.10),bloom=smooth(start-.3+i*.12,start+1.3+i*.1,n);
+    // Translucent nested petals echo greenhouses and living seed heads.
+    for(let j=0;j<5;j++){
+      const angle=j*2.3999632297+i*.4,rr=size/PHI**(j*.38);
+      ctx.save();ctx.translate(p.x,p.y);ctx.rotate(angle);ctx.scale(1,.55);
+      ctx.beginPath();ctx.ellipse(rr*.26,0,rr,rr/PHI,0,0,Math.PI*2);
+      ctx.fillStyle=color(mint,.028*bloom*strength);ctx.fill();ctx.strokeStyle=color(j%2?gold:mint,(.37-j*.035)*bloom*strength);ctx.lineWidth=.85;ctx.stroke();ctx.restore();
+    }
+    glow(p.x,p.y,size*.8,mint,.30*strength);ctx.beginPath();ctx.arc(p.x,p.y,3,0,Math.PI*2);ctx.fillStyle=color([244,240,223],strength);ctx.fill();
+    // App leaves retain a shared base but acquire distinct local forms.
+    const apps=smooth(chapterIndex('sdk')-.5,chapterIndex('remix'),n);
+    if(apps>0){for(let k=0;k<3;k++){
+      const angle=k*2*Math.PI/3+i*.3,x=p.x+Math.cos(angle)*size*1.4,y=p.y+Math.sin(angle)*size*.7;
+      const adapt=demoId==='remix'?demoProgress:smooth(chapterIndex('remix')-.3,chapterIndex('remix')+.5,n);
+      const radius=4+(k+i)%3*adapt*2;ctx.beginPath();ctx.ellipse(x,y,radius,radius/PHI,angle+adapt*i*.5,0,Math.PI*2);ctx.strokeStyle=color(k===1?gold:mint,apps*strength*.8);ctx.lineWidth=1;ctx.stroke();line(p,{x,y},apps*.3,.65);
+    }}
+    if(demoProgress){const u=clamp(demoProgress*1.8-i*.14);ctx.beginPath();ctx.ellipse(p.x,p.y,size*(1+u*2),size*(.5+u),0,0,Math.PI*2);ctx.strokeStyle=color(mint,(1-u*.65)*strength*.75);ctx.lineWidth=1.3;ctx.stroke();}
+  });
+  // Communities nest into regional collaboration, still with open boundaries.
+  if(mature>0){for(let k=0;k<2;k++){
+    const a=hubs[k?2:0],b=hubs[k?3:1],cx=(a.x+b.x)/2,cy=(a.y+b.y)/2,rx=Math.abs(a.x-b.x)*.7+r*1.7;
+    ctx.beginPath();ctx.ellipse(cx,cy,rx,rx/PHI*.54,-.12,0.12,Math.PI*1.86);ctx.strokeStyle=color(mint,mature*.22*strength);ctx.lineWidth=.8;ctx.stroke();
   }}
   ctx.restore();
 }
@@ -210,7 +266,7 @@ function draw(narrative:number,now:number) {
   // Continuous color-grade, shared by the scenery and composite architecture.
   ctx.fillStyle='rgba(2,20,28,'+( .26 + state.darkness*.46 - state.life*.12)+')';ctx.fillRect(0,0,width,height);
   const atmosphere=ctx.createLinearGradient(0,0,0,height);atmosphere.addColorStop(0,'rgba(2,21,29,'+(.22+state.darkness*.3)+')');atmosphere.addColorStop(.6,'rgba(3,36,37,0)');atmosphere.addColorStop(1,'rgba(1,20,22,.12)');ctx.fillStyle=atmosphere;ctx.fillRect(0,0,width,height);
-  const netOpacity=state.network*(1-state.life*.47);
+  const netOpacity=state.network*(1-state.life*.9);
   const ink=mint.map((v,i)=>mix(v,gold[i],state.capture));
   ctx.save();ctx.globalCompositeOperation='screen';ctx.lineCap='round';
   RELATIONS.forEach((_,i)=>{
@@ -264,6 +320,7 @@ function draw(narrative:number,now:number) {
   if(bloom>0){ctx.save();ctx.globalCompositeOperation='screen';for(let i=0;i<9;i++){const end=points[(i*3+2)%points.length];const origin={x:ts[i%3].x,y:ts[i%3].y};const p=smooth(3.7+i*.065,4.65+i*.06,t);ctx.beginPath();ctx.moveTo(origin.x,origin.y);ctx.bezierCurveTo(origin.x+Math.sin(i*2)*width*.12,origin.y-height*.2*p,end.x,end.y-height*.20*p,end.x,end.y);ctx.strokeStyle=color(mint,bloom*.28);ctx.lineWidth=1.1;ctx.stroke();glow(end.x,end.y,18,mint,bloom*.28);}ctx.restore();}
   // Floating motes integrate the digital light into the atmosphere.
   if(!quiet){ctx.save();ctx.globalCompositeOperation='screen';for(let i=0;i<24;i++){const x=((i*.381966+Math.sin(phase*.035+i)*.025)%1)*width;const y=height*(.39+((i*.273+phase*.006)% .60));glow(x,y,1.3+(i%3),state.darkness>.7?gold:mint,.18);}ctx.restore();}
+  drawFederation(narrative,now);
   if(demo)drawExchange(points,ts,state,now);
   ctx.restore();
 }
@@ -274,7 +331,9 @@ function drawExchange(points:Point[],ts:ReturnType<typeof towers>,state:ReturnTy
   const packet=BEATS[demo.chapter].id==='packets';
   const c=captured?gold:mint;
   ctx.save();ctx.globalCompositeOperation='screen';
-  if(packet){
+  if(['remix','federation'].includes(BEATS[demo.chapter].id)){
+    // The shared federation layer animates these demonstrations.
+  } else if(packet){
     const sequence=[0,4,8,12];const leg=Math.min(2,Math.floor(p*3)),u=Math.min(1,p*3-leg);
     for(let j=0;j<=leg;j++){const a=points[sequence[j]],b=points[sequence[j+1]];const q=route(a,b,a,0,j===leg?u:1);ctx.strokeStyle=color(mint,.9);ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(q.x,q.y);ctx.stroke();glow(q.x,q.y,17,mint,.8);}
   } else if(captured){
@@ -287,7 +346,7 @@ function drawExchange(points:Point[],ts:ReturnType<typeof towers>,state:ReturnTy
     if(p>.65){const a=points[0];glow(a.x,a.y,18+(p-.65)*80,c,(1-p)*2.4);}
   }
   ctx.restore();
-  if(p>=1&&!demo.done){demo.done=true;demo.button.disabled=false;const status=demo.button.parentElement!.querySelector<HTMLElement>('.exchange-result')!;status.textContent=packet?'A message crosses independent networks.':captured?'The platform keeps the value.':BEATS[demo.chapter].id==='living'?'Shared onward. Returned in another form.':'A direct connection. Something comes back.';}
+  if(p>=1&&!demo.done){demo.done=true;demo.button.disabled=false;const status=demo.button.parentElement!.querySelector<HTMLElement>('.exchange-result')!;status.textContent=exchangeOutcome(BEATS[demo.chapter].id);}
 }
 function updateCopy(t:number) {
   if(reading)return;
@@ -378,13 +437,13 @@ document.querySelectorAll<HTMLButtonElement>('[data-exchange]').forEach(button=>
   if(demo&&!demo.done)return;
   const chapter=Number(button.dataset.exchange);demo={chapter,start:performance.now(),done:false,button};button.disabled=!quiet;
   button.parentElement!.querySelector('.exchange-result')!.textContent=BEATS[chapter].id==='extraction'?'Follow the light into the middle…':'Watch the connection travel…';
-  if(reading||quiet){button.parentElement!.querySelector('.exchange-result')!.textContent=BEATS[chapter].id==='packets'?'A message crosses independent networks.':BEATS[chapter].id==='extraction'?'The platform keeps the value.':BEATS[chapter].id==='living'?'Shared onward. Returned in another form.':'A direct connection. Something comes back.';demo.done=true;button.disabled=false;}
+  if(reading||quiet){button.parentElement!.querySelector('.exchange-result')!.textContent=exchangeOutcome(BEATS[chapter].id);demo.done=true;button.disabled=false;}
   request();
 }));
 addEventListener('scroll',()=>{if(!reading)target=clamp(scrollY/Math.max(1,span),0,LAST);request();},{passive:true});
 addEventListener('resize',measure);document.addEventListener('visibilitychange',request);
 addEventListener('hashchange',()=>{const i=BEATS.findIndex(b=>'#'+b.id===location.hash);if(i>=0)go(i);});
 setQuiet(quiet);measure();
-Promise.all(['valley','commons','citadel'].map(load)).then(()=>{ready=true;canvas.parentElement!.classList.add('ready');const legacy: Record<string,string>={open:'connection',peers:'connection',captured:'capture',flow:'extraction',freed:'reconnect',homes:'belong',groups:'belong',alive:'living',place:'living',unfinished:'future',techne:'future'};const hash=location.hash.slice(1);const index=BEATS.findIndex(b=>b.id===(legacy[hash]||hash));if(index>=0&&!reading)go(index);request();}).catch(()=>{setReading(true);});
+Promise.all(['valley','commons','citadel'].map(load)).then(()=>{ready=true;canvas.parentElement!.classList.add('ready');const legacy: Record<string,string>={credit:'sharing',open:'connection',peers:'connection',captured:'capture',flow:'extraction',freed:'reconnect',homes:'belong',groups:'belong',alive:'living',place:'living',unfinished:'future',techne:'future'};const hash=location.hash.slice(1);const index=BEATS.findIndex(b=>b.id===(legacy[hash]||hash));if(index>=0&&!reading)go(index);request();}).catch(()=>{setReading(true);});
 document.fonts.ready.then(measure);
 (window as any).__film={state:()=>({progress,target,active,quiet,reading,ready,scene:sceneAt(progress),chapters:BEATS.length,people:PEOPLE.length,edges:RELATIONS.length,width,height}),go,freeze:()=>setQuiet(true)};

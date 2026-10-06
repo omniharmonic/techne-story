@@ -44,7 +44,7 @@ const base = import.meta.env.BASE_URL;
           <p class="narration">{beat.body}</p>
           {beat.action && <div class="exchange"><button class="exchange-button" data-exchange={i}><span class="spark-icon" aria-hidden="true">✳</span>{beat.action}<svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M3 10h13M11 5l5 5-5 5" stroke="currentColor" fill="none" stroke-width="1.2"/></svg></button><p class="exchange-result" role="status" aria-live="polite"></p></div>}
           {i > 0 && i < LAST && <button class="chapter-note-button" data-note={i} aria-haspopup="dialog">Look closer <span aria-hidden="true">＋</span></button>}
-          {i === LAST && <div class="end-actions"><a href="https://unforcedagi.github.io/techne-www/writing/protocols-of-belonging/" class="primary-link">Explore the thinking <span aria-hidden="true">↗</span></a><a href="mailto:synergy@benjaminlife.one" class="contact-link">Build with us</a></div>}
+          {i === LAST && <div class="end-actions"><a href="mailto:synergy@benjaminlife.one?subject=Funding%20the%20Techne%20SDK" class="primary-link">Fund the living web <span aria-hidden="true">↗</span></a><a href="https://unforcedagi.github.io/techne-www/writing/protocols-of-belonging/" class="contact-link">Explore the thinking</a></div>}
         </div>
       </section>
     ))}
