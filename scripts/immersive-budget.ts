@@ -1,0 +1,10 @@
+import { readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
+import { gzipSync } from 'node:zlib';
+const files=(p:string):string[]=>readdirSync(p).flatMap(f=>statSync(p+'/'+f).isDirectory()?files(p+'/'+f):[p+'/'+f]);
+const all=files('dist');
+const data=all.filter(f=>/\.html$|\.css$|\.js$|\.woff2$|art\/immersive\/.*\.webp$/.test(f)).map(f=>({file:f.replace('dist/',''),bytes:statSync(f).size,transfer:/woff2|webp/.test(f)?statSync(f).size:gzipSync(readFileSync(f)).length}));
+const js=data.filter(f=>f.file.endsWith('.js')).reduce((s,f)=>s+f.transfer,0);
+const art=data.filter(f=>f.file.endsWith('.webp')).reduce((s,f)=>s+f.transfer,0);
+const total=data.reduce((s,f)=>s+f.transfer,0);
+const report={date:new Date().toISOString(),method:'gzip text; native compressed image/font sizes',javascript:js,art,totalUpperBound:total,withinBudget:total<1500000&&js<40000,files:data};
+writeFileSync('qa/immersive/transfer.json',JSON.stringify(report,null,2));console.log(JSON.stringify({javascript:js,art,totalUpperBound:total,withinBudget:report.withinBudget}));if(!report.withinBudget)process.exitCode=1;

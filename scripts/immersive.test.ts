@@ -1,0 +1,12 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {BEATS,PEOPLE,RELATIONS,filmState,route} from '../src/lib/immersive.ts';
+test('eight distinct, concise narrative beats',()=>{assert.equal(BEATS.length,8);assert.equal(new Set(BEATS.map(b=>b.id)).size,8);assert.ok(BEATS.reduce((n,b)=>n+b.body.split(/\s+/).length,0)<230);});
+test('the film clock is bounded at both scroll extremes',()=>{assert.deepEqual(filmState(-10),filmState(0));assert.deepEqual(filmState(20),filmState(7));});
+test('reversing the scroll returns exactly the same landscape state',()=>{for(let i=0;i<=700;i++){const t=i/100;const a=filmState(t),b=filmState(7-(7-t));for(const k of Object.keys(a) as (keyof typeof a)[])assert.ok(Math.abs(a[k]-b[k])<1e-10);}});
+test('every interpolated state stays finite and in range',()=>{for(let i=0;i<=700;i++)for(const [k,v]of Object.entries(filmState(i/100))){assert.ok(Number.isFinite(v));if(k!=='t')assert.ok(v>=0&&v<=1,k);}});
+test('capture precedes the eye; the eye vanishes before the mature commons',()=>{assert.equal(filmState(0).rise,0);assert.equal(filmState(2).capture,1);assert.equal(filmState(2).eye,0);assert.ok(filmState(3).eye>.9);assert.equal(filmState(5).eye,0);assert.equal(filmState(7).rise,0);assert.equal(filmState(7).life,1);});
+test('community growth and release are monotonic',()=>{let freedom=0,life=0;for(let i=0;i<=700;i++){const s=filmState(i/100);assert.ok(s.freedom>=freedom&&s.life>=life);freedom=s.freedom;life=s.life;}});
+test('people and relationships are unique, connected, and stable',()=>{assert.equal(PEOPLE.length,27);const seen=new Set();for(const [a,b]of RELATIONS){assert.ok(a!==b&&a>=0&&b<PEOPLE.length);const key=[a,b].sort((x,y)=>x-y).join(':');assert.ok(!seen.has(key));seen.add(key);}for(let i=0;i<PEOPLE.length;i++)assert.ok(RELATIONS.some(e=>e.includes(i)));});
+test('route morphs preserve endpoints and put full capture through the gate',()=>{const a={x:10,y:80},b={x:200,y:130},g={x:160,y:50};for(let c=0;c<=1;c+=.01){const p=route(a,b,g,c,0),q=route(a,b,g,c,1);assert.ok(Math.hypot(p.x-a.x,p.y-a.y)<1e-8);assert.ok(Math.hypot(q.x-b.x,q.y-b.y)<1e-8);}assert.deepEqual(route(a,b,g,1,.5),g);assert.notDeepEqual(route(a,b,g,0,.5),g);});
+test('route morph is continuous rather than a replacement between scenes',()=>{const a={x:10,y:80},b={x:200,y:130},g={x:160,y:50};for(let c=0;c<1;c+=.01)for(let u=0;u<=1;u+=.05){const p=route(a,b,g,c,u),q=route(a,b,g,c+.01,u);assert.ok(Math.hypot(p.x-q.x,p.y-q.y)<3);}});

@@ -2,22 +2,20 @@
   "name": "techne-story",
   "private": true,
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview --port 4321",
-    "test": "node --test scripts/identity.test.ts",
-    "qa": "node scripts/qa.ts all",
-    "qa:checks": "node scripts/qa.ts checks",
-    "qa:shots": "node scripts/qa.ts shots",
-    "qa:report": "node scripts/transfer-report.ts && node scripts/manifest.ts"
+    "test": "node --test scripts/immersive.test.ts",
+    "qa": "node scripts/immersive-qa.ts",
+    "qa:checks": "node scripts/immersive-qa.ts",
+    "qa:report": "node scripts/immersive-budget.ts"
   },
   "dependencies": {
     "@fontsource/newsreader": "5.3.0",
     "@fontsource/source-sans-3": "5.3.0",
-    "astro": "7.3.6",
-    "marked": "18.1.0"
+    "astro": "7.3.6"
   },
   "devDependencies": {
     "playwright": "1.63.0",

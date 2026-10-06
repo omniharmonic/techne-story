@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-06T20:51:10.213Z",
+  "method": "gzip text; native compressed image/font sizes",
+  "javascript": 6037,
+  "art": 899372,
+  "totalUpperBound": 980950,
+  "withinBudget": true,
+  "files": [
+    {
+      "file": "art/immersive/citadel.webp",
+      "bytes": 193930,
+      "transfer": 193930
+    },
+    {
+      "file": "art/immersive/commons.webp",
+      "bytes": 395890,
+      "transfer": 395890
+    },
+    {
+      "file": "art/immersive/valley.webp",
+      "bytes": 309552,
+      "transfer": 309552
+    },
+    {
+      "file": "assets/index.D3XM0Lsq.css",
+      "bytes": 10298,
+      "transfer": 3105
+    },
+    {
+      "file": "assets/index.astro_astro_type_script_index_0_lang.ByGQKQb2.js",
+      "bytes": 14067,
+      "transfer": 6037
+    },
+    {
+      "file": "assets/newsreader-latin-400-normal.BFBkh4jY.woff2",
+      "bytes": 22480,
+      "transfer": 22480
+    },
+    {
+      "file": "assets/source-sans-3-latin-300-normal.KpEPfINB.woff2",
+      "bytes": 15432,
+      "transfer": 15432
+    },
+    {
+      "file": "assets/source-sans-3-latin-400-normal.DQi5PRDE.woff2",
+      "bytes": 15696,
+      "transfer": 15696
+    },
+    {
+      "file": "assets/source-sans-3-latin-500-normal.DiWS0tcR.woff2",
+      "bytes": 15652,
+      "transfer": 15652
+    },
+    {
+      "file": "index.html",
+      "bytes": 9560,
+      "transfer": 3176
+    }
+  ]
+}

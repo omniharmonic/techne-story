@@ -1,0 +1,1343 @@
+{
+  "date": "2026-10-06T20:51:35.458Z",
+  "url": "http://127.0.0.1:4321/techne-story/",
+  "passed": 30,
+  "failed": 0,
+  "results": [
+    {
+      "name": "1440×900: full-bleed world, clear text, no panels or overflow at every beat",
+      "pass": true,
+      "detail": [
+        {
+          "i": 0,
+          "canvas": [
+            0,
+            0,
+            1440,
+            900
+          ],
+          "copy": [
+            240,
+            225,
+            1200,
+            580.671875
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 0,
+            "target": 0,
+            "active": 0,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 1440,
+            "height": 900
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 1,
+          "canvas": [
+            0,
+            0,
+            1440,
+            900
+          ],
+          "copy": [
+            106.546875,
+            270,
+            846.546875,
+            578.265625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 1,
+            "target": 1,
+            "active": 1,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 1440,
+            "height": 900
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 2,
+          "canvas": [
+            0,
+            0,
+            1440,
+            900
+          ],
+          "copy": [
+            106.546875,
+            270,
+            846.546875,
+            694.265625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 2,
+            "target": 2,
+            "active": 2,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 1440,
+            "height": 900
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 3,
+          "canvas": [
+            0,
+            0,
+            1440,
+            900
+          ],
+          "copy": [
+            106.546875,
+            270,
+            846.546875,
+            578.265625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 3,
+            "target": 3,
+            "active": 3,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 1440,
+            "height": 900
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 4,
+          "canvas": [
+            0,
+            0,
+            1440,
+            900
+          ],
+          "copy": [
+            106.546875,
+            270,
+            846.546875,
+            694.265625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 4,
+            "target": 4,
+            "active": 4,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 1440,
+            "height": 900
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 5,
+          "canvas": [
+            0,
+            0,
+            1440,
+            900
+          ],
+          "copy": [
+            106.546875,
+            270,
+            846.546875,
+            578.265625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 5,
+            "target": 5,
+            "active": 5,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 1440,
+            "height": 900
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 6,
+          "canvas": [
+            0,
+            0,
+            1440,
+            900
+          ],
+          "copy": [
+            106.546875,
+            270,
+            846.546875,
+            694.265625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 6,
+            "target": 6,
+            "active": 6,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 1440,
+            "height": 900
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 7,
+          "canvas": [
+            0,
+            0,
+            1440,
+            900
+          ],
+          "copy": [
+            106.546875,
+            225,
+            846.546875,
+            606.703125
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 7,
+            "target": 7,
+            "active": 7,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 1440,
+            "height": 900
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        }
+      ]
+    },
+    {
+      "name": "1440×900: one canvas throughout",
+      "pass": true
+    },
+    {
+      "name": "820×1180: full-bleed world, clear text, no panels or overflow at every beat",
+      "pass": true,
+      "detail": [
+        {
+          "i": 0,
+          "canvas": [
+            0,
+            0,
+            820,
+            1180
+          ],
+          "copy": [
+            41,
+            295,
+            779,
+            538.6875
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 0,
+            "target": 0,
+            "active": 0,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 820,
+            "height": 1180
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 1,
+          "canvas": [
+            0,
+            0,
+            820,
+            1180
+          ],
+          "copy": [
+            60.671875,
+            354,
+            487.0625,
+            568.96875
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 1,
+            "target": 1,
+            "active": 1,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 820,
+            "height": 1180
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 2,
+          "canvas": [
+            0,
+            0,
+            820,
+            1180
+          ],
+          "copy": [
+            60.671875,
+            354,
+            487.0625,
+            684.96875
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 2,
+            "target": 2,
+            "active": 2,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 820,
+            "height": 1180
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 3,
+          "canvas": [
+            0,
+            0,
+            820,
+            1180
+          ],
+          "copy": [
+            60.671875,
+            354,
+            487.0625,
+            568.96875
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 3,
+            "target": 3,
+            "active": 3,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 820,
+            "height": 1180
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 4,
+          "canvas": [
+            0,
+            0,
+            820,
+            1180
+          ],
+          "copy": [
+            60.671875,
+            354,
+            487.0625,
+            684.96875
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 4,
+            "target": 4,
+            "active": 4,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 820,
+            "height": 1180
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 5,
+          "canvas": [
+            0,
+            0,
+            820,
+            1180
+          ],
+          "copy": [
+            60.671875,
+            354,
+            487.0625,
+            568.96875
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 5,
+            "target": 5,
+            "active": 5,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 820,
+            "height": 1180
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 6,
+          "canvas": [
+            0,
+            0,
+            820,
+            1180
+          ],
+          "copy": [
+            60.671875,
+            354,
+            487.0625,
+            684.96875
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 6,
+            "target": 6,
+            "active": 6,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 820,
+            "height": 1180
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 7,
+          "canvas": [
+            0,
+            0,
+            820,
+            1180
+          ],
+          "copy": [
+            60.671875,
+            295,
+            487.0625,
+            594.875
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 7,
+            "target": 7,
+            "active": 7,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 820,
+            "height": 1180
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        }
+      ]
+    },
+    {
+      "name": "820×1180: one canvas throughout",
+      "pass": true
+    },
+    {
+      "name": "390×844: full-bleed world, clear text, no panels or overflow at every beat",
+      "pass": true,
+      "detail": [
+        {
+          "i": 0,
+          "canvas": [
+            0,
+            0,
+            390,
+            844
+          ],
+          "copy": [
+            18,
+            202.546875,
+            372,
+            433.796875
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 0,
+            "target": 0,
+            "active": 0,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 390,
+            "height": 844
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 1,
+          "canvas": [
+            0,
+            0,
+            390,
+            844
+          ],
+          "copy": [
+            24,
+            563.359375,
+            366,
+            740
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 1,
+            "target": 1,
+            "active": 1,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 390,
+            "height": 844
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 2,
+          "canvas": [
+            0,
+            0,
+            390,
+            844
+          ],
+          "copy": [
+            24,
+            461.359375,
+            366,
+            740
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 2,
+            "target": 2,
+            "active": 2,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 390,
+            "height": 844
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 3,
+          "canvas": [
+            0,
+            0,
+            390,
+            844
+          ],
+          "copy": [
+            24,
+            563.3887939453125,
+            366,
+            740.0294189453125
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 2.9991830065359477,
+            "target": 2.9991830065359477,
+            "active": 3,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 390,
+            "height": 844
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 4,
+          "canvas": [
+            0,
+            0,
+            390,
+            844
+          ],
+          "copy": [
+            24,
+            461.3887939453125,
+            366,
+            740.0294189453125
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 3.9991830065359477,
+            "target": 3.9991830065359477,
+            "active": 4,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 390,
+            "height": 844
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 5,
+          "canvas": [
+            0,
+            0,
+            390,
+            844
+          ],
+          "copy": [
+            24,
+            563.3887939453125,
+            366,
+            740.0294189453125
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 4.999183006535947,
+            "target": 4.999183006535947,
+            "active": 5,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 390,
+            "height": 844
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 6,
+          "canvas": [
+            0,
+            0,
+            390,
+            844
+          ],
+          "copy": [
+            24,
+            461.3887939453125,
+            366,
+            740.0294189453125
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 5.999183006535947,
+            "target": 5.999183006535947,
+            "active": 6,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 390,
+            "height": 844
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 7,
+          "canvas": [
+            0,
+            0,
+            390,
+            844
+          ],
+          "copy": [
+            24,
+            491.3887939453125,
+            366,
+            740.0294189453125
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 6.999183006535947,
+            "target": 6.999183006535947,
+            "active": 7,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 390,
+            "height": 844
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        }
+      ]
+    },
+    {
+      "name": "390×844: one canvas throughout",
+      "pass": true
+    },
+    {
+      "name": "320×740: full-bleed world, clear text, no panels or overflow at every beat",
+      "pass": true,
+      "detail": [
+        {
+          "i": 0,
+          "canvas": [
+            0,
+            0,
+            320,
+            740
+          ],
+          "copy": [
+            18,
+            177.59375,
+            302,
+            405.84375
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 0,
+            "target": 0,
+            "active": 0,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 320,
+            "height": 740
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 1,
+          "canvas": [
+            0,
+            0,
+            320,
+            740
+          ],
+          "copy": [
+            24,
+            439.9375,
+            296,
+            636
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 1,
+            "target": 1,
+            "active": 1,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 320,
+            "height": 740
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 2,
+          "canvas": [
+            0,
+            0,
+            320,
+            740
+          ],
+          "copy": [
+            24,
+            337.9375,
+            296,
+            636
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 2,
+            "target": 2,
+            "active": 2,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 320,
+            "height": 740
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 3,
+          "canvas": [
+            0,
+            0,
+            320,
+            740
+          ],
+          "copy": [
+            24,
+            464.578125,
+            296,
+            636
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 3,
+            "target": 3,
+            "active": 3,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 320,
+            "height": 740
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 4,
+          "canvas": [
+            0,
+            0,
+            320,
+            740
+          ],
+          "copy": [
+            24,
+            362.578125,
+            296,
+            636
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 4,
+            "target": 4,
+            "active": 4,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 320,
+            "height": 740
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 5,
+          "canvas": [
+            0,
+            0,
+            320,
+            740
+          ],
+          "copy": [
+            24,
+            439.9375,
+            296,
+            636
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 5,
+            "target": 5,
+            "active": 5,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 320,
+            "height": 740
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 6,
+          "canvas": [
+            0,
+            0,
+            320,
+            740
+          ],
+          "copy": [
+            24,
+            362.578125,
+            296,
+            636
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 6,
+            "target": 6,
+            "active": 6,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 320,
+            "height": 740
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 7,
+          "canvas": [
+            0,
+            0,
+            320,
+            740
+          ],
+          "copy": [
+            24,
+            300.828125,
+            296,
+            636
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 7,
+            "target": 7,
+            "active": 7,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 320,
+            "height": 740
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        }
+      ]
+    },
+    {
+      "name": "320×740: one canvas throughout",
+      "pass": true
+    },
+    {
+      "name": "844×390: full-bleed world, clear text, no panels or overflow at every beat",
+      "pass": true,
+      "detail": [
+        {
+          "i": 0,
+          "canvas": [
+            0,
+            0,
+            844,
+            390
+          ],
+          "copy": [
+            42.203125,
+            97.5,
+            801.796875,
+            263
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 0,
+            "target": 0,
+            "active": 0,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 844,
+            "height": 390
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 1,
+          "canvas": [
+            0,
+            0,
+            844,
+            390
+          ],
+          "copy": [
+            62.453125,
+            85.796875,
+            501.328125,
+            229.546875
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 1,
+            "target": 1,
+            "active": 1,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 844,
+            "height": 390
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 2,
+          "canvas": [
+            0,
+            0,
+            844,
+            390
+          ],
+          "copy": [
+            62.453125,
+            85.8823471069336,
+            501.328125,
+            308.6323471069336
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 1.9986850338514366,
+            "target": 1.9982332155477032,
+            "active": 2,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 844,
+            "height": 390
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 3,
+          "canvas": [
+            0,
+            0,
+            844,
+            390
+          ],
+          "copy": [
+            62.453125,
+            85.88648223876953,
+            501.328125,
+            229.63648223876953
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 2.998621392746891,
+            "target": 2.998233215547703,
+            "active": 3,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 844,
+            "height": 390
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 4,
+          "canvas": [
+            0,
+            0,
+            844,
+            390
+          ],
+          "copy": [
+            62.453125,
+            85.96781921386719,
+            501.328125,
+            308.71783447265625
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 3.9973700677028727,
+            "target": 3.9964664310954063,
+            "active": 4,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 844,
+            "height": 390
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 5,
+          "canvas": [
+            0,
+            0,
+            844,
+            390
+          ],
+          "copy": [
+            62.453125,
+            85.96776580810547,
+            501.328125,
+            229.71776580810547
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 4.997370889564214,
+            "target": 4.996466431095406,
+            "active": 5,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 844,
+            "height": 390
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 6,
+          "canvas": [
+            0,
+            0,
+            844,
+            390
+          ],
+          "copy": [
+            62.453125,
+            86.06570434570312,
+            501.328125,
+            308.8157043457031
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 5.995864178240673,
+            "target": 5.9946996466431095,
+            "active": 6,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 844,
+            "height": 390
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "i": 7,
+          "canvas": [
+            0,
+            0,
+            844,
+            390
+          ],
+          "copy": [
+            62.453125,
+            86.05329132080078,
+            501.328125,
+            293.8032913208008
+          ],
+          "textInside": true,
+          "overflow": 0,
+          "state": {
+            "progress": 6.996055101554309,
+            "target": 6.9946996466431095,
+            "active": 7,
+            "quiet": false,
+            "reading": false,
+            "ready": true,
+            "people": 27,
+            "edges": 41,
+            "width": 844,
+            "height": 390
+          },
+          "background": "rgba(0, 0, 0, 0)"
+        }
+      ]
+    },
+    {
+      "name": "844×390: one canvas throughout",
+      "pass": true
+    },
+    {
+      "name": "one h1 and correctly labelled story sections",
+      "pass": true
+    },
+    {
+      "name": "exchange outcome in Extraction",
+      "pass": true
+    },
+    {
+      "name": "exchange outcome in Reconnection",
+      "pass": true
+    },
+    {
+      "name": "exchange outcome in Life",
+      "pass": true
+    },
+    {
+      "name": "leaving an exchange resets it",
+      "pass": true
+    },
+    {
+      "name": "chapter menu traps keyboard focus in its modal",
+      "pass": true
+    },
+    {
+      "name": "Escape closes the menu and returns focus",
+      "pass": true
+    },
+    {
+      "name": "chapter navigation reaches the selected landscape",
+      "pass": true
+    },
+    {
+      "name": "quiet mode retains the world and settles animation",
+      "pass": true
+    },
+    {
+      "name": "quiet mode provides the exchange result immediately",
+      "pass": true
+    },
+    {
+      "name": "simple reading exposes all eight passages",
+      "pass": true
+    },
+    {
+      "name": "returning from reading restores the current chapter",
+      "pass": true
+    },
+    {
+      "name": "scroll frame timing stays below 34ms p95",
+      "pass": true,
+      "detail": {
+        "p95": 18.100000143051147,
+        "over50": 0
+      }
+    },
+    {
+      "name": "reverse navigation restores state without accumulating elements",
+      "pass": true
+    },
+    {
+      "name": "download includes all and only the new eight passages",
+      "pass": true
+    },
+    {
+      "name": "system reduced motion is respected on first paint",
+      "pass": true
+    },
+    {
+      "name": "without JavaScript all eight chapters are readable",
+      "pass": true
+    },
+    {
+      "name": "400% reflow switches to readable natural flow",
+      "pass": true
+    },
+    {
+      "name": "deep links initialize the matching scene",
+      "pass": true
+    },
+    {
+      "name": "no browser exceptions",
+      "pass": true,
+      "detail": []
+    }
+  ]
+}

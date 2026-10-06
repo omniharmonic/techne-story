@@ -16,3 +16,12 @@ HANDOFF-TO-DESIGN.md
 qa/REPORT.md
 qa/lighthouse-mobile.report.json
 qa/identity-test-results.txt
+
+# Keep only the six representative release captures in version control.
+qa/immersive/*.png
+!qa/immersive/release-1440-0.png
+!qa/immersive/release-1440-3.png
+!qa/immersive/release-1440-6.png
+!qa/immersive/release-390-0.png
+!qa/immersive/release-390-3.png
+!qa/immersive/release-390-6.png
