@@ -2,7 +2,7 @@
 
 ## Editorial direction
 
-Twelve chapters replace the previous twenty-three, with the strongest earlier language restored: “A link was an open door,” “The value was already between us,” “Our network. Someone else’s return,” and “A web in service of life.” Preserve the approved opening and its contrast gradient. Each subsequent passage advances the argument: open networks, participant-created value, enshittification, attention and public life, AI acceleration, cooperative ownership, the Techne SDK, local remixing, federation, local exchange, and funding.
+Nineteen chapters restore the original extended arc: 596 narration words versus 734 (18.8% shorter). The approved opening remains unchanged. Combine only the related enclosure/convenience, choice/reconnection, portability/SDK and funding/future passages. Keep the original emotional sequence: origins, open Web, enclosure, sharing, enshittification, attention, inner life, livelihoods, democracy, AI, Moloch, reciprocity, SDK, remixing, stewardship, federation, living places, invitation. Sources and qualifications remain in Look closer and the Markdown download.
 
 Use concrete subjects and connected sentences. Avoid repeating the same claim as another chapter or adding ornamental slogans. Supporting history, qualifications and sources belong in Look closer and the Markdown download. Keep the distinction between the proposed Techne architecture and released capabilities. Do not invent adoption, partners, funding targets or investment returns.
 
@@ -20,11 +20,32 @@ Typography remains Source Sans 3 light display and regular body; Newsreader word
 
 ## Continuous motion
 
-Twelve narrative positions map continuously to the existing world clock 0–7. Scroll position is eased over approximately 110ms. World state is reversible. The same terrain changes from open valley to concentrated corporate power and then a planted commons.
+Nineteen narrative positions map continuously to the existing world clock 0–7. Scroll position is eased over approximately 110ms. World state is reversible. The same terrain changes from open valley to concentrated corporate power and then a planted commons.
 
 Early relay stations and linked pages fade into walls and captured routes. Value moves into growing towers. The machine eye and reaching filaments intensify before direct routes return. Five community hubs grow fifteen branches and seventy-five leaves scaled by phi, joined by seven peer links. These are social metaphors, not a literal AT Protocol server diagram.
 
-Ambient layers: a reusable procedural mist texture drifts in separate valley and foreground layers; restrained gold reflections move on the river; motes and reciprocal network pulses continue while the reader pauses. Community petal forms breathe by 7%, with a visible expanding ground-plane ring every 3.7 seconds. Motion must be calm enough for reading. All ambient motion stops in quiet mode, reduced motion, hidden tabs or open dialogs. No video or new raster payload is required.
+Ambient layers: ten reusable procedural cloud banks drift at different depths, with five finer secondary strands; restrained gold reflections move on the river; motes and reciprocal network pulses continue while the reader pauses. Community petal forms breathe by 7%, with a visible expanding ground-plane ring every 3.7 seconds. Motion must be calm enough for reading. All ambient motion stops in quiet mode, reduced motion, hidden tabs or open dialogs. No video or new raster payload is required.
+
+## Distinct visual eras
+
+- Early internet: cool blue packet lights, dotted open links, separate relay pavilions and linked pages. No dominant center. The packet and Web chapters have separate illustrations.
+- Web 2: gold paths converge on citadels; concentric enclosure rings and asset gateways give way to attention loops, interrupted personal rhythms, livelihood tolls and privately mediated public squares. Platform buildings stay modest through the democracy passage. AI introduces vertical growth, the eye and reaching tendrils; Moloch alone reaches full megalith scale and adds tightening rings competing around all three towers.
+- Distributed web: the old network fades completely. Shared records cross between community hubs, apps vary locally, stewardship circulates value within each place, and connections gradually extend into botanical federation. Mint/gold reciprocity replaces the single inward flow.
+
+Keep all these mechanisms grounded in the same authored landmark coordinates. Public-square illustrations must also follow the landscape camera. Text remains fully visible across 60% of each chapter interval, so the restored narrative has time to breathe. Reversing scroll reverses scene development. Clouds and local pulses keep moving during reading pauses.
+
+### Narration-to-animation gates
+
+| Passages | Architecture and motion |
+| --- | --- |
+| Connection, packets, open Web | No corporate towers; independent stations and open links |
+| Private gates, sharing, returns | Small platform structures and enclosing gateways; no eye |
+| Attention, inner life, livelihoods, democracy | Structures stay modest; distinct human-scale mechanisms |
+| AI acceleration | Towers begin substantial vertical growth; eye and tendrils emerge |
+| Moloch | Full tower height, full eye, competing contraction rings |
+| Reconnection onward | Eye recedes, routes bypass the gates, local reciprocal networks develop |
+
+A regression test evaluates the actual chapter scene positions: no monumental growth or eye in any pre-AI passage. Do not use a chapter-count-independent timer that can outrun the narration.
 
 ## Interactions and access
 

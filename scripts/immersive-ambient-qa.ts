@@ -1,10 +1,11 @@
+import { chapterIndex } from '../src/lib/immersive.ts';
 import { chromium } from 'playwright';
 import { writeFileSync } from 'node:fs';
 const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 3440, height: 1440 } });
 await page.goto(process.env.QA_URL || 'http://127.0.0.1:4321/techne-story/');
 await page.waitForFunction(() => Boolean((window as any).__film?.state().ready));
-await page.evaluate(() => (window as any).__film.go(5));
+await page.evaluate(i => (window as any).__film.go(i), chapterIndex('moloch'));
 await page.waitForTimeout(1000);
 const wideP95 = await page.evaluate(async () => {
   const intervals: number[] = []; let last = performance.now();

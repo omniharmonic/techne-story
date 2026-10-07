@@ -190,3 +190,6 @@ html:not(.js) .chapter-note-button { display:none; }
   .js .beat:not(.opening):not(.ending) .copy { top:18%; }
   .copy:has(.exchange) .chapter-note-button { position:absolute; right:0; bottom:24px; margin:0; }
 }
+@media(max-height:520px) and (min-width:600px) {
+  .js .ending .copy { top:20%; }
+}

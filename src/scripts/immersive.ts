@@ -45,7 +45,7 @@ function project(p: {x:number;y:number}): Point {
 function towers(state: ReturnType<typeof filmState>) {
   const defs=[[.485,.525,.31],[.902,.585,.39],[.582,.818,.58]];
   const size=Math.min(1,...defs.map(([x,y,h])=>Math.max(.05,camera.point(x,y).y-height*.12)/(camera.h*h*1.08)));
-  return defs.map(([x,y,h],i)=>({...camera.point(x,y),h:camera.h*h*size*mix(.69,1.08,state.growth)*state.rise,i}));
+  return defs.map(([x,y,h],i)=>({...camera.point(x,y),h:camera.h*h*size*mix(.22,1.08,state.growth)*state.rise,i}));
 }
 function backdrop(img: HTMLImageElement) {ctx.drawImage(img,camera.x,camera.y,camera.w,camera.h);}
 function glow(x: number,y: number,r: number,c: number[],a: number) {
@@ -115,7 +115,7 @@ function drawMechanisms(n:number,points:Point[],ts:ReturnType<typeof towers>,sta
   }
   ctx.globalCompositeOperation='screen';
   // Hyperlinked pages rise from the pavilions, never enclosing their neighbors.
-  const web=at('packets',1.2);
+  const web=at('open-web',1.2);
   if(web>0){for(let i=0;i<9;i++){
     const p=points[i*3],r=13*scale,y=p.y-48*scale;
     ctx.save();ctx.translate(p.x,y);ctx.transform(1,-.15,.12,1,0,0);
@@ -150,7 +150,7 @@ function drawMechanisms(n:number,points:Point[],ts:ReturnType<typeof towers>,sta
     stroke(a,b,gold,capital*.27,35);const q={x:mix(a.x,b.x,u),y:mix(a.y,b.y,u)-Math.sin(u*Math.PI)*35};glow(q.x,q.y,7,gold,capital*.7);
   }});}
   // The person's own rhythm and the repeated call to return are distinct.
-  const attention=Math.max(at('extraction'),at('psyche'));
+  const attention=Math.max(at('extraction'),at('psyche')*.42);
   if(attention>0){
     const p=points[12],r=(isMobile()?39:68);
     for(let k=0;k<12;k++){
@@ -160,6 +160,18 @@ function drawMechanisms(n:number,points:Point[],ts:ReturnType<typeof towers>,sta
     }
     const pulse=quiet?.5:(Math.sin(phase*1.6)+1)/2;glow(p.x,p.y,r*.45,mint,attention*.5);ctx.beginPath();ctx.ellipse(p.x,p.y,r*(.4+pulse*.3),r*(.15+pulse*.12),0,0,Math.PI*2);ctx.strokeStyle=color(mint,attention*.6);ctx.stroke();
   }
+  // An interrupted personal rhythm is distinct from the surrounding ad machinery.
+  const psyche=at('psyche');
+  if(psyche>0){
+    const p=points[12],radius=camera.w*.035;
+    for(let k=0;k<3;k++){
+      const u=quiet?.45:(phase*.19+k/3)%1;
+      ctx.beginPath();ctx.ellipse(p.x,p.y,radius*(.35+u),radius*(.12+u*.3),0,.15,Math.PI*1.7);
+      ctx.strokeStyle=color(mint,psyche*(1-u)*.8);ctx.lineWidth=1.5;ctx.stroke();
+      const interruption=quiet?.5:(Math.sin(phase*2.3+k*1.9)+1)/2;
+      glow(p.x+Math.cos(k*2.1)*radius,p.y+Math.sin(k*2.1)*radius*.4,9,gold,psyche*interruption*.7);
+    }
+  }
   const toll=at('livelihoods');
   if(toll>0){for(let i=0;i<12;i++){
     const a=points[i*2],tower=ts[i%3],gate={x:tower.x,y:tower.y-12};stroke(a,gate,gold,toll*.4,25);
@@ -168,13 +180,23 @@ function drawMechanisms(n:number,points:Point[],ts:ReturnType<typeof towers>,sta
   }}
   const publicSquare=at('democracy',1.05);
   if(publicSquare>0){for(let i=0;i<3;i++){
-    const cx=width*(isMobile()?.2+i*.3:.58+i*.15),cy=height*(isMobile()?.27:.38),rx=width*(isMobile()?.14:.065),c=i===1?gold:mint;
+    const hub=HUBS[[0,2,1][i]],anchor=camera.point(hub.x,hub.y);
+    const cx=anchor.x,cy=anchor.y,rx=camera.w*.038,c=i===1?gold:mint;
     ctx.beginPath();ctx.ellipse(cx,cy,rx,rx*.63,0,0,Math.PI*2);ctx.fillStyle=color(c,publicSquare*.025);ctx.fill();ctx.strokeStyle=color(c,publicSquare*.5);ctx.stroke();
     for(let j=0;j<9;j++){const a=j/9*Math.PI*2;glow(cx+Math.cos(a)*rx*.72,cy+Math.sin(a)*rx*.43,3,c,publicSquare*.8);}
     stroke({x:cx,y:cy+rx*.6},{x:ts[i].x,y:ts[i].y},c,publicSquare*.25,0);
   }}
+  // The Moloch beat adds competing, tightening rings around every citadel.
+  const race=at('moloch',1.15);
+  if(race>0){ts.forEach((tower,i)=>{
+    for(let k=0;k<3;k++){
+      const u=quiet?.5:(phase*(.18+i*.035)+k/3)%1,rx=camera.w*.075*(1-u*.7);
+      ctx.beginPath();ctx.ellipse(tower.x,tower.y-6,rx,rx*.28,0,i*.7,Math.PI*1.8+i*.7);
+      ctx.strokeStyle=color(gold,race*(1-u)*.65);ctx.lineWidth=1.2;ctx.stroke();
+    }
+  });}
   // AI multiplies reaching paths and draws small satellites into the center.
-  const reach=smooth(2.5,3.2,state.t)*(1-smooth(3.7,4.5,state.t));
+  const reach=smooth(2.72,3.3,state.t)*(1-smooth(3.7,4.5,state.t));
   if(reach>0){
     const crown={x:ts[2].x,y:ts[2].y-ts[2].h*.82};
     for(let i=0;i<points.length;i++){
@@ -200,11 +222,13 @@ function drawFederation(n:number,now:number) {
   ctx.save();ctx.globalCompositeOperation='screen';
   // Every hub connects to several peers; no central distribution tower.
   FEDERATION_LINKS.forEach(([a,b],i)=>{
-    const alpha=(.20+mature*.28);line(hubs[a],hubs[b],alpha,1.4);
-    if(!quiet||demoProgress){for(let side=0;side<2;side++){
+    const joined=smooth(chapterIndex('sdk')-.25+i*.16,chapterIndex('federation')-.2+i*.07,n);
+    const alpha=(.10+mature*.38)*joined;line(hubs[a],hubs[b],alpha,1.4);
+    if((!quiet||demoProgress)&&joined>.05){for(let side=0;side<2;side++){
       let u=quiet?demoProgress:(phase*.075+i*.137+side*.48)%1;if(side)u=1-u;
       const p={x:mix(hubs[a].x,hubs[b].x,u),y:mix(hubs[a].y,hubs[b].y,u)-Math.sin(u*Math.PI)*Math.abs(hubs[a].x-hubs[b].x)*.10};
-      glow(p.x,p.y,isMobile()?9:13,side?gold:mint,strength*.95);
+      glow(p.x,p.y,isMobile()?9:13,side?gold:mint,strength*joined*.95);
+      if(n<chapterIndex('remix')+.4){ctx.strokeStyle=color(mint,joined*strength*.9);ctx.lineWidth=1;ctx.strokeRect(p.x-4,p.y-3,8,6);}
     }}
   });
   // Branches divide by the golden ratio. They grow into local exchange loops.
@@ -245,6 +269,13 @@ function drawFederation(n:number,now:number) {
       const adapt=demoId==='remix'?demoProgress:smooth(chapterIndex('remix')-.3,chapterIndex('remix')+.5,n);
       const radius=4+(k+i)%3*adapt*2;ctx.beginPath();ctx.ellipse(x,y,radius,radius/PHI,angle+adapt*i*.5,0,Math.PI*2);ctx.strokeStyle=color(k===1?gold:mint,apps*strength*.8);ctx.lineWidth=1;ctx.stroke();line(p,{x,y},apps*.3,.65);
     }}
+    const stewardship=1-smooth(.3,1.2,Math.abs(n-chapterIndex('stewardship')));
+    if(stewardship>0){for(let k=0;k<4;k++){
+      const a=(quiet?k*Math.PI/2:phase*.7+k*Math.PI/2)+i*.3;
+      const x=p.x+Math.cos(a)*size*2.1,y=p.y+Math.sin(a)*size*.7;
+      glow(x,y,7,k%2?gold:mint,stewardship*.8);
+      ctx.beginPath();ctx.ellipse(p.x,p.y,size*2.1,size*.7,0,a-.35,a+.15);ctx.strokeStyle=color(mint,stewardship*.6);ctx.lineWidth=1.3;ctx.stroke();
+    }}
     if(demoProgress){const u=clamp(demoProgress*1.8-i*.14);ctx.beginPath();ctx.ellipse(p.x,p.y,size*(1+u*2),size*(.5+u),0,0,Math.PI*2);ctx.strokeStyle=color(mint,(1-u*.65)*strength*.75);ctx.lineWidth=1.3;ctx.stroke();}
   });
   // Communities nest into regional collaboration, still with open boundaries.
@@ -262,15 +293,28 @@ for(let i=0;i<22;i++){
   const x=30+i*21,y=64+Math.sin(i*1.8)*17,r=43+Math.sin(i*.7)*7;
   const g=mistContext.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,'rgba(220,238,227,.38)');g.addColorStop(1,'rgba(201,225,215,0)');mistContext.fillStyle=g;mistContext.fillRect(x-r,y-r,r*2,r*2);
 }
+// Feather the whole texture so scaled cloud banks never expose rectangular edges.
+mistContext.globalCompositeOperation='destination-in';
+for(const horizontal of [true,false]){
+  const fade=mistContext.createLinearGradient(0,0,horizontal?512:0,horizontal?0:128);
+  fade.addColorStop(0,'transparent');fade.addColorStop(.18,'white');fade.addColorStop(.82,'white');fade.addColorStop(1,'transparent');
+  mistContext.fillStyle=fade;mistContext.fillRect(0,0,512,128);
+}
 function drawMist(t:number,foreground=false){
+  const state=filmState(t),time=quiet?0:phase;
+  // Separate high cloud, valley fog and foreground wisps. All follow the camera.
+  const banks=foreground?[[.34,.70,.32],[.76,.51,.34],[.50,.86,.38],[.87,.66,.23]]:
+    [[.27,.19,.39],[.68,.15,.43],[.46,.31,.35],[.32,.40,.32],[.75,.36,.37],[.58,.59,.30]];
   ctx.save();
-  const banks=foreground?[[.34,.70],[.76,.51],[.50,.86]]:[[.32,.40],[.75,.36],[.58,.59]];
   for(let i=0;i<banks.length;i++){
-    const drift=quiet?0:Math.sin(phase*.12+i*1.7)*.055;
-    const p=camera.point(banks[i][0]+drift,banks[i][1]+Math.sin(phase*.18+i)*.006);
-    const w=camera.w*(.29+i*.025),h=w*(foreground?.17:.15);
-    ctx.globalAlpha=(foreground?.62:.52)*(1-filmState(t).darkness*.15);
+    const speed=(foreground?.14:.075)*(1+state.capture*.35);
+    const drift=Math.sin(time*speed+i*1.7)*(.055+state.life*.02);
+    const p=camera.point(banks[i][0]+drift,banks[i][1]+Math.sin(time*.15+i)*.009);
+    const w=camera.w*banks[i][2],h=w*(foreground?.18:.12);
+    ctx.globalAlpha=(foreground?.68:.58)*(1+state.capture*.12);
     ctx.drawImage(mistTexture,p.x-w/2,p.y-h/2,w,h);
+    // A thinner, faster strand peels away inside the same cloud bank.
+    if(i%2===0){ctx.globalAlpha*=.34;ctx.drawImage(mistTexture,p.x-w*.34+Math.sin(time*.21+i)*w*.07,p.y-h*.12,w*.7,h*.27);}
   }
   ctx.restore();
 }
@@ -298,13 +342,15 @@ function draw(narrative:number,now:number) {
   ctx.fillStyle='rgba(2,20,28,'+( .26 + state.darkness*.46 - state.life*.12)+')';ctx.fillRect(0,0,width,height);
   const atmosphere=ctx.createLinearGradient(0,0,0,height);atmosphere.addColorStop(0,'rgba(2,21,29,'+(.22+state.darkness*.3)+')');atmosphere.addColorStop(.6,'rgba(3,36,37,0)');atmosphere.addColorStop(1,'rgba(1,20,22,.12)');ctx.fillStyle=atmosphere;ctx.fillRect(0,0,width,height);
   drawMist(t);drawRiverLight(t);
-  const netOpacity=state.network*(1-state.life*.9);
-  const ink=mint.map((v,i)=>mix(v,gold[i],state.capture));
+  const netOpacity=state.network*(1-state.life);
+  const early=[166,224,249];
+  const ink=early.map((v,i)=>mix(mix(v,gold[i],state.capture),mint[i],state.freedom));
   ctx.save();ctx.globalCompositeOperation='screen';ctx.lineCap='round';
   RELATIONS.forEach((_,i)=>{
     const reveal=smooth(-.15+i*.009,.18+i*.009,t+.17);
+    ctx.setLineDash(state.capture<.35&&state.freedom<.2?[2,7]:[]);
     trace(i,state.capture,points,ts,reveal);
-    ctx.strokeStyle=color(ink,netOpacity*(i%3===0?.40:.20));ctx.lineWidth=mobile?.7:1;ctx.stroke();
+    ctx.strokeStyle=color(ink,netOpacity*(i%3===0?.40:.20));ctx.lineWidth=mobile?.7:1;ctx.stroke();ctx.setLineDash([]);
     if(!quiet){
       const u=(phase*(state.capture>.5?.10:.055)+i*.173)%1;
       const p=pointOn(i,u,state.capture,points,ts);
@@ -386,7 +432,7 @@ function updateCopy(t:number) {
   const nearest=Math.round(t);
   copies.forEach((copy,i)=>{
     const d=t-i;
-    const opacity=i===0 ? 1-smooth(.12,.50,t) : i===LAST ? smooth(-.5,-.16,d) : smooth(-.5,-.19,d)*(1-smooth(.19,.50,d));
+    const opacity=i===0 ? 1-smooth(.12,.50,t) : i===LAST ? smooth(-.5,-.16,d) : smooth(-.5,-.30,d)*(1-smooth(.30,.50,d));
     copy.style.opacity=String(opacity);
     copy.style.visibility=opacity>.005?'visible':'hidden';
     copy.style.transform=(i===0?'translateX(-50%) ':'')+'translateY('+(-d*(isMobile()?36:65))+'px)';
@@ -478,6 +524,6 @@ addEventListener('scroll',()=>{if(!reading)target=clamp(scrollY/Math.max(1,span)
 addEventListener('resize',measure);document.addEventListener('visibilitychange',request);
 addEventListener('hashchange',()=>{const i=BEATS.findIndex(b=>'#'+b.id===location.hash);if(i>=0)go(i);});
 setQuiet(quiet);measure();
-Promise.all(['valley','commons','citadel'].map(load)).then(()=>{ready=true;canvas.parentElement!.classList.add('ready');const legacy: Record<string,string>={'open-web':'packets',capture:'sharing',enclosure:'sharing',psyche:'extraction',livelihoods:'extraction',democracy:'extraction',moloch:'acceleration',choice:'reconnect',belong:'sdk',stewardship:'federation',fund:'future',credit:'sharing',open:'connection',peers:'connection',captured:'sharing',flow:'extraction',freed:'reconnect',homes:'sdk',groups:'sdk',alive:'living',place:'living',unfinished:'future',techne:'future'};const hash=location.hash.slice(1);const index=BEATS.findIndex(b=>b.id===(legacy[hash]||hash));if(index>=0&&!reading)go(index);request();}).catch(()=>{setReading(true);});
+Promise.all(['valley','commons','citadel'].map(load)).then(()=>{ready=true;canvas.parentElement!.classList.add('ready');const legacy: Record<string,string>={'open-web':'packets',capture:'sharing',enclosure:'sharing',psyche:'extraction',livelihoods:'extraction',democracy:'extraction',moloch:'acceleration',choice:'reconnect',belong:'sdk',stewardship:'federation',fund:'future',credit:'sharing',open:'connection',peers:'connection',captured:'sharing',flow:'extraction',freed:'reconnect',homes:'sdk',groups:'sdk',alive:'living',place:'living',unfinished:'future',techne:'future'};const hash=location.hash.slice(1);const canonical=BEATS.some(b=>b.id===hash)?hash:(legacy[hash]||hash);const index=BEATS.findIndex(b=>b.id===canonical);if(index>=0&&!reading)go(index);request();}).catch(()=>{setReading(true);});
 document.fonts.ready.then(measure);
 (window as any).__film={state:()=>({progress,target,active,quiet,reading,ready,camera:{x:camera.x,y:camera.y,w:camera.w,h:camera.h},scene:sceneAt(progress),chapters:BEATS.length,people:PEOPLE.length,edges:RELATIONS.length,width,height}),go,freeze:()=>setQuiet(true)};
