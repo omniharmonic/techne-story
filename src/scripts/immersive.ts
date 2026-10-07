@@ -45,7 +45,7 @@ function project(p: {x:number;y:number}): Point {
 function towers(state: ReturnType<typeof filmState>) {
   const defs=[[.485,.525,.31],[.902,.585,.39],[.582,.818,.58]];
   const size=Math.min(1,...defs.map(([x,y,h])=>Math.max(.05,camera.point(x,y).y-height*.12)/(camera.h*h*1.08)));
-  return defs.map(([x,y,h],i)=>({...camera.point(x,y),h:camera.h*h*size*mix(.22,1.08,state.growth)*state.rise,i}));
+  return defs.map(([x,y,h],i)=>({...camera.point(x,y),h:camera.h*h*size*mix(.48,1.08,state.growth)*state.rise,i}));
 }
 function backdrop(img: HTMLImageElement) {ctx.drawImage(img,camera.x,camera.y,camera.w,camera.h);}
 function glow(x: number,y: number,r: number,c: number[],a: number) {
@@ -241,6 +241,11 @@ function drawFederation(n:number,now:number) {
         line(b,end,.31*u,.65);glow(end.x,end.y,(isMobile()?3:5),mint,u*strength*.48);
         ctx.beginPath();ctx.ellipse(end.x,end.y,2.7*u,1.6*u,-.45,0,Math.PI*2);ctx.fillStyle=color(mint,strength*u*.65);ctx.fill();
         if(j>0)line(map(leaves[j-1]),end,.1*u,.55);
+        if(!quiet&&j===2&&u>.5){
+          const cycle=(phase*.24+i*.17)%1,travel=(1-Math.cos(cycle*Math.PI*2))/2;
+          const q={x:mix(b.x,end.x,travel),y:mix(b.y,end.y,travel)};
+          glow(q.x,q.y,6,cycle<.5?mint:gold,strength*u*.8);
+        }
       });
       glow(b.x,b.y,r*.32,mint,.45*strength*emergence);
     }
@@ -352,9 +357,16 @@ function draw(narrative:number,now:number) {
     trace(i,state.capture,points,ts,reveal);
     ctx.strokeStyle=color(ink,netOpacity*(i%3===0?.40:.20));ctx.lineWidth=mobile?.7:1;ctx.stroke();ctx.setLineDash([]);
     if(!quiet){
-      const u=(phase*(state.capture>.5?.10:.055)+i*.173)%1;
-      const p=pointOn(i,u,state.capture,points,ts);
-      if(i%3===0){glow(p.x,p.y,mobile?5:7,ink,.54);ctx.beginPath();ctx.arc(p.x,p.y,mobile?.8:1.05,0,Math.PI*2);ctx.fillStyle=color([242,255,232],.92);ctx.fill();}
+      const cycle=(phase*(.085+state.capture*.085+state.eye*.12)+i*.173)%1;
+      // Under enclosure both ends pay inward; free peers exchange end to end.
+      const along=(v:number)=>mix(v,i%2?1-v*.5:v*.5,state.capture);
+      const u=along(cycle),p=pointOn(i,u,state.capture,points,ts);
+      if(i%3===0){
+        ctx.beginPath();
+        for(let k=5;k>=0;k--){const q=pointOn(i,along(Math.max(0,cycle-k*.009)),state.capture,points,ts);if(k===5)ctx.moveTo(q.x,q.y);else ctx.lineTo(q.x,q.y);}
+        ctx.strokeStyle=color(ink,.8*netOpacity);ctx.lineWidth=1.7;ctx.stroke();
+        glow(p.x,p.y,mobile?7:10,ink,.72*netOpacity);ctx.beginPath();ctx.arc(p.x,p.y,mobile?1.1:1.5,0,Math.PI*2);ctx.fillStyle=color([242,255,232],.92*netOpacity);ctx.fill();
+      }
     }
   });
   points.forEach((p,i)=>{const r=mobile?1.25:1.75;glow(p.x,p.y,r*7,ink,.32*netOpacity);ctx.fillStyle=color([239,255,228],.83*netOpacity);ctx.beginPath();ctx.arc(p.x,p.y,r*(.65+PEOPLE[i].depth*.45),0,Math.PI*2);ctx.fill();});
@@ -375,6 +387,21 @@ function draw(narrative:number,now:number) {
     ctx.drawImage(img,tower.x-tw/2,tower.y-tower.h,tw,tower.h);
     ctx.globalAlpha=1;
     corporateMark(tower.x,tower.y-tower.h*.42,mobile?10:18,tower.i,state.capture*.8);
+    // Gate scans and inhabited facades make centralized platforms active before AI.
+    if(state.capture>.02){
+      ctx.save();ctx.globalCompositeOperation='screen';
+      const turn=quiet?.4:phase*(.35+state.growth*.45)+tower.i;
+      const radius=tw*(.48+state.capture*.25);
+      ctx.beginPath();ctx.ellipse(tower.x,tower.y-2,radius,radius*.3,0,turn,turn+Math.PI*1.45);
+      ctx.strokeStyle=color(gold,state.capture*.58);ctx.lineWidth=1.4;ctx.stroke();
+      for(let row=0;row<7;row++){
+        const pulse=quiet?.4:(Math.sin(phase*1.8-row*.75+tower.i)+1)/2;
+        const y=tower.y-tower.h*(.2+row*.085),half=tw*(.12-row*.011);
+        ctx.beginPath();ctx.moveTo(tower.x-half,y);ctx.lineTo(tower.x+half,y);
+        ctx.strokeStyle=color(gold,state.capture*(.12+pulse*.5));ctx.lineWidth=1.25;ctx.stroke();
+      }
+      ctx.restore();
+    }
     // Gold moves up the facade: value is accumulated, not exchanged back.
     if(state.capture>.02){
       ctx.save();ctx.globalCompositeOperation='screen';

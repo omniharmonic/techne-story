@@ -1,6 +1,6 @@
 # Techne — Another web is possible
 
-An immersive, full-bleed story about moving from extraction to connection. Nineteen chapters across five acts travel through one cinematic river valley: a luminous peer network, rising corporate citadels, an accelerating eye, reconnection, and a planted solarpunk commons.
+An immersive, full-bleed story about moving from extraction to connection. Eighteen chapters across five acts travel through one cinematic river valley: a luminous peer network, rising corporate citadels, an accelerating eye, reconnection, and a planted solarpunk commons.
 
 [Live experience](https://omniharmonic.github.io/techne-story/)
 
@@ -21,7 +21,7 @@ npm run qa:report
 
 On a fresh machine, install the browser for QA with `npx playwright install chromium`.
 
-The narration restores the extended arc at 596 words versus 734 in the original: an 18.8% reduction. Early internet, centralized platforms and the distributed web have distinct motion patterns, with ten drifting cloud layers.
+The extended emotional arc is retained, with the two Web 2 setup passages combined into one. The eighteen chapters contain 561 narration words. Recognizable towers emerge with centralization, continue growing through extraction, and intensify with AI. Ten cloud layers, inbound light trails, scanning gates and reciprocal community flows stay active between scroll changes.
 
 ## Implementation
 

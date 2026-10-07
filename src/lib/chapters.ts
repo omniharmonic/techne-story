@@ -88,31 +88,18 @@ export const BEATS: Chapter[] = [
     ]
   },
   {
-    "id": "capture",
-    "act": "Enclosure",
-    "chapter": "The convenient middle",
-    "title": "Open roads.\nPrivate gates.",
-    "body": "Search helped us find. Social feeds helped us gather. Marketplaces helped us trade. Useful services became places everyone needed to be. The connections were between us; control over reaching one another belonged to the platform.",
-    "scene": 1.15,
-    "action": "",
-    "mechanism": "More people → more reasons to stay",
-    "note": "Network effects can create real value: a service is often more useful when others participate. The problem arises when that value is difficult to carry elsewhere. This chapter is a model of platform dependence, not a claim that every large service has the same business model. A social graph records relationships between people. Platforms can control access to those records, visibility and discovery without literally owning a friendship. The internet’s open transport layer does not guarantee that applications will make those relationships portable. Enclosure happens through design, contracts, defaults and data access.",
-    "sources": [
-      "internet",
-      "protocol"
-    ]
-  },
-  {
     "id": "sharing",
     "act": "Enclosure",
-    "chapter": "The sharing promise",
+    "chapter": "Open roads, private gates",
     "title": "The value was\nalready between us.",
-    "body": "A spare room. A seat in a car. The sharing economy promised to unlock what people already had. Hosts, drivers, guests, and riders made the network valuable. Airbnb and Uber became the gates through which they met.",
-    "scene": 1.55,
+    "body": "Search helped us find. Marketplaces helped us trade. A room, a ride, a friendship: the value was already between us. Airbnb, Uber, and Facebook made these networks useful—then became the gates through which we reached one another.",
+    "scene": 1.25,
     "action": "",
     "mechanism": "People supply the assets. Relationships create the value.",
-    "note": "Airbnb and Uber describe networks in which participants attract one another. Their services also contribute discovery, coordination, payments and trust mechanisms. The distinction is between creating a useful service and controlling access to the network that participants sustain. These are examples of platform enclosure, not a claim that every company is legally a monopoly.",
+    "note": "Network effects can create real value: a service is often more useful when others participate. The problem arises when that value is difficult to carry elsewhere. This chapter is a model of platform dependence, not a claim that every large service has the same business model. A social graph records relationships between people. Platforms can control access to those records, visibility and discovery without literally owning a friendship. The internet’s open transport layer does not guarantee that applications will make those relationships portable. Enclosure happens through design, contracts, defaults and data access. Airbnb and Uber describe networks in which participants attract one another. Their services also contribute discovery, coordination, payments and trust mechanisms. The distinction is between creating a useful service and controlling access to the network that participants sustain. These are examples of platform enclosure, not a claim that every company is legally a monopoly.",
     "sources": [
+      "internet",
+      "protocol",
       "sharing",
       "mobility"
     ]

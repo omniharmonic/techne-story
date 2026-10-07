@@ -1,9 +1,9 @@
 {
-  "date": "2026-10-07T00:10:07.963Z",
+  "date": "2026-10-07T01:36:48.137Z",
   "method": "gzip text; native compressed image/font sizes",
-  "javascript": 16450,
+  "javascript": 16631,
   "art": 899372,
-  "totalUpperBound": 994759,
+  "totalUpperBound": 994795,
   "withinBudget": true,
   "files": [
     {
@@ -27,9 +27,9 @@
       "transfer": 3544
     },
     {
-      "file": "assets/index.astro_astro_type_script_index_0_lang.BO7e3aqM.js",
-      "bytes": 42141,
-      "transfer": 16450
+      "file": "assets/index.astro_astro_type_script_index_0_lang.AQMC5qSZ.js",
+      "bytes": 42615,
+      "transfer": 16631
     },
     {
       "file": "assets/newsreader-latin-400-normal.BFBkh4jY.woff2",
@@ -53,8 +53,8 @@
     },
     {
       "file": "index.html",
-      "bytes": 22832,
-      "transfer": 6133
+      "bytes": 22081,
+      "transfer": 5988
     }
   ]
 }

@@ -9,8 +9,8 @@ export const filmState = (progress: number) => {
   const freedom = smooth(3.7, 5.05, t);
   return {
     t, capture: smooth(.55, 1.65, t) * (1 - freedom),
-    rise: smooth(.72, 1.55, t) * (1 - smooth(4.35, 5.4, t)),
-    growth: smooth(2.55, 3.35, t),
+    rise: smooth(.58, 1.2, t) * (1 - smooth(4.35, 5.4, t)),
+    growth: .28 * smooth(.72, 2.52, t) + .72 * smooth(2.55, 3.35, t),
     eye: smooth(2.75, 3.2, t) * (1 - smooth(3.85, 4.5, t)),
     darkness: smooth(.7, 2.7, t) * (1 - smooth(3.7, 5.3, t)),
     freedom, life: smooth(4.6, 6.3, t),
